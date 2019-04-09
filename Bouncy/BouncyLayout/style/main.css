@@ -923,6 +923,29 @@ a, li{
 		font-size: 10px;
 	}
 }
+@media (max-width: 380px) {
+	#portfolio .posts .post .descr h3{
+		font-size: 10px;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+	.descr .icons{
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+	.descr i {
+		font-size: 9px;
+	}
+	.descr{
+		align-items: flex-start;
+		padding-left: 7%;
+	}
+	.descr .border{
+		margin: .3em 0;
+	}
+}
 
 /* Seven block (Team) */
 #team{
