@@ -711,6 +711,9 @@ a, li{
 	margin: 10px 4px ;
 	position: relative;
 }
+.portfolio .post:hover{
+	transform: scale(1.1);
+}
 .portfolio .descr{
 	position: absolute;
 	top: 0;
@@ -925,7 +928,7 @@ a, li{
 }
 @media (max-width: 380px) {
 	#portfolio .posts .post .descr h3{
-		font-size: 10px;
+		font-size: 8px;
 		margin: 0;
 		padding: 0;
 		text-align: left;
@@ -939,6 +942,7 @@ a, li{
 		font-size: 9px;
 	}
 	.descr{
+		box-sizing: border-box;
 		align-items: flex-start;
 		padding-left: 7%;
 	}
