@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0;
 	padding: 0;
 }
+a{
+	text-decoration: none;
+}
 body{
 	margin: 0;
 	background: linear-gradient(45deg, #304352, #BFC7CD, #204352);
@@ -227,6 +230,30 @@ address{
 	border-bottom: 1px solid rgba(168,168,168,.44);
 	margin-top: 30px;
 }
+.projects .bouncy a{
+	width: 100%;
+	display: block;
+	height: inherit;
+	position: absolute;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	transition: ease .5s;
+	display: flex;
+	opacity: 0;
+}
+.projects #bouncy:hover a{
+	opacity: 1;
+	background-color: rgba(0,0,0,.8);
+}
+.projects #bouncy{
+	background: url(../img/Bouncy.jpg) no-repeat;
+	background-size: 100%;
+	position: relative;
+	display: flex;
+	flex-basis: 100%;	
+	height: 30vh;
+}
 .list{
 	list-style: none;
 	padding-left: 0px;
@@ -296,7 +323,7 @@ progress::-webkit-progress-bar {
   border-radius: 2px;
 }
 progress::-webkit-progress-value {
-  background-color: #898989;
+  background-color: #1F2847;
 }
 progress::-moz-progress-bar {
   background-color: #fff;
@@ -309,7 +336,7 @@ progress::-webkit-progress-bar {
   border-radius: 2px;
 }
 progress::-webkit-progress-value {
-  background-color: #898989;
+  background-color: #1F2847;
 }
 progress::-moz-progress-bar {
   background-color: #fff;
@@ -320,6 +347,19 @@ progress::-moz-progress-bar {
 @media (max-width: 1024px) {
 	.container{
 		width: 90%;
+	}
+	.projects #bouncy{
+		height: 28vh;
+	}
+}
+@media (max-width: 980px) {
+	.projects #bouncy{
+		height: 25vh;
+	}
+}
+@media (max-width: 910px;) {
+	.projects #bouncy{
+		height: 19vh;
 	}
 }
 @media (max-width: 850px) {
@@ -354,6 +394,9 @@ progress::-moz-progress-bar {
 	}
 }
 @media (max-width: 565px) {
+	.projects #bouncy{
+		height: 20vh;
+	}
 	.profile-photo{
 		height: 300px;
 		background-size: cover;
@@ -367,7 +410,13 @@ progress::-moz-progress-bar {
 		margin-right: 8px;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 495px) {
+	.resume-wrap{
+		padding: 30px;
+	}
+	.list-item{
+		padding-left: 25px;
+	}
 	.logo{
 		display: none;
 	}
@@ -380,6 +429,16 @@ progress::-moz-progress-bar {
 	}
 	progress{
 		width: 40%;
+	}
+}
+@media (max-width: 450px) {
+	.projects #bouncy{
+		height: 17vh;
+	}
+}
+@media (max-width: 400px) {
+	.projects #bouncy{
+		height: 13vh;
 	}
 }
 @keyframes gradient {
