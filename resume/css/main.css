@@ -38,6 +38,26 @@ body{
 	background-image: url(../img/Img.jpg);
 	background-position: center;
 	background-size: cover;
+	position: relative;
+}
+.profile-photo a{
+	font-size: 20px;
+	color: rgba(168,168,168,.94);
+	border: 1px solid rgba(168,168,168,.44);
+	transition: .4s ease;
+}
+.profile-photo a:hover{
+	background-color: rgba(0,0,0,.8);
+}
+.profile-photo a:nth-child(1) {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.profile-photo a:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 35px;
 }
 .profile-info{
 	padding: 50px 30px 70px 30px;
@@ -107,13 +127,35 @@ address{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+}
+.language:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	background-color: #5c5c5c;
+	display: block;
+}
+.language:nth-child(1):before {
+	width: 100px;
+	height: 4px;
+}
+.language:nth-child(2):before {
+	width: 100px;
+	height: 4px;
+}
+.language:nth-child(3):before {
+	width: 100px;
+	height: 34px;
 }
 .language:nth-child(3) {
 	margin-bottom: 0;
 }
 .language-text{
+	z-index: 2;
 	text-transform: uppercase;
-	font-size: 11px;
+	font-size: 9px;
 }
 .languages-per{
 	font-size: 15px;
@@ -355,6 +397,11 @@ progress::-moz-progress-bar {
 @media (max-width: 980px) {
 	.projects #bouncy{
 		height: 25vh;
+	}
+	.language{
+		margin-right: 15px;
+		width: 85px;
+		height: 85px;
 	}
 }
 @media (max-width: 910px;) {
