@@ -37,3 +37,19 @@ $('.menu-btn').on('click', function(e) {
 	$('.menu-btn').toggleClass('move');
 	$('.myTopnav').toggleClass('style');
 }); 
+
+function slowScroll(id) {
+	let offset = 0;
+	$('html, body').animate({
+		scrollTop: $(id).offset().top - offset
+	}, 500);
+	return false;
+}
+
+$(window).scroll(function() {
+	if($(this).scrollTop() <= 200) {
+		$('#toUp').fadeOut();
+	} else {
+		$('#toUp').fadeIn();
+	}
+});

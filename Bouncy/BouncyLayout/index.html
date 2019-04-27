@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/circle.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="OwlCarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="OwlCarousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="OwlCarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="style/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,13 +18,13 @@
 			<div class="navigation">
 				<a href="#" class="icon menu-btn">☰</a>
 				<div class="myTopnav style">
-					<a class="nav__item" href="#header">Hello</a>
-					<a class="nav__item" href="#aboutUs">About</a>
-					<a class="nav__item" href="#services">Services</a>
-					<a class="nav__item" href="#portfolio">Portfolio</a>
-					<a class="nav__item" href="#team">Team</a>
-					<a class="nav__item" href="#blog">Blog</a>
-					<a class="nav__item" href="#contacts">Contact</a>
+					<a class="nav__item" onclick="slowScroll('#header')">Home</a>
+					<a class="nav__item" onclick="slowScroll('#aboutUs')">About</a>
+					<a class="nav__item" onclick="slowScroll('#services')">Services</a>
+					<a class="nav__item" onclick="slowScroll('#portfolio')">Portfolio</a>
+					<a class="nav__item" onclick="slowScroll('#team')">Team</a>
+					<a class="nav__item" onclick="slowScroll('#blog')">Blog</a>
+					<a class="nav__item" onclick="slowScroll('#contacts')">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -34,9 +34,10 @@
 			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
 		</div>
 
-		<div class="buttonScroll"><a href="#aboutUs"><i class="fas fa-angle-down"></i></a></div>
+		<div class="buttonScroll"><a class="nav__item" onclick="slowScroll('#aboutUs')"><i class="fas fa-angle-down"></i></a></div>
 	</header>
 
+	<a onclick="slowScroll('#header')" id="toUp"><i class="fas fa-arrow-up"></i></a>
 	<section id="aboutUs" name="aboutUs">
 		<div class="left">
 			<h2>This is bouncy</h2>
