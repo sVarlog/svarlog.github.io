@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Интернет магазин автозапчастей Bigfoot.su</title>
+	<!-- Normalize.css -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<!-- Carousel -->
+	<link rel="stylesheet" href="Owl-carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="Owl-carousel/assets/owl.theme.default.min.css">
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- Site style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Header -->
+	<header id="header" class="header">
+		<div class="gradient">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg ">
+				  <a class="navbar-brand col-2 mr-auto" href="#"><img src="img/Logo.png" alt="bigfoot" class="w-75"></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarNav">
+				  	
+				    <ul class="navbar-nav align-items-center justify-content-lg-center justify-content-md-start col-12">
+				    	<li class="nav-item col-4">
+					    	<input class="search" type="search" placeholder="Search" aria-label="Search" id="Search">
+							<label for="Search" class="search__img"><img src="img/magnifier.png" alt="search"></label>
+				    	</li>
+				      <li class="nav-item dropdown mx-3">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        	<img src="img/cart.png" alt="cart" class="mr-4">
+				          Корзина
+				        </a>
+				        <ul class="dropdown-menu mt-1">
+						    <li class="dropdown-item d-flex justify-content-between">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex justify-content-between my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex justify-content-between my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+						    <li class="dropdown-item d-flex justify-content-between my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+						    <li class="dropdown-item d-flex justify-content-between my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex justify-content-between my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+						    <li class="dropdown-item d-flex mt-1">
+						    	<a href="#" class="btn btn-black mr-2">Перейти в корзину</a>
+						    	<a href="#" class="btn btn-yellow">Оформление заказа</a>
+						    </li>
+					 	</ul>
+				      </li>
+				      <li class="nav-item active mr-5">
+				        <button type="button" class="modal-btn ml-5" data-toggle="modal" data-target="#myModal">
+				        	<img src="img/user-silhouette.png" alt="user" class="mr-1">
+					        Личный кабинет
+						</button>
+					    <a class="nav-link ml-5" href="#">
+				        	<img src="img/like.png" alt="like" class="mr-1">
+					        Избранное
+					    </a>
+				      </li>
+				      <li class="nav-item d-flex ml-3">
+				      	<div class="img">
+				      		<img class="mr-2" src="img/phone-connection-with-a-boy.png" alt="phone">
+				      	</div>
+				       	<div class="text">
+				       		<a href="#">+7 (922) 147 67 07</a>
+							<span class="tel__text-sub">Бесплатный звонок</span>
+				       	</div>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+			</div>
+			<div class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="col-4">
+							<span class="category">Категории</span>
+							<div class="cat-wrap">
+								<ul class="avto">Автозвук()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автоинструменты()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автомобильные гаджеты()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автохимия()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автоэлектроника()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Аксесуары для водителей()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Ароматизаторы()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Больше категорий
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<ul class="col-8 d-flex justify-content-between ml-auto">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Производители</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Доставка и оплата</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Контакты</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">О нас</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Акции</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link discount" href="#">Скидки</a>
+					      </li>
+					    </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container" id="head__content">
+				<div class="row h-100">
+					<div class="col-4 ml-3">
+						
+					</div>
+					<div class="col-7 ml-4 mt-5" id="carousel">
+						<div class="slider owl-carousel owl-theme owl-loader offer">
+						  	<div class="owl_item d-flex justify-content-around align-items-center">
+							  	<div class="col-7 left my-3 ">
+							  		<h2>Диски SKAD</h2>
+								  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+								  	<a href="#" class="btn-yellow buy">Купить сейчас</a>
+								</div>
+								<div class="col-4 right">
+									<img src="img/wheel.png" alt="wheel" class="w-100">
+								</div>
+						  	</div>
+						  	<div class="owl_item d-flex justify-content-around align-items-center">
+							  	<div class="col-7 left my-3 ">
+							  		<h2>Диски SKAD</h2>
+								  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+								  	<a href="#" class="btn-yellow buy">Купить сейчас</a>
+								</div>
+								<div class="col-4 right">
+									<img src="img/wheel.png" alt="wheel" class="w-100">
+								</div>
+						  	</div>
+						  	<div class="owl_item d-flex justify-content-around align-items-center">
+							  	<div class="col-7 left my-3 ">
+							  		<h2>Диски SKAD</h2>
+								  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+								  	<a href="#" class="btn-yellow buy">Купить сейчас</a>
+								</div>
+								<div class="col-4 right">
+									<img src="img/wheel.png" alt="wheel" class="w-100">
+								</div>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header> 
+	<!-- Header end -->
+	
+	<!-- MODAL WINDOW! -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title mx-auto" id="myModalLabel">Вход в личный кабинет</h4>
+	      </div>
+	      <div class="modal-body d-flex flex-column px-5 justify-content-around">
+	        <input type="email" placeholder="E-Mail">
+	        <input type="password" placeholder="Пароль">
+	      </div>
+	      <div class="modal-footer d-flex flex-column">
+	        <div class="container-fluid">
+	        	<a class="btn-yellow mx-3 enter__btn">Войти</a>
+	        	<div class="d-flex">
+		        	<div class="col-5 mr-auto">
+		        		<a href="#" class="text-white">Забыли пароль?</a>
+		        	</div>
+	        		<div class="col-4 text-right">
+		        		<a href="#" class="text-white">Регистрация</a>
+		        	</div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- MODAL END -->
+
+	<!-- Content -->
+	<section id="content">
+		<div class="container mt-5 pt-5">
+			<div class="row">
+				<div class="col-lg-4 d-lg-block d-md-none">
+					<div class="banner__one-transmision">
+						<div class="d-flex flex-column justify-content-center text-center">
+							<img src="img/transmision.png" alt="transmision" class="m-auto">
+							<h3 class="transmision__text">Трансмиссия</h3>
+							<span class="transmision__persent">50%</span>
+							<a href="#">Купить сейчас</a>
+						</div>
+					</div>
+				</div>	
+				<!-- News -->
+				<div class="col-lg-8 col-md-12 p-0 m-0">
+					<div class="news mb-3">
+						<a href="#"><h2 class="news__title text-uppercase text-center gradient">Новинки</h2></a>
+					</div>
+					<div class="owl-news owl-carousel owl-loader">
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-8 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow price__btn">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center d-flex">
+					  				<div class="col-8 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-7 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-7 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					</div>
+					<!--  -->
+				</div>
+			</div>
+			<div class="row pt-5">
+				<div class="col-lg-4 d-lg-block d-md-none">
+					<div class="banner__sec-break d-flex flex-column justify-content-center text-center">
+						<img src="img/break.png" alt="break" class="m-auto">
+						<h3 class="break__text">Тормоза</h3>
+						<span class="break__persent">50%</span>
+						<a href="#">Купить сейчас</a>
+					</div>
+				</div>
+				<!-- Top sales -->
+				<div class="col-lg-8 col-md-12 pd-0">
+					<div class="top__sales my-4">
+						<a href="#"><h2 class="news__title text-uppercase text-center gradient">Хит продаж</h2></a>
+					</div>
+					<div class="owl-news owl-carousel owl-loader mb-5">
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-8 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center d-flex">
+					  				<div class="col-8 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-7 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					  	<div class="news__card d-flex flex-column justify-content-center align-items-center mx-3">
+					  		<div class="card__head">
+					  			<img src="img/news-item.jpg" alt="item" class="w-50 d-block m-auto">
+					  		</div>
+					  		<div class="card__body text-center">
+					  			<h2>Автомагнитола 2DIN PROLOGY DVS-265T</h2>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quis. Perspiciatis, repellat.</p>
+					  			<span class="price">13417&#8381;</span>
+					  			<div class="row align-items-center w">
+					  				<div class="col-7 d-flex mr-auto">
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  					<span class="star"></span>
+					  				</div>
+					  				<div class="col-4 p-0 m-0">
+					  					<h4>10 отзывов</h4>
+					  				</div>
+					  			</div>
+					  			<a href="#" class="btn-yellow">
+					  			<span class="span btn__text">Купить</span>
+					  			 <img src="img/cartblack.png" alt="cart"></a>
+					  		</div>
+					  	</div>
+					</div>
+					<!--  -->
+				</div>
+			</div>
+			<div class="d-flex flex-lg-row mb-5 flex-md-column-reverse">
+				<div class="col-lg-4 col-md-12 p-0">
+					<div class="reviews">
+						<div class="rev__cards owl-carousel owl-theme">
+							<div class="rev__card">
+						  		<div class="rev__head mb-3">
+						  			<h2 class="review__title text-center">Отзывы</h2>
+						  		</div>
+						  		<div class="rev__body d-flex align-items-center mb-3">	
+									<span class="rev__img mr-2"></span>
+									<div class="rev__body-name ">
+										<h3>Андрей Чинёнов</h3>
+										<div class="d-flex mt-1">
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+										</div>
+									</div>
+						  		</div>
+						  		<div class="rev__footer">
+						  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						  			</p>
+						  		</div>
+						  	</div>
+						  	<div class="rev__card">
+						  		<div class="rev__head mb-3">
+						  			<h2 class="review__title text-center">Отзывы</h2>
+						  		</div>
+						  		<div class="rev__body d-flex align-items-center mb-3">	
+									<span class="rev__img mr-2"></span>
+									<div class="rev__body-name ">
+										<h3>Андрей Чинёнов</h3>
+										<div class="d-flex mt-1">
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+											<span class="star"></span>
+										</div>
+									</div>
+						  		</div>
+						  		<div class="rev__footer">
+						  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+						  		</div>
+						  	</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-12">
+					<div class="about__shop" id="aboutShop">
+						<div class="gradient pt-4">
+							<h2 class="about__title text-uppercase text-center">О магазине</h2>
+							<div class="container d-flex mt-5">
+								<div class="col-6">
+									<div class="about__card">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+									</div>
+								</div>
+								<div class="col-6 ml-5 mt-4 d-flex flex-column">
+									<div class="about__item d-flex my-4">
+										<span><img src="img/path.png" alt="img"></span>
+										<h4 class="about__item-text">
+											Широкий <br>ассортимент
+										</h4>
+									</div>
+									<div class="about__item d-flex my-4">
+										<span><img src="img/original.png" alt="img"></span>
+										<h4 class="about__item-text">
+											Оригинальные <br>запчасти
+										</h4>
+									</div>
+									<div class="about__item d-flex my-4">
+										<span><img src="img/warranty_(1).png" alt="img"></span>
+										<h4 class="about__item-text">
+											Предостовляем <br>гарантию
+										</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+					<h2 class="footer__title">Информация</h2>
+					<a href="#">Доставка</a>
+					<a href="#">Политика безопасности</a>
+					<a href="#">Условия соглашения</a>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+					<h2 class="footer__title">Служба поддержки</h2>
+					<a href="#">Контакты</a>
+					<a href="#">Возврат товара</a>
+					<a href="#">Карта сайта</a>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+					<h2 class="footer__title">Дополнительно</h2>
+					<a href="#">Производители</a>
+					<a href="#">Подарочные сертификаты</a>
+					<a href="#">Партнёрска программа</a>
+					<a href="#">Акции</a>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5">
+					<h2 class="footer__title">Клиенту</h2>
+					<a href="#">Личный кабинет</a>
+					<a href="#">История заказов</a>
+					<a href="#">Закладки</a>
+					<a href="#">Рассылка</a>
+				</div>
+			</div>
+		</div>
+		<div class="down_line"></div>
+		<div class="container">
+			<div class="row py-2">
+				<div class="col-2 mr-auto ml-3">
+					<img src="img/Logo.png" alt="logo" class="w-75">					
+				</div>
+				<div class="col-2 d-flex flex-column mr-5">
+					<div class="icons d-flex justify-content-start">
+						<img src="img/youtube.png" alt="youtube">
+						<img src="img/facebook.png" alt="fb" class="mx-4">
+						<img src="img/vk.png" alt="vk">
+					</div>					
+					<div class="text">
+			       		<a href="#">+7 (922) 147 67 07</a>
+						<span class="footer__text-sub">Бесплатный звонок</span>
+			       	</div>
+				</div>
+			</div>
+		</div>
+		<div class="down_line"></div>
+		<div class="container">
+			<h3 class="rights">Все права защищены,/2019</h3>
+		</div>
+	</footer>
+
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="Owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
