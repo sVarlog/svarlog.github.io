@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Интернет магазин автозапчастей Bigfoot.su</title>
 	<!-- Normalize.css -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -23,20 +24,20 @@
 		<div class="gradient">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg ">
-				  <a class="navbar-brand col-2 mr-auto" href="#"><img src="img/Logo.png" alt="bigfoot" class="w-75"></a>
+				  <a class="navbar-brand col-2 mr-auto" href="#"><img src="img/Logo.png" alt="bigfoot" class="w-100"></a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 				  </button>
 
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				  	
-				    <ul class="navbar-nav align-items-center justify-content-lg-center justify-content-md-start col-12">
-				    	<li class="nav-item col-4">
+				    <ul class="navbar-nav align-items-lg-center align-items-md-center  col-12 flex-wrap">
+				    	<li class="nav-item col-lg-3 col-md-12 my-md-2">
 					    	<input class="search" type="search" placeholder="Search" aria-label="Search" id="Search">
 							<label for="Search" class="search__img"><img src="img/magnifier.png" alt="search"></label>
 				    	</li>
-				      <li class="nav-item dropdown mx-3">
-				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      <li class="nav-item dropdown mx-lg-auto col-lg-3 col-md-4">
+				        <a class="nav-link dropdown-toggle text-lg-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				        	<img src="img/cart.png" alt="cart" class="mr-4">
 				          Корзина
 				        </a>
@@ -76,17 +77,17 @@
 						    </li>
 					 	</ul>
 				      </li>
-				      <li class="nav-item active mr-5">
-				        <button type="button" class="modal-btn ml-5" data-toggle="modal" data-target="#myModal">
+				      <li class="nav-item active col-lg-3 col-md-4 pl-lg-2">
+				        <button type="button" class="modal-btn " data-toggle="modal" data-target="#myModal">
 				        	<img src="img/user-silhouette.png" alt="user" class="mr-1">
 					        Личный кабинет
 						</button>
-					    <a class="nav-link ml-5" href="#">
+					    <a class="nav-link " href="#">
 				        	<img src="img/like.png" alt="like" class="mr-1">
 					        Избранное
 					    </a>
 				      </li>
-				      <li class="nav-item d-flex ml-3">
+				      <li class="nav-item d-flex col-lg-3 col-md-4">
 				      	<div class="img">
 				      		<img class="mr-2" src="img/phone-connection-with-a-boy.png" alt="phone">
 				      	</div>
@@ -220,7 +221,7 @@
 							</div>
 						</div>
 
-						<ul class="col-8 d-flex justify-content-between ml-auto">
+						<ul class="col-8 d-flex justify-content-between ml-auto flex-md-wrap">
 					      <li class="nav-item active">
 					        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
 					      </li>
@@ -654,26 +655,26 @@
 	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
 					<h2 class="footer__title">Информация</h2>
 					<a href="#">Доставка</a>
 					<a href="#">Политика безопасности</a>
 					<a href="#">Условия соглашения</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
 					<h2 class="footer__title">Служба поддержки</h2>
 					<a href="#">Контакты</a>
 					<a href="#">Возврат товара</a>
 					<a href="#">Карта сайта</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 bd-right">
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
 					<h2 class="footer__title">Дополнительно</h2>
 					<a href="#">Производители</a>
 					<a href="#">Подарочные сертификаты</a>
 					<a href="#">Партнёрска программа</a>
 					<a href="#">Акции</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5">
+				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 text-sm-center ft-item">
 					<h2 class="footer__title">Клиенту</h2>
 					<a href="#">Личный кабинет</a>
 					<a href="#">История заказов</a>
@@ -685,11 +686,11 @@
 		<div class="down_line"></div>
 		<div class="container">
 			<div class="row py-2">
-				<div class="col-2 mr-auto ml-3">
+				<div class="col-lg-2 col-md-4 mr-auto ml-3">
 					<img src="img/Logo.png" alt="logo" class="w-75">					
 				</div>
-				<div class="col-2 d-flex flex-column mr-5">
-					<div class="icons d-flex justify-content-start">
+				<div class="col-lg-3 col-md-3 d-flex flex-column align-items-end mr-lg-5">
+					<div class="icons d-flex justify-content-end">
 						<img src="img/youtube.png" alt="youtube">
 						<img src="img/facebook.png" alt="fb" class="mx-4">
 						<img src="img/vk.png" alt="vk">
