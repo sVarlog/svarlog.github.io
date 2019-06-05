@@ -23,20 +23,66 @@
 	<header id="header" class="header">
 		<div class="gradient">
 			<div class="container">
-				<nav class="navbar navbar-expand-lg ">
-				  <a class="navbar-brand col-2 mr-auto" href="#"><img src="img/Logo.png" alt="bigfoot" class="w-100"></a>
+				<div class="row d-flex justify-content-center">
+					<nav class="navbar navbar-expand-lg col-12">
+				  <a class="navbar-brand col-2 mr-auto" href="#"><img src="img/Logo.png" alt="bigfoot" class="logo"></a>
+				  <button type="button" class="modal-btn mr-2 nav-modal-btn d-block d-lg-none" data-toggle="modal" data-target="#myModal">
+			        	<img src="img/user-silhouette.png" alt="user" class="mr-1">
+					</button>
+				  <span class=" dropdown d-lg-none d-block nav-btn">
+				        <a class="nav-btn__img d-block text-lg-center" href="#" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+				        	<img src="img/cart.png" alt="cart">
+				        </a>
+				        <ul class="nav-cart dropdown-menu">
+						    <li class="dropdown-item d-flex ">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex  my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex  my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+						    <li class="dropdown-item d-flex  my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+						    <li class="dropdown-item d-flex  my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+							</li>
+							<li class="line"></li>
+							<li class="dropdown-item d-flex  my-1">
+						    	<span>Диски SKAD</span>
+						    	<span>2 x 5000 &#8381;</span>
+						    	<li class="line"></li>
+							</li>
+						    <li class="dropdown-item d-flex flex-column">
+						    	<a href="#" class="btn btn-black my-1">Перейти в корзину</a>
+						    	<a href="#" class="btn btn-yellow">Оформление заказа</a>
+						    </li>
+					 	</ul>
+				      </span>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+
 				    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 				  </button>
 
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				  	
-				    <ul class="navbar-nav align-items-lg-center align-items-md-center  col-12 flex-wrap">
+				    <ul class="navbar-nav align-items-center col-12 justify-content-end d-lg-flex d-none">
 				    	<li class="nav-item col-lg-3 col-md-12 my-md-2">
 					    	<input class="search" type="search" placeholder="Search" aria-label="Search" id="Search">
 							<label for="Search" class="search__img"><img src="img/magnifier.png" alt="search"></label>
 				    	</li>
-				      <li class="nav-item dropdown mx-lg-auto col-lg-3 col-md-4">
+				      <li class="nav-item dropdown col-3">
 				        <a class="nav-link dropdown-toggle text-lg-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				        	<img src="img/cart.png" alt="cart" class="mr-4">
 				          Корзина
@@ -77,18 +123,18 @@
 						    </li>
 					 	</ul>
 				      </li>
-				      <li class="nav-item active col-lg-3 col-md-4 pl-lg-2">
-				        <button type="button" class="modal-btn " data-toggle="modal" data-target="#myModal">
+				      <li class="nav-item active col-3">
+				        <button type="button" class="modal-btn ml-4" data-toggle="modal" data-target="#myModal">
 				        	<img src="img/user-silhouette.png" alt="user" class="mr-1">
 					        Личный кабинет
 						</button>
-					    <a class="nav-link " href="#">
+					    <a class="nav-link ml-4" href="#">
 				        	<img src="img/like.png" alt="like" class="mr-1">
 					        Избранное
 					    </a>
 				      </li>
-				      <li class="nav-item d-flex col-lg-3 col-md-4">
-				      	<div class="img">
+				      <li class="nav-item d-flex col-3">
+				      	<div class="img ml-3">
 				      		<img class="mr-2" src="img/phone-connection-with-a-boy.png" alt="phone">
 				      	</div>
 				       	<div class="text">
@@ -97,13 +143,131 @@
 				       	</div>
 				      </li>
 				    </ul>
+				    <div class="d-lg-none d-block col-12 categody-block">
+							<span class="category nav-cat mx-auto">Категории</span>
+							<div class="cat-wrap nav-wrap">
+								<ul class="avto">Автозвук()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автоинструменты()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автомобильные гаджеты()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автохимия()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Автоэлектроника()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Аксесуары для водителей()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Ароматизаторы()
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+								<ul class="avto">Больше категорий
+									<li class="avto__item"><a href="#">Автомагнитолы()</a></li>
+									<li class="avto__item"><a href="#">Акустические системы()</a></li>
+									<li class="avto__item"><a href="#">Вибро и шумоизоляция()</a></li>
+									<li class="avto__item"><a href="#">Источники питания()</a></li>
+									<li class="avto__item"><a href="#">Кабельная продукция()</a></li>
+									<li class="avto__item"><a href="#">Компоненты для установки()</a></li>
+									<li class="avto__item"><a href="#">Короба и подиумы()</a></li>
+									<li class="avto__item"><a href="#">Переходные рамки, ISO и адаптеры()</a></li>
+									<li class="avto__item"><a href="#">Процессоры()</a></li>
+									<li class="avto__item"><a href="#">Усилители()</a></li>
+									<li class="avto__item"><a href="#">Фирменная атрибутика()</a></li>
+									<li class="avto__item"><a href="#">Эмуляторы()</a></li>
+								</ul>
+							</div>
+						</div>
 				  </div>
 				</nav>
+				</div>
 			</div>
-			<div class="container-fluid"> <!--menu--> 
+			<div class="container-fluid d-lg-block d-none"> <!--menu--> 
 				<div class="container">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-lg-4">
 							<span class="category">Категории</span>
 							<div class="cat-wrap">
 								<ul class="avto">Автозвук()
@@ -249,11 +413,11 @@
 			</div>
 			
 			<div class="container" id="head__content">
-				<div class="row h-100">
-					<div class="col-4 ml-3">
+				<div class="row">
+					<div class="col-4 ml-3 d-lg-block d-none">
 						
 					</div>
-					<div class="col-7 ml-4 mt-5" id="carousel">
+					<div class="col-lg-7 d-lg-block d-none ml-4 mt-5" id="carousel">
 						<div class="slider owl-carousel owl-theme owl-loader offer">
 						  	<div class="owl_item d-flex justify-content-around align-items-center">
 							  	<div class="col-7 left my-3 ">
@@ -324,9 +488,9 @@
 
 	<!-- Content -->
 	<section id="content">
-		<div class="container mt-5 pt-5">
+		<div class="container mt-lg-5 pt-5">
 			<div class="row">
-				<div class="col-lg-4 d-lg-block d-md-none">
+				<div class="col-lg-4 d-lg-block d-none">
 					<div class="banner__one-transmision">
 						<div class="d-flex flex-column justify-content-center text-center">
 							<img src="img/transmision.png" alt="transmision" class="m-auto">
@@ -337,7 +501,7 @@
 					</div>
 				</div>	
 				<!-- News -->
-				<div class="col-lg-8 col-md-12 p-0 m-0">
+				<div class="col-lg-8 col-10 p-0 mx-auto">
 					<div class="news mb-3">
 						<a href="#"><h2 class="news__title text-uppercase text-center gradient">Новинки</h2></a>
 					</div>
@@ -446,8 +610,8 @@
 					<!--  -->
 				</div>
 			</div>
-			<div class="row pt-5">
-				<div class="col-lg-4 d-lg-block d-md-none">
+			<div class="row pt-lg-5">
+				<div class="col-lg-4 d-lg-block d-none">
 					<div class="banner__sec-break d-flex flex-column justify-content-center text-center">
 						<img src="img/break.png" alt="break" class="m-auto">
 						<h3 class="break__text">Тормоза</h3>
@@ -456,7 +620,7 @@
 					</div>
 				</div>
 				<!-- Top sales -->
-				<div class="col-lg-8 col-md-12 pd-0">
+				<div class="col-lg-8 col-11 pd-0 mx-auto">
 					<div class="top__sales my-4">
 						<a href="#"><h2 class="news__title text-uppercase text-center gradient">Хит продаж</h2></a>
 					</div>
@@ -565,8 +729,8 @@
 					<!--  -->
 				</div>
 			</div>
-			<div class="d-flex flex-lg-row mb-5 flex-md-column-reverse">
-				<div class="col-lg-4 col-md-12 p-0">
+			<div class="d-flex flex-lg-row mb-lg-5 flex-md-column-reverse">
+				<div class="col-lg-4 col-md-12 d-lg-block d-none p-0">
 					<div class="reviews">
 						<div class="rev__cards owl-carousel owl-theme">
 							<div class="rev__card">
@@ -615,7 +779,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8 col-md-12">
+				<div class="col-lg-8 col-md-12 d-lg-block d-none">
 					<div class="about__shop" id="aboutShop">
 						<div class="gradient pt-4">
 							<h2 class="about__title text-uppercase text-center">О магазине</h2>
@@ -655,26 +819,26 @@
 	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
+				<div class="col-lg-3 col-md-6 col-12 d-flex flex-column p-5 text-lg-left text-center ft-item">
 					<h2 class="footer__title">Информация</h2>
 					<a href="#">Доставка</a>
 					<a href="#">Политика безопасности</a>
 					<a href="#">Условия соглашения</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
+				<div class="col-lg-3 col-md-6 col-12 d-flex flex-column p-5 text-lg-left text-center ft-item">
 					<h2 class="footer__title">Служба поддержки</h2>
 					<a href="#">Контакты</a>
 					<a href="#">Возврат товара</a>
 					<a href="#">Карта сайта</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 responsive-bd text-sm-center ft-item">
+				<div class="col-lg-3 col-md-6 col-12 d-flex flex-column p-5 text-lg-left text-center ft-item">
 					<h2 class="footer__title">Дополнительно</h2>
 					<a href="#">Производители</a>
 					<a href="#">Подарочные сертификаты</a>
 					<a href="#">Партнёрска программа</a>
 					<a href="#">Акции</a>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column p-5 text-sm-center ft-item">
+				<div class="col-lg-3 col-md-6 col-12 d-flex flex-column p-5 text-lg-left text-center ft-item">
 					<h2 class="footer__title">Клиенту</h2>
 					<a href="#">Личный кабинет</a>
 					<a href="#">История заказов</a>
@@ -686,10 +850,10 @@
 		<div class="down_line"></div>
 		<div class="container">
 			<div class="row py-2">
-				<div class="col-lg-2 col-md-4 mr-auto ml-3">
-					<img src="img/Logo.png" alt="logo" class="w-75">					
+				<div class="col-lg-2 col-4 mr-auto ml-3">
+					<img src="img/Logo.png" alt="logo" class="logo">					
 				</div>
-				<div class="col-lg-3 col-md-3 d-flex flex-column align-items-end mr-lg-5">
+				<div class="col-lg-3 col-6 d-flex flex-column align-items-end mr-lg-5">
 					<div class="icons d-flex justify-content-end">
 						<img src="img/youtube.png" alt="youtube">
 						<img src="img/facebook.png" alt="fb" class="mx-4">

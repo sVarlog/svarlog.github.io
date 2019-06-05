@@ -27,6 +27,12 @@ $(document).ready(function() {
     navText : ["<img src='img/prev-arrow.png'>","<img src='img/next-arrow.png'>"],
     stagePadding: 5,
     responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items: 1
+        },
         1000:{
             items:1
         },
