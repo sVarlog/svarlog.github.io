@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ставки на киберспорт</title>
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<div class="firstRow">
+				<div class="name">
+					<p>Название компании</p>
+				</div>
+				<div class="login">
+					<div class="enter">
+						<button id="modalBtn" class="enter">Вход</button>
+					</div>
+					<div class="register">
+						<a href="checkIn.html" class="check">Регистрация</a>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="secondRow">
+				<ul class="categ">
+					<a href="index.html"><p>Киберспорт:</p></a>
+					<li class="Dota"><a href="#">Dota 2</a></li>
+					<li class="CS:GO"><a href="#">CS:GO</a></li>
+					<li class="Lol"><a href="#">Lol</a></li>
+					<li class="starcraft"><a href="#">StarCraft 2</a></li>
+					<li class="WOW"><a href="#">WOW</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal-window">
+			<div class="modal" id="modal">
+			    <div class="modal-content">
+			    	<header>
+				    	<span class="enter">Вход</span>
+				        <span class="close">&times;</span>
+				    </header>
+				    <input type="email" placeholder="Введите ваш е-mail">
+				    <input type="password" placeholder="Введите пароль">
+				    <a href="#" class="btn">Войти</a>
+				    <a href="#">Забыли пароль?</a>
+			    </div>
+			</div>
+		</div>
+	</header>
+	<section class="checkIn">
+		<h2>Регистрация</h2>
+			<div class="border"></div>
+		<div class="container">
+			
+			<div class="form">
+				<div class="row">
+				<span>ФИО *</span>
+				<input type="text" placeholder="Иванов Иван Иванович">
+			</div>
+			<div class="row">
+				<span>Дата рождения *</span>
+				<input type="text" placeholder="ДД.ММ.ГГГГ">
+			</div>
+			<div class="row">
+				<span>Электронная почта*</span>
+				<input type="email" placeholder="Email">
+			</div>
+			<div class="row">
+				<span>Пароль *</span>
+				<input type="password" placeholder="Пароль">
+			</div>
+			<div class="row">
+				<span>Подвтердите пароль *</span>
+				<input type="password" placeholder="Подтвердите пароль">
+			</div>
+			<div class="row">
+				<span>Номер телефона *</span>
+				<input type="phoneNumber" placeholder="Номер мобильного телефона">
+			</div>
+			<div class="row">
+				<a href="#" class="sendMessage">Отправить смс</a>
+			</div>
+			<div class="row">
+				<span>Код подтверждения *</span>
+				<input type="text" placeholder="1234">
+			</div>
+			</div>
+			<div class="confirm">
+				<div class="grayBg">
+					<div class="row">
+						<input type="checkbox">
+						<span>Соглашаюсь с Правилами азартных игр Букмекерской конторы, Правилами приема интерактивных ставок и выплаты выигрышей Букмекерской конторы, Правилами посещения букмекерской конторы, условиями основанного на риске соглашения о выигрыше и даю согласие на обработку персональных данных, как без использования средств автоматизации, так и с их использованием. *</span>
+					</div>
+					<div class="row">
+						<input type="checkbox">
+						<span>Соглашаюсь с получением информационных материалов по электронной почте и SMS на телефонный номер об услугах и сведениях, необходимые для принятия участия в азартной игре, акциях, бонусах сайта НАЗВАНИЕ САЙТА *</span>
+					</div>
+				</div>
+				<div class="row">
+					<a href="#" class="checkBtn">Регистрация</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="name">
+				<p>Название компании</p>
+			</div>
+			<p><a href="#">Правила</a></p>
+			<p><a href="#">Контакты</a></p>
+			<p><a href="#">Мобильная версия</a></p>
+		</div>
+	</footer>
+
+	<script src="script/script.js"></script>
+</body>
+</html>
