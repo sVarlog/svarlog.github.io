@@ -336,7 +336,6 @@ a, li{
 #featured .heading h2{
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 10px;
 	font-size: 20px;
 	font-weight: lighter;
 	color: #4E555E;
@@ -448,8 +447,6 @@ a, li{
 }
 @media (max-width: 670px){
 	#featured .heading h2{
-		font-size: 16px;
-		letter-spacing: 5px;
 		margin-bottom: 0.5em;
 	}
 	#featured .heading p{
@@ -481,7 +478,6 @@ a, li{
 	text-transform: uppercase;
 	font-weight: lighter;
 	font-size: 20px;
-	letter-spacing: 7px;
 	color: #4E555E;
 	margin-bottom: 1em;
 }
@@ -556,7 +552,8 @@ a, li{
 /* Adaptive */
 @media (max-width: 1020px){
 	#services .servRow{
-		display: block;
+		flex-direction: column;
+		padding-bottom: 25px;
 	}
 	#services .icons{
 		width: 100%;
@@ -591,9 +588,7 @@ a, li{
 		margin-bottom: 0.5em;
 	}
 	#services h2{
-		font-size: 16px;
 		margin-bottom: 0.5em;
-		letter-spacing: 4px;
 	}
 	#services p {
 		margin-bottom: 1em;
@@ -647,6 +642,19 @@ a, li{
 }
 
 /* Adaptive */
+@media (max-width: 940px) {
+	.containerQuetes img{
+		margin-top: -100px;
+	}
+}
+@media (max-width: 810px){
+	#quotImg{
+		display: none;
+	}
+	.blockQuetes{
+		width: 100%;
+	}
+}
 @media (max-width: 530px) {
 	.blockQuetes h2{
 		font-size: 16px;
@@ -657,14 +665,6 @@ a, li{
 	}
 	.blockQuetes span{
 		font-size: 13px;
-	}
-}
-@media (max-width: 810px){
-	#quotImg{
-		display: none;
-	}
-	.blockQuetes{
-		width: 100%;
 	}
 }
 
@@ -682,7 +682,6 @@ a, li{
 	text-transform: uppercase;
 	font-weight: lighter;
 	margin-bottom: 1em;
-	letter-spacing: 6px;
 	color: #4E555E;
 }
 #portfolio p{
@@ -724,7 +723,7 @@ a, li{
 	transition: .9s;
 }
 .portfolio .post:hover{
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .portfolio .descr{
 	position: absolute;
@@ -795,7 +794,7 @@ a, li{
 	display: block;
 	width: 100px;
 	margin: 0 auto;
-	padding: 0.3em;
+	padding: 10px;
 	border: 1px solid #fff;
 	border-radius: 30px;
 	font-size: 16px;
@@ -822,8 +821,6 @@ a, li{
 		padding: 5% 0;
 	}
 	#portfolio h2{
-		letter-spacing: 4px;
-		font-size: 18px;
 		margin-bottom: 0.7em;
 	}
 	#portfolio p{
@@ -905,8 +902,6 @@ a, li{
 }
 @media (max-width: 725px) {
 	#portfolio h2{
-		font-size: 18px;
-		letter-spacing: 4px;
 		margin-bottom: 0.5em;
 	}
 	#portfolio p{
@@ -917,9 +912,6 @@ a, li{
 	}
 }
 @media (max-width: 580px){
-	#portfolio h2{
-		font-size: 16px;
-	}
 	#portfolio p{
 		font-size: 13px;
 		width: 100%;
@@ -1105,7 +1097,6 @@ progress::-webkit-progress-value{
 }
 @media (max-width: 650px) {
 	#team h2{
-		font-size: 16px;
 		margin-bottom: 0.4em;
 	}
 	#team p{
@@ -1311,7 +1302,7 @@ progress::-webkit-progress-value{
 #blog .blogContainer .owl-carousel .owl-item{
 	display: flex;
 	flex-direction: column;
-	height: 65vh;
+	padding-bottom: 20px;
 }
 #blog .blogContainer .item h2{
 	text-transform: uppercase;
@@ -1505,9 +1496,6 @@ progress::-webkit-progress-value{
 @media (max-width: 410px){
 	#price{
 		padding: 3% 6%;
-	}
-	#price .priceContainer h2{
-		font-size: 15px;
 	}
 	.priceRow .card{
 		width: 75%;
