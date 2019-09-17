@@ -33,28 +33,33 @@ body{
 	color: #ababab;
 	animation: animLeft .5s ease;
 }
-.profile-photo{
-	height: 230px;	
-	background-image: url(../img/Img.jpg);
-	background-position: center;
-	background-size: cover;
+.profile-wrap{
+	height: 350px;	
 	position: relative;
+	padding: 30px 25px 0 25px;
 }
-.profile-photo a{
+.profile-wrap .profile-photo{
+	background-image: url(../img/MyImg.jpeg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+.profile-wrap a{
 	font-size: 20px;
 	color: rgba(168,168,168,.94);
 	border: 1px solid rgba(168,168,168,.44);
 	transition: .4s ease;
 }
-.profile-photo a:hover{
+.profile-wrap a:hover{
 	background-color: rgba(0,0,0,.8);
 }
-.profile-photo a:nth-child(1) {
+.profile-wrap a:nth-child(1) {
 	position: absolute;
 	right: 0;
 	top: 0;
 }
-.profile-photo a:nth-child(2) {
+.profile-wrap a:nth-child(2) {
 	position: absolute;
 	top: 0;
 	right: 35px;
@@ -417,9 +422,11 @@ progress::-moz-progress-bar {
 	.resume{
 		margin-top: 20px;
 	}
-	.profile-photo{
-		height: 400px;
-		background-size: cover;
+	.profile-wrap{
+		height: 500px;
+	}
+	.profile-wrap .profile-photo{
+		background-size: 90%;
 	}
 	.lines{
 		display: none;
@@ -444,9 +451,8 @@ progress::-moz-progress-bar {
 	.projects #bouncy{
 		height: 20vh;
 	}
-	.profile-photo{
+	.profile-wrap{
 		height: 300px;
-		background-size: cover;
 	}
 	.logo-img{
 		width: 70px;
@@ -468,7 +474,7 @@ progress::-moz-progress-bar {
 		display: none;
 	}
 	.container{
-		min-width: 320px;
+		min-width: 290px;
 	}
 	.name{
 		letter-spacing: normal;
