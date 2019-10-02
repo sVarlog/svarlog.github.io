@@ -1,0 +1,51 @@
+@media screen and (max-width: 1199px){
+	.section12 .tab-title .item p{
+		line-height: 18px;
+		font-size: 14px;
+	}
+	.section12 .tab-title .item{
+		padding: 15px 30px;
+	}
+}
+@media screen and (max-width: 768px){
+	.section2 .partLeft img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.section2 .partRight{
+		position: initial;
+	}
+	.section2 .lines{
+		position: initial;
+	}
+	.section2 .partRight:after{
+		left: 15px;
+	}
+	.section6 .tab-title .active:after{
+		display: none;
+	}
+	.section6 .tab-content .container{
+		padding: 40px;
+	}
+}
+@media screen and (max-width: 576px){
+	.section8 .images{
+		margin: 100px 15px 0px 15px;
+	}
+	.section10 .owl-carousel img{
+		width: 100%;
+		height: 100%;
+	}
+	.section10 .owl-carousel .testText{
+		left: 0;
+	}
+	.section12 .tab-content .item{
+		margin: 0 15px;
+	}
+	.section13 input[type="email"]{
+		padding-right: 15px;
+	}
+	.section14 .container{
+		padding: 150px 0 0 0;
+	}
+}
