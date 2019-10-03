@@ -414,12 +414,16 @@ progress::-moz-progress-bar {
 	.container{
 		width: 90%;
 	}
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #alexis,
+	.projects #webShop{
 		height: 28vh;
 	}
 }
 @media (max-width: 980px) {
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #alexis,
+	.projects #webShop{
 		height: 25vh;
 	}
 	.language{
@@ -429,7 +433,9 @@ progress::-moz-progress-bar {
 	}
 }
 @media (max-width: 910px;) {
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #alexis,
+	.projects #webShop{
 		height: 19vh;
 	}
 }
@@ -467,7 +473,9 @@ progress::-moz-progress-bar {
 	}
 }
 @media (max-width: 565px) {
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #alexis,
+	.projects #webShop{
 		height: 20vh;
 	}
 	.profile-wrap{
@@ -504,12 +512,15 @@ progress::-moz-progress-bar {
 	}
 }
 @media (max-width: 450px) {
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #webShop{
 		height: 17vh;
 	}
 }
 @media (max-width: 400px) {
-	.projects #bouncy{
+	.projects #bouncy,
+	.projects #alexis,
+	.projects #webShop{
 		height: 13vh;
 	}
 }
