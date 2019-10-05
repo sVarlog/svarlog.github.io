@@ -1,31 +1,15 @@
-html{
-	box-sizing: border-box; 
-}
-*, *:after, *:before{
-	box-sizing: inherit; 
-}
-h1, h2, h3, h4, h5, h6{
-	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
-}
-a{
-	text-decoration: none;
-}
-body{
-	margin: 0;
-	background: linear-gradient(45deg, #304352, #BFC7CD, #204352);
-	background-size: 200% 200%;
-	animation: gradient 5s ease infinite;
-	font-family: 'Roboto', sans-serif;
-}
+html{box-sizing: border-box;}
+*, *:after, *:before{box-sizing: inherit;}
+h1, h2, h3, h4, h5, h6{font-family: sans-serif;margin: 0;padding: 0;}
+a{text-decoration: none;}
+body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);background-size: 200% 200%;animation: gradient 5s ease infinite;font-family: 'Roboto', sans-serif;}
+.text-center{text-align:center;}.mb{margin-bottom:3rem;}
 .container{
 	display: flex;
 	max-width: 960px;
-	background-color: #eaeaea;
+	background-color: rgba(0,0,0,0);
 	margin: 20px auto;
 	justify-content: space-between;
-	box-shadow: 1px 1px 10px rgba(0,0,0,.4)
 }
 .profile{
 	flex-basis: 37%;
