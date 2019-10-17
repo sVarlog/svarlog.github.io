@@ -1,6 +1,7 @@
 html{box-sizing: border-box;}
 *, *:after, *:before{box-sizing: inherit;}
-h1, h2, h3, h4, h5, h6{font-family: sans-serif;margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-family:'Prosto One',cursive;margin:0;padding:0;}
+p,a,li{font-family:'Cormorant SC',serif;}
 a{text-decoration: none;}
 body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);background-size: 200% 200%;animation: gradient 5s ease infinite;font-family: 'Roboto', sans-serif;}
 .text-center{text-align:center;}.mb{margin-bottom:3rem;}
@@ -34,9 +35,10 @@ body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);bac
 	color: rgba(168,168,168,.94);
 	border: 1px solid rgba(168,168,168,.44);
 	transition: .4s ease;
+	font-weight: 700;
 }
 .profile-wrap a:hover{
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.9);
 }
 .profile-wrap a:nth-child(1) {
 	position: absolute;
@@ -55,6 +57,9 @@ body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);bac
 	line-height: 24.19px;
 	font-size: 13px;
 	padding-bottom: 20px;
+}
+.languages{
+	font-family: 'Cormorant SC', serif;
 }
 .heading{
 	margin: 0;
@@ -261,12 +266,17 @@ address{
 	border-bottom: 1px solid rgba(168,168,168,.44);
 	margin-top: 30px;
 }
+.projects h2 > span{
+	font-size: 16px;
+	font-weight: 400;
+}
 .projects .work{
 	margin-bottom: 15px;
 }
 .projects .work a{
 	width: 100%;
-	display: block;
+	display: flex;
+	flex-direction: column;
 	height: inherit;
 	position: absolute;
 	color: #fff;
@@ -279,6 +289,10 @@ address{
 .projects .work:hover a{
 	opacity: 1;
 	background-color: rgba(0,0,0,.8);
+}
+.projects .work a > p{
+	margin: 0;
+	text-align: center;
 }
 .projects #bouncy{
 	background: url(../img/Bouncy.jpg) no-repeat;
@@ -361,7 +375,9 @@ address{
 	border: 1px solid #39383a;
 	background: #fff;
 }
-
+.skills span{
+	font-family:'Prosto One',cursive;
+}
 progress {
   background-color: #fff;
   border: 1px solid #000;
@@ -476,7 +492,7 @@ progress::-moz-progress-bar {
 }
 @media (max-width: 495px) {
 	.resume-wrap{
-		padding: 30px;
+		padding: 15px;
 	}
 	.list-item{
 		padding-left: 25px;
@@ -500,12 +516,30 @@ progress::-moz-progress-bar {
 	.projects #webShop{
 		height: 17vh;
 	}
+	.projects h2 > span{
+		font-size: 12px;
+	}
+	.projects .work a{
+		font-size: 12px;
+	}
 }
 @media (max-width: 400px) {
 	.projects #bouncy,
 	.projects #alexis,
 	.projects #webShop{
 		height: 13vh;
+	}
+	.skills-list__item{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	progress{
+		width: 100%;
+		margin-top: 10px;
+	}
+	.resume{
+		padding: 15px;
 	}
 }
 @keyframes gradient {
