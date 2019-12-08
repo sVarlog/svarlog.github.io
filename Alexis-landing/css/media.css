@@ -196,3 +196,201 @@
 		font-size: 12px;
 	}
 }
+@media screen and (max-width: 1199px){
+	.section12 .tab-title .item p{
+		line-height: 18px;
+		font-size: 14px;
+	}
+	.section12 .tab-title .item{
+		padding: 15px 30px;
+	}
+}
+@media screen and (max-width: 768px){
+	.section2 .partLeft img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.section2 .partRight{
+		position: initial;
+	}
+	.section2 .lines{
+		position: initial;
+	}
+	.section2 .partRight:after{
+		left: 15px;
+	}
+	.section6 .tab-title .active:after{
+		display: none;
+	}
+	.section6 .tab-content .container{
+		padding: 40px;
+	}
+}
+@media screen and (max-width: 576px){
+	.section1 .container{
+		padding-bottom: 100px;
+	}
+	.section7 .container{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.section8 .images{
+		margin: 100px 15px 0px 15px;
+	}
+	.section10 .owl-carousel img{
+		width: 100%;
+		height: 100%;
+	}
+	.section10 .owl-carousel .testText{
+		left: 0;
+	}
+	.section11 .logo img{
+		width: 100%;
+	}
+	.section11 .logo{
+		padding: 0 0 0 15px;
+	}
+	.section11 h3{
+		font-size: 15px;
+	}
+	.section11 .headline{
+		justify-content: center;
+	}
+	.section12 .tab-content .item{
+		margin: 0 15px;
+	}
+	.section12 .container{
+		padding-bottom: 100px;
+	}
+	.section12 .tab-title{
+		margin-top: 10px;
+	}
+	.section13 input[type="email"]{
+		padding-right: 15px;
+	}
+	.section14 .container{
+		padding: 150px 0 0 0;
+	}
+	.section14 p{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+@media screen and (max-width: 500px){
+	.section2 .partRight:after{
+		top: -10%;
+	}
+}
+@media screen and (max-width: 440px){
+	.section1 h1{
+		font-size: 50px;
+	}
+	.section2 .partRight h2,
+	.section3 h2,
+	.section4 h2,
+	.section5 h2,
+	.section6 h2,
+	.section8 h2,
+	.section9 h2,
+	.section10 h2,
+	.section11 h2,
+	.section12 h2,
+	.section14 h2{
+		font-size: 40px;
+	}
+	.section2 .partRight:after{
+		font-size: 150px;
+		top: -8%;
+	}
+	.section3 h2:before,
+	.section5 h2:before,
+	.section6 h2:before,
+	.section8 h2:before,
+	.section9 h2:before,
+	.section10 h2:before,
+	.section11 h2:before,
+	.section12 h2:before{
+		font-size: 150px;
+		left: calc(50% - 100px);
+		top: -210%;
+	}
+	.section14 h2:before{
+		font-size: 150px;
+		left: calc(50% - 80px);
+		top: -210%;
+	}
+	.section2 .partRight p,
+	.section6 .tab-content p,
+	.section11 .cards p,
+	.section12 .tab-content .item .text p,
+	.section12 .tab-title .item p{
+		font-size: 12px;
+	}
+	.section3 .icons .cardContent{
+		padding: 55px 15px;
+	}
+	.section6 .tab-content .container{
+		padding: 30px 10px;
+	}
+	.section10 .container,
+	.section13 .container{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.section13 h3{
+		font-size: 20px;
+	}
+	.section13 input[type="email"]{
+		padding: 10px 0 10px 15px;
+		font-size: 12px;
+	}
+	.section13 input[type="submit"]{
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 392px){
+	.section2 .partRight h2,
+	.section3 h2,
+	.section4 h2,
+	.section5 h2,
+	.section6 h2,
+	.section8 h2,
+	.section9 h2,
+	.section10 h2,
+	.section11 h2,
+	.section12 h2,
+	.section14 h2{
+		font-size: 30px;
+	}
+	.section3 p,
+	.section4 p,
+	.section5 p,
+	.section6 p,
+	.section8 p,
+	.section9 p,
+	.section10 p,
+	.section11 p,
+	.section12 p,
+	.section14 p{
+		font-size: 14px;
+	}
+	.section2 .partRight{
+		padding: 90px 30px;
+	}
+	.section3 h2:before,
+	.section5 h2:before,
+	.section6 h2:before,
+	.section8 h2:before,
+	.section9 h2:before,
+	.section10 h2:before,
+	.section11 h2:before,
+	.section12 h2:before,
+	.section14 h2:before{
+		top: -320%;
+	}
+	.section9 .card p,
+	.section10 .owl-carousel .testText p{
+		font-size: 12px;
+	}
+}
