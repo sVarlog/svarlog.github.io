@@ -116,7 +116,7 @@ li{
 }
 .header #nav{
 	position: fixed;
-	transform: translateX(500px);
+	transform: translateX(1500px);
 	background: rgba(0,0,0,.85);
 	height: 100vh;
 	display: flex;
