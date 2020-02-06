@@ -74,9 +74,6 @@ body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);bac
 .contacts{
 	margin-bottom: 70px;
 }
-.contacts-item:first-child i{
-	transform: rotate(90deg);
-}
 .contacts-item{
 	padding: 20px 0;
 	border-bottom: 2px dashed #5a5a5a;
@@ -652,9 +649,6 @@ body{margin: 0;background: linear-gradient(45deg, #304352, #BFC7CD, #204352);bac
 }
 .contacts{
 	margin-bottom: 70px;
-}
-.contacts-item:first-child i{
-	transform: rotate(90deg);
 }
 .contacts-item{
 	padding: 20px 0;
