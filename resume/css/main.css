@@ -386,10 +386,10 @@ progress::-moz-progress-bar {
 }
 .works .projects .workItem{
 	width: 45%;
-	margin: auto;
 	display: block;
 	margin: 10px;
 	position: relative;
+	border: 1px solid rgba(168,168,168,.44);
 }
 .works .projects .workItem .itemWrap{
 	position: absolute;
@@ -441,7 +441,7 @@ progress::-moz-progress-bar {
 }
 .works .projects .workItem img{
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 /* WORKS END */
 /* MODAL WINDOWS */
