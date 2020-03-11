@@ -262,8 +262,18 @@ address{
 	left: 0;
 }
 /* EDUCATION */
-.education a > img{
+.education .educationWrap{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.education .educationItem{
+	display: block;
+	width: 45%;
+}
+.education .educationWrap img{
 	width: 100%;
+	height: 100%;
 }
 /* EDUCATION END */
 /* SKILLS LIST */
@@ -501,7 +511,7 @@ progress::-moz-progress-bar {
 .modalWrap .close:hover:before{
 	transform: rotate(-45deg);
 }
-#wpModal iframe{
+.modal iframe{
 	width: 100%;
 	height: 100%;
 	border: none;

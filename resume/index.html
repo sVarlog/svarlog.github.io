@@ -88,9 +88,14 @@
 				</div>
 				<div class="education">
 					<h2 class="heading heading-dark heading-skills">Сертификаты:</h2>
-					<a href="#" id="wp">
-						<img src="img/Education/WP_patent.png" alt="">
-					</a>
+					<div class="educationWrap">
+						<div class="educationItem" id="stepikLayout">
+							<img src="img/Education/stepikLayout.jpg" alt="stepik">
+						</div>
+						<div class="educationItem" id="wp">
+							<img src="img/Education/WP_patent.png" alt="wp wayup">
+						</div>
+					</div>
 				</div>
 				<div class="skills">
 					<h2 class="heading heading-dark heading-skills">Навыки</h2>
@@ -128,6 +133,13 @@
 			<div class="worksWrap">
 				<h2 class="heading heading-dark">Некоторые мои работы <span>(Верстка)</span>:</h2>
 				<div class="projects">
+					<div class="workItem">
+						<a href="https://svarlog.github.io/MOGO/" target="_blank" class="itemWrap">
+							<h2>MoGo template</h2>
+							<p>Верстка по PSD макету с использованием bootstrap4, flex-box, css Grid и js библиотек.</p>
+						</a>
+						<img src="img/MoGo.jpg" alt="MoGo img">
+					</div>
 					<div class="workItem">
 						<a href="https://svarlog.github.io/Construction%20company/index.html" target="_blank" class="itemWrap">
 							<h2>Construct company</h2>
@@ -172,6 +184,12 @@
 		<div class="modalWrap">
 			<span class="close"></span>
 			<iframe src="certificate/WP.pdf"></iframe>
+		</div>
+	</div>
+	<div class="modal" id="stepikModal">
+		<div class="modalWrap">
+			<span class="close"></span>
+			<iframe src="certificate/Layout_certificate.pdf"></iframe>
 		</div>
 	</div>
 	<script src="js/jQuery.3.4.1.js"></script>
