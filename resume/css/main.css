@@ -458,6 +458,12 @@ progress::-moz-progress-bar {
 .works .projects .workItem:hover .itemWrap{
 	opacity: 1;
 }
+.works .projects .workItem .itemWrap a{
+	z-index: 2;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+}
 .works .projects .workItem img{
 	width: 100%;
 	height: 100%;

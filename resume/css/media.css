@@ -78,6 +78,12 @@
 	.profile-wrap .profile-photo img{
 		height: 235px;
 	}
+	.works .projects .workItem .itemWrap{
+		font-size: 16px;
+	}
+	.works .projects .workItem .itemWrap a{
+		font-size: 14px;
+	}
 	.works .projects .workItem .itemWrap p{
 		display: none;
 	}
