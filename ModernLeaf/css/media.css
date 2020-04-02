@@ -1,0 +1,135 @@
+@media screen and (max-width: 991px){
+	.heading p{
+		width: 100%;
+	}
+	.header .leafSlider .wrap h1{
+		font-size: 60px;
+	}
+	.section1 .cardRow .cardItem{
+	    padding: 20px;
+	}
+	.section1 .cardRow .cardItem h4{
+	    font-size: 16px;
+	}
+	.section1 .cardRow .cardItem p{
+		font-size: 14px;
+	}
+	.section1 .cardRow .cardItem i{
+		font-size: 55px;
+	}
+	.sectionParallax .customContainer{
+		justify-content: center;
+	}
+	.section2 .colRight p{
+		width: 100%;
+	}
+	.section2 .colLeft .imgWrap img,
+	.section2 .colLeft .imgWrap{
+		height: auto;
+	}
+	.section2 .dots{
+		bottom: -20px;
+		right: calc(50% - 142.5px);
+	}
+	.section5 .bg .cardItem{
+		height: auto;
+	}
+	.section5 .bg .itemCol:first-child .textBlock{
+		max-width: 100%;
+	}
+	.section5 .bg .cardItem .textBlock{
+		position: relative;
+	}
+}
+@media screen and (max-width: 878px){
+	.header .leafSlider .item img{
+		height: 100%;
+		width: auto;
+	}
+	.section4 .gallery{
+		grid-template-rows: 140px 140px;
+	}
+	.section7{
+		height: 160px;
+	}
+}
+@media screen and (max-width: 768px){
+	*{
+		letter-spacing: 0!important;
+	}
+	.header .leafSlider .wrap h3{
+		margin-top: 0;
+	}
+	.sectionParallax .customContainer .cardWrap{
+		padding: 0;
+	}
+	.section4{
+		padding: 75px 0 40px 0;
+	}
+	.section4 .gallery{
+		grid-template-columns: 5fr 5fr 5fr;
+		grid-template-rows: 4fr 4fr 5fr;
+		grid-gap: 1%;
+	}
+	.section4 .w2,
+	.section4 .ht2,
+	.section4 .c3{
+		grid-column-start: auto;
+		grid-column-end: auto;
+	}
+	.section7{
+		height: 150px;
+		background-size: 110% 300%;
+	}
+}
+@media screen and (max-width: 600px){
+	.sectionParallax .bg .cardItem{
+		padding: 25px 50px;
+	}
+}
+@media screen and (max-width: 576px){
+	.section1 .cardRow .cardWrap{
+		padding: 0;
+	}
+	.section2 .colRight{
+		padding: 20px 25px 10px 25px;
+	}
+	.section7{
+		background-size: 110% 150%;
+	}
+}
+@media screen and (max-width: 460px){
+	.section4 .gallery .workItem .wrapperImg .workInfo{
+		padding: 15px 13px;
+	}
+	.section6 form input{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 430px){
+	.heading p{
+		font-size: 12px;
+	}
+	.header .leafSlider .wrap h1{
+		font-size: 40px;
+	}
+	.header .leafSlider .wrap h3{
+		font-size: 25px;
+	}
+	.sectionParallax .bg .cardItem{
+		padding: 25px 15px;
+	}
+	.sectionParallax .bg .cardItem h3{
+		margin-bottom: 10px;
+	}
+	.section2 .dots{
+		left: calc(50% - 127.5px);
+		right: 0;
+	}
+	.section2 .dots span{
+		margin: 0 5px;
+	}
+	.footer .copyright{
+		text-align: center;
+	}
+}

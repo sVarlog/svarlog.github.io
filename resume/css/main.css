@@ -173,7 +173,7 @@ address{
 	margin-left: 20px;
 }
 .resume{
-	padding: 25px 30px;
+	padding: 20px;
 	flex-basis: 60%;
 	background-color: #fff;
 	animation: animRight .5s ease;
@@ -197,6 +197,7 @@ address{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-weight: 700;
 }
 .logo-lines{
 	display: flex;
@@ -269,7 +270,9 @@ address{
 }
 .education .educationItem{
 	display: block;
-	width: 45%;
+	width: 48%;
+	cursor: pointer;
+	border: 1px solid #ccc;
 }
 .education .educationWrap img{
 	width: 100%;
@@ -378,6 +381,12 @@ progress::-moz-progress-bar {
 	margin: 0;
 	border-bottom: 0;
 	margin-left: 10px;
+}
+.works .main-heading{
+	margin-left: 0;
+	border-bottom: 1px solid rgba(168,168,168,.44);
+	padding-bottom: 8px;
+	margin-bottom: 8px;
 }
 .works .projects{
 	display: flex;

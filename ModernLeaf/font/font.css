@@ -1,0 +1,13 @@
+@font-face{
+
+font-family: 'BigNoodle';
+
+src: url('big_noodle_titling.ttf');
+
+src: url('big_noodle_titling_oblique.ttf') format('ttf'),
+
+font-weight: normal;
+
+font-style: normal;
+
+}
