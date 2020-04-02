@@ -65,6 +65,7 @@
 	}
 	.container{
 		min-width: 290px;
+		width: 95%;
 	}
 	.name{
 		letter-spacing: normal;
@@ -98,7 +99,8 @@
 		width: 100%;
 		margin-top: 10px;
 	}
-	.resume{
+	.resume,
+	.works{
 		padding: 15px;
 	}
 }

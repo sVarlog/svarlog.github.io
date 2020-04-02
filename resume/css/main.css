@@ -18,6 +18,9 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 	padding: 20px 0;
 	justify-content: space-between;
 }
+.c2{
+	padding-top: 0;
+}
 .profile{
 	flex-basis: 37%;
 	background-color: #39383a;
