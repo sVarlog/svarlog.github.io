@@ -195,7 +195,7 @@ address{
 .logo-img{
 	width: 90px;
 	height: 90px;
-	border: 1px solid #39383a;
+	border: 2px solid #39383a;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
