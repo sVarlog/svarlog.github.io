@@ -1,0 +1,107 @@
+*{transition: all .5s ease;}
+h1,h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;font-weight:900;margin:0;padding:0;}
+p{font-family:'Roboto',sans-serif;margin:0;}
+a{font-family:'Roboto',sans-serif;color: #fff;}
+a:hover{text-decoration:none;}
+li{text-decoration:none;}
+h2{font-size:30px;}
+body{overflow-x:hidden;}
+.gradient1{
+	background: linear-gradient(180deg, rgba(38, 6, 51, 0.75) 0%, rgba(236, 97, 93, 0.25) 100%);
+	height: inherit;
+}
+.captionUnderline{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+.captionUnderline span{
+	width: 30px;
+	height: 1px;
+	background: #EC615D;
+	display: block;
+	margin: 5px;
+}
+/* HEADER */
+.header{
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header .menu1{
+	padding: 30px 0;
+}
+.header .menu1 .logo .logoText{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
+	margin-left: 10px;
+	line-height: 20px;
+	font-size: 16px;
+}
+.header .phone{
+	font-weight: 900;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+.header .text{
+	color: #fff;
+	margin-top: 15%;
+}
+.header .text h3{
+	font-size: 15px;
+}
+.header .text h1{
+	font-size: 40px;
+}
+.header .text h2{
+	font-size: 35px;
+}
+.header .blackout{
+	padding: 15px 0;
+	background: rgba(0,0,0,.4);
+}
+.header .mainMenu .navigation .menuItem{
+	margin: 0 10px;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 20px;
+	font-weight: 900;
+}
+.header .mainMenu .langFlag img{
+	width: 20px;
+	height: 15px;
+}
+/* HEADER END */
+/* SECTION1 */
+.section1{
+	padding: 70px 0;
+}
+.section1 .textBlock h3{
+	margin-bottom: 15px;
+}
+.section1 .textBlock p{
+	margin-bottom: 20px;
+}
+.section1 .img{
+	background: #cecece;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+}
+.section1 .icons{
+	margin-left: 20px;
+}
+.section1 .icons .icon{
+	width: 30px;
+	height: 30px;
+	border: 2px solid #EC615D;
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.section1 .icons .icon i{
+	font-size: 15px;
+	color: #EC615D;
+}
+/* SECTION1 END */
