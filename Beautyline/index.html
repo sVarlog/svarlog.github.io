@@ -2,11 +2,13 @@
 <html lang="ua">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 	<title>Beautyline</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
 						<img src="img/logo.png" alt="Logo">
 						<a href="#" class="logoText">Світ<br> косметолога</a>
 					</div>
-					<div class="phone ml-auto d-flex flex-column">
+					<div class="phone ml-auto d-flex flex-column justify-content-center">
 						<a href="tel: +380 67 12 12 132">+380 67 65 37 303</a>
 						<a href="tel: +380 67 12 12 132">+380 67 19 69 915</a>
 					</div>
@@ -37,20 +39,20 @@
 							<img src="img/lang/flagUA.svg" alt="UA flag" class="flagIMG">
 						</div>
 						<nav class="navigation">
-							<a href="#" class="menuItem">Навчання</a>
-							<a href="#" class="menuItem">Сервісний центр</a>
-							<a href="#" class="menuItem">Переваги</a>
-							<a href="#" class="menuItem">Відгуки</a>
-							<a href="#" class="menuItem">Товари</a>
-							<a href="#" class="menuItem">Клієнти</a>
-							<a href="#" class="menuItem">Контакти</a>
+							<a href="#study" class="menuItem">Навчання</a>
+							<a href="#service" class="menuItem">Сервісний центр</a>
+							<a href="#section2" class="menuItem">Переваги</a>
+							<a href="#section4" class="menuItem">Відгуки</a>
+							<a href="#section5" class="menuItem">Товари</a>
+							<a href="#section6" class="menuItem">Клієнти</a>
+							<a href="#section7" class="menuItem">Контакти</a>
 							<a href="#" class="menuItem">Блог</a>
 						</nav>
 						<div class="lang">
 							<a href="#">УКР</a>
 						</div>
 					</div>
-					<div class="mainMenuSmall justify-content-between">
+					<div class="mainMenuSmall justify-content-between align-items-center">
 						<div class="lang">
 							<a href="#">УКР</a>
 						</div>
@@ -72,13 +74,13 @@
 				</div>
 			</div>
 			<nav class="navigation">
-				<a href="#" class="menuItem">Навчання</a>
-				<a href="#" class="menuItem">Сервісний центр</a>
-				<a href="#" class="menuItem">Переваги</a>
-				<a href="#" class="menuItem">Відгуки</a>
-				<a href="#" class="menuItem">Товари</a>
-				<a href="#" class="menuItem">Клієнти</a>
-				<a href="#" class="menuItem">Контакти</a>
+				<a href="#study" class="menuItem">Навчання</a>
+				<a href="#service" class="menuItem">Сервісний центр</a>
+				<a href="#section2" class="menuItem">Переваги</a>
+				<a href="#section4" class="menuItem">Відгуки</a>
+				<a href="#section5" class="menuItem">Товари</a>
+				<a href="#section6" class="menuItem">Клієнти</a>
+				<a href="#section7" class="menuItem">Контакти</a>
 				<a href="#" class="menuItem">Блог</a>
 			</nav>
 			<div class="menuBot">
@@ -92,6 +94,7 @@
 			</div>
 		</div>
 	</header>
+
 	<section class="section1" id="section1">
 		<h2 class="text-center">Світ косметолога</h2>
 		<div class="captionUnderline d-flex align-items-start justify-content-center">
@@ -99,15 +102,15 @@
 			<i class="fas fa-chevron-down"></i>
 			<span></span>
 		</div>
-		<div class="container-fluid px-0">
+		<div class="container-fluid px-0" id="study">
 			<div class="row m-0">
-				<div class="col-6 px-0">
-					<div class="img"></div>
+				<div class="col-12 col-lg-6 px-0">
+					<img src="img/studyImg.jpg" alt="">
 				</div>
-				<div class="col-6 text">
+				<div class="col-12 col-lg-6 text py-5 py-lg-0">
 					<div class="textBlock">
-						<h3>Наше навчання</h3>
-						<p>Якість навчання роботі з косметологічним обладнанням є одним з важливих пріоритетів у діяльності компанії Світ Косметолога. Тому ми розробили унікальний індивідуальний навчальний курс, завдяки якому покупці нашого обладнання вже на наступний день можуть надавати свої послуги на високому рівні і отримувати дохід.</p>
+						<h3 class="text-center text-lg-left">Наше навчання</h3>
+						<p class="text-center text-lg-left">Якість навчання роботі з косметологічним обладнанням є одним з важливих пріоритетів у діяльності компанії Світ Косметолога. Тому ми розробили унікальний індивідуальний навчальний курс, завдяки якому покупці нашого обладнання вже на наступний день можуть надавати свої послуги на високому рівні і отримувати дохід.</p>
 					</div>
 					<div class="icons">
 						<div class="iconItem d-flex align-items-center">
@@ -124,13 +127,13 @@
 						</div>
 						<div class="iconItem d-flex align-items-center">
 							<div class="icon">
-								<i class="fas fa-globe-europe"></i>
+								<i class="fas fa-certificate"></i>
 							</div>
 							<p>Надаємо сертифікат після навчання;</p>
 						</div>
 						<div class="iconItem d-flex align-items-center">
 							<div class="icon">
-								<i class="fas fa-user-graduate"></i>
+								<i class="fas fa-history"></i>
 							</div>
 							<p>Ми поруч 24/7 для вирішення робочих, практичних питань та питань з ремонту;</p>
 						</div>						
@@ -139,9 +142,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid px-0">
+		<div class="container-fluid px-0" id="service">
 			<div class="row m-0">
-				<div class="col-6 text">
+				<div class="col-12 order-2 order-lg-1 col-lg-6 text py-5 py-lg-0">
 					<div class="textBlock">
 						<h3>Сервісний центр</h3>
 						<p>Всі зусилля сервісного центру “Світ Косметолога“ спрямовані на забезпечення якісного технічного обслуговування косметологічного обладнання, яке дозволяє підтримувати апарати наших клієнтів в справному стані. Для цього використовуються якісні комплектуючі перевірених виробників і нові сервісні технології.</p>
@@ -149,19 +152,19 @@
 					<div class="icons">
 						<div class="iconItem d-flex align-items-center">
 							<div class="icon">
-								<i class="fas fa-check"></i>
+								<i class="fas fa-search-dollar"></i>
 							</div>
 							<p>Прозоре технічне обслуговування без прихованих платежів протягом усього гарантійного терміну;</p>
 						</div>
 						<div class="iconItem d-flex align-items-center">
 							<div class="icon">
-								<i class="fas fa-check"></i>
+								<i class="fas fa-hammer"></i>
 							</div>
 							<p>Власний сервісний центр “Світ Косметолога“ знаходиться в Україні, це значно скорочує термін технічного та сервісного обслуговування;</p>
 						</div>
 						<div class="iconItem d-flex align-items-center">
 							<div class="icon">
-								<i class="fas fa-check"></i>
+								<i class="fas fa-thumbs-up"></i>
 							</div>
 							<p>В рамках гарантійного та післягарантійного обслуговування компанія “Світ Косметолога“ завжди прагне запропонувати бездоганний рівень сервісу;</p>
 						</div>
@@ -174,8 +177,8 @@
 					</div>
 					<a href="#" class="button"><span>Детальніше</span></a>
 				</div>
-				<div class="col-6 px-0">
-					<div class="img"></div>
+				<div class="col-12 order-1 order-lg-2 col-lg-6 px-0">
+					<img src="img/service.jpg" alt="service">
 				</div>
 			</div>
 		</div>
@@ -193,25 +196,26 @@
 				<i class="fas fa-chevron-down"></i>
 				<span></span>
 			</div>
-			<div class="row">
-				<div class="col-4">
+			<div class="row" id="areaForSlider">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol active">
 					<div class="advantageItem">
-						<img src="img/advantages/6.jpg" alt="5">
+						<img src="img/advantages/sort.jpg" alt="sort">
 						<div class="advantageWrap">
 							<h3 class="text-center">Широкий асортимент</h3>
 							<p class="text-center">У каталозі обладнання представлені сучасні та технологічні косметологічні лазери для салонів краси, косметологічних кабінетів й медичних центрів.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol">
 					<div class="advantageItem">
+						<img src="img/advantages/price.jpg" alt="">
 						<div class="advantageWrap">
 							<h3 class="text-center">Вигідна цінова політика</h3>
 							<p class="text-center">Завдяки тому, що компанія Світ Косметолога надає покупцям надійний сервіс, широкий перелік корисних бонусів та на постійній основі проводить акції та святкові знижки Ви маєте можливість отримати надійне обладнання за дуже вигідною ціною.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol">
 					<div class="advantageItem">
 						<img src="img/advantages/map.jpg" alt="4">
 						<div class="advantageWrap">
@@ -220,7 +224,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol">
 					<div class="advantageItem">
 						<img src="img/advantages/1.jpg" alt="1">
 						<div class="advantageWrap">
@@ -229,15 +233,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol">
 					<div class="advantageItem">
+						<img src="img/advantages/team.jpg" alt="team">
 						<div class="advantageWrap">
 							<h3 class="text-center">Професійна команда</h3>
 							<p class="text-center">У компанії Світ Косметолога працюють тільки кваліфіковані фахівці, які розуміють потреби клієнта і здатні їх задовольнити в оптимальний термін</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-10 mx-auto col-md-6 col-lg-4 advantageCol">
 					<div class="advantageItem">
 						<img src="img/advantages/test.jpg" alt="">
 						<div class="advantageWrap">
@@ -264,38 +269,50 @@
 			</div>
 			<p class="text-center sectionCaption">Ми буквально "за руку" супроводжуємо Вас від кваліфікованої консультації до залучення перших клієнтів у Ваш салон краси.</p>
 			<div class="row workIcons">
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works1.png" alt="1">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">Ваш дзвінок</p>
 					</div>
 				</div>
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works2.png" alt="2">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">Консультація і побудова бізнес - моделі</p>
 					</div>
 				</div>
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works3.png" alt="3">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">Підбір обладнання та укладення договору</p>
 					</div>
 				</div>
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works4.png" alt="4">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">Безкоштовне навчання у Вашому</p>
 					</div>
 				</div>
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works5.png" alt="5">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">Оплата наших послуг</p>
 					</div>
 				</div>
-				<div class="col-2 d-flex flex-column">
-					<div class="icon"></div>
+				<div class="col-12 col-sm-4 col-lg-2 d-flex flex-row flex-sm-column align-items-center iconItem">
+					<div class="icon">
+						<img src="img/works/works6.png" alt="6">
+					</div>
 					<div class="textBlock">
 						<p class="text-center">П'ємо каву і дякуємо один-одному</p>
 					</div>
@@ -305,7 +322,7 @@
 	</section>
 
 	<section class="adapterBlock youTubeBlock" id="adapterBlock">
-		<div class="textBlock d-flex justify-content-center">
+		<div class="textBlock d-flex flex-column flex-md-row justify-content-center align-items-center">
 			<h3 class="text-center">Більше інформації на нашому</h3> <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
 		</div>
 	</section>
@@ -320,11 +337,11 @@
 			</div>
 			<div class="reviews">
 				<div class="photo">
-					<div class="item">
-						<img src="img/Reviews/Photo1.jpg" alt="1">
+					<div class="item active">
+						<img src="img/Reviews/Photo3.jpg" alt="3">
 					</div>
 					<div class="item">
-						<img src="img/Reviews/Photo3.jpg" alt="3">
+						<img src="img/Reviews/Photo1.jpg" alt="1">
 					</div>
 					<div class="item">
 						<img src="img/Reviews/Photo2.jpg" alt="2">
@@ -369,12 +386,6 @@
 			<div class="specialWrap">
 				<h2 class="text-center text-uppercase">Бесплатний тест-драйв</h2>
 				<h2 class="text-center">діодного лазера</h2>
-				<!-- <div class="captionUnderline d-flex align-items-start justify-content-center">
-					<span></span>
-					<i class="fas fa-chevron-down"></i>
-					<span></span>
-				</div> -->
-				<!-- <p class="text-center">Унікальний тест-драйв діодного лазера</p> -->
 				<a href="#" class="button">Детальніше</a>
 			</div>
 		</div>
@@ -389,17 +400,17 @@
 				<span></span>
 			</div>
 			<div class="row">
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
-						<div class="left">
+						<div class="left order-2 order-lg-1">
 							<h3>Діодні лазери</h3>
 							<p>Сучасні косметологічні апарати VIP-класу для швидкого, безпечного і безболісного видалення волосся</p>
 							<a href="#" class="button noGradient">Детальніше</a>
 						</div>
-						<div class="right"></div>
+						<div class="right order-1 order-lg-2"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Неодимові лазери</h3>
@@ -409,7 +420,7 @@
 						<div class="right"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати по корекції фігури</h3>
@@ -420,7 +431,7 @@
 					</div>
 				</div>
 				<!-- Second row -->
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Aпарати пресотерапії</h3>
@@ -430,7 +441,7 @@
 						<div class="right"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати з омолодження</h3>
@@ -440,7 +451,7 @@
 						<div class="right"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати СМАС-ліфтингу</h3>
@@ -451,7 +462,7 @@
 					</div>
 				</div>
 				<!-- Third row -->
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати фракційного РФ</h3>
@@ -461,7 +472,7 @@
 						<div class="right"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати для фотоепіляції</h3>
@@ -471,7 +482,7 @@
 						<div class="right"></div>
 					</div>
 				</div>
-				<div class="col-4 cardColumn">
+				<div class="col-12 col-lg-4 cardColumn">
 					<div class="cardItem">
 						<div class="left">
 							<h3>Апарати по корекції фігури</h3>
@@ -487,12 +498,7 @@
 
 	<section class="adapterBlock socialBlock" id="adapterBlock">
 		<div class="textBlock d-flex flex-column justify-content-center">
-			<h3 class="text-center">Наші соціальні мережі</h3>
-			<div class="captionUnderline d-flex align-items-start justify-content-center">
-				<span></span>
-				<i class="fas fa-chevron-down"></i>
-				<span></span>
-			</div>
+			<h3 class="text-center mb-3">Наші соціальні мережі</h3>
 			<div class="socialIcons d-flex justify-content-center">
 				<a href="#"><i class="fab fa-facebook-square"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
@@ -551,45 +557,47 @@
 
 	<section class="adapterBlock callBlock" id="adapterBlock">
 		<div class="container">
-			<div class="textBlock d-flex justify-content-between align-items-center">
-				<h3 class="text-center">У вас є запитання? Телефонуйте!</h3>
+			<div class="textBlock d-flex justify-content-between align-items-center flex-column flex-md-row">
+				<h3 class="text-center mb-3 mb-md-0">У вас є запитання? Телефонуйте!</h3>
 				<a href="tel: +380 67 12 12 132"><i class="fas fa-phone-square"></i>+380 67 12 12 132</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="section7" id="section7">
-		<div class="row">
-			<div class="col-6 left">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.1545021299785!2d33.42029721568174!3d49.06469777930826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDAzJzUyLjkiTiAzM8KwMjUnMjEuMCJF!5e0!3m2!1sru!2sua!4v1550841320619" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-			<div class="col-6 right">
-				<div class="caption">
-					<h2 class="text-center">Контакти</h2>
-					<div class="captionUnderline d-flex align-items-start justify-content-center">
-						<span></span>
-						<i class="fas fa-chevron-down"></i>
-						<span></span>
-					</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-lg-6 order-1 order-lg-1 left p-0">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.1545021299785!2d33.42029721568174!3d49.06469777930826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDAzJzUyLjkiTiAzM8KwMjUnMjEuMCJF!5e0!3m2!1sru!2sua!4v1550841320619" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
-				<div class="contacts">
-					<div class="contactItem d-flex align-items-center">
-						<div class="icon">
-							<i class="fas fa-truck"></i>
+				<div class="col-12 col-lg-6 order-2 order-lg-2 right py-5 py-lg-0">
+					<div class="caption">
+						<h2 class="text-center">Контакти</h2>
+						<div class="captionUnderline d-flex align-items-start justify-content-center">
+							<span></span>
+							<i class="fas fa-chevron-down"></i>
+							<span></span>
 						</div>
-						<a href="tel: +380 67 65 37 303">+380 67 65 37 303</a>
 					</div>
-					<div class="contactItem d-flex align-items-center">
-						<div class="icon">
-							<i class="fas fa-truck"></i>
+					<div class="contacts d-flex d-lg-block">
+						<div class="contactItem d-flex align-items-center order-3 order-md-1">
+							<div class="icon">
+								<i class="fas fa-phone"></i>
+							</div>
+							<a href="tel: +380 67 65 37 303">+380 67 65 37 303</a>
 						</div>
-						<p>м.Кременчук, вул.Театральна 34</p>
-					</div>
-					<div class="contactItem d-flex align-items-center">
-						<div class="icon">
-							<i class="fas fa-envelope"></i>
+						<div class="contactItem d-flex align-items-center">
+							<div class="icon">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<p>м.Кременчук, вул.Театральна 34</p>
 						</div>
-						<a href="mailto: mirkosmetologabeauty@gmail.com">mirkosmetologabeauty@gmail.com</a>
+						<div class="contactItem d-flex align-items-center">
+							<div class="icon">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<a href="mailto: mirkosmetologabeauty@gmail.com">mirkosmetologabeauty@gmail.com</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -597,15 +605,16 @@
 	</section>
 
 	<footer class="footer" id="footer">
-		<div class="container d-flex justify-content-between align-items-center">
+		<div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
 			<div class="left">
 				<div class="logo d-flex align-items-center">
 					<img src="img/logo.png" alt="Logo">
 					<a href="#" class="logoText">Світ<br> косметолога</a>
 				</div>
 			</div>
+			<div class="whiteLine d-block d-md-none"></div>
 			<div class="right">
-				<p>Copyright © Світ косметолога. 2020. Всі права захищені</p>
+				<p class="text-center text-md-right">Copyright©<br class="d-block d-md-none"> Світ косметолога. 2020. Всі права захищені</p>
 			</div>
 		</div>
 	</footer>
