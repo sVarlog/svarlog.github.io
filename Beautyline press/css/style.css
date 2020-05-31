@@ -1,0 +1,105 @@
+/* SAME STYLES */
+*,p{margin:0;padding:0;transition:.5s;}
+h1,h2,h3,h4{padding:0;margin:0;font-weight:700;}
+h3{font-size: 15px;}
+p{font-size: 13px;}
+li{font-size: 13px;margin-left: 15px;}
+span{font-weight: 700;}
+body{position:relative;overflow-x:hidden;}
+div.img{background: #cecece;width: 100%;height: 100%;min-height: 350px;}
+div.img.video{position: relative;}
+div.img.video:after{
+    content: '';
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    display: block;
+    background: #ffffff;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 40px);
+}
+/* SAME STYLES END */
+/* HEADER */
+/* HEADER END */
+/* SECTION1, SECTION2 */
+.section1 .img,
+.section2 .img{
+    background: #cecece;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+.section1 .cardItem,
+.section2 .cardItem{
+    background: #cecece;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.section1 .payback,
+.section2 .payback{
+    background-color: #f2f2f2;
+}
+.section1 .cardItem .icon,
+.section2 .cardItem .icon{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-bottom: 15px;
+}
+.section1 .cardItem p,
+.section2 .cardItem p{
+    margin-bottom: 5px;
+}
+/* SECTION1, SECTION2 END */
+/* DISCOUNT */
+section.discount{
+    background: #cecece;
+    color: #fff;
+}
+section.discount input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+section.discount a.button{
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    transition: .5s;
+    display: inline-block;
+}
+section.discount a.button:hover{
+    transform: scaleX(1.05);
+    text-decoration: none
+}
+/* DISCOUNT END */
+/* SECTION4 */
+.section4{
+    background: #f2f2f2;
+}
+.section4 .img{
+    position: relative;
+}
+.section4 .wrap{
+    position: absolute;
+    width: calc(100% - 30px);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/* SECTION4 END */

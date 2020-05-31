@@ -1,0 +1,78 @@
+@media screen and (max-width: 767px){
+    /* SECTION 1/2 */
+    /* SWITCHER */
+    #switcher{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    #switcher div{
+        background: #fff;
+        width: 30%;
+        text-align: center;
+        padding: 10px;
+        font-weight: 700;
+        color: #000;
+        cursor: pointer;
+    }
+    #switcher div:not(.active){
+        background: #cecece;
+        width: 70%;
+        color: #000;
+    }
+    /* SWITCHER END */
+    section.airSlim:not(.active){
+        transition: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    section.airSlim .paybackSlider{
+        position: relative;
+        min-height: 250px;
+    }
+    section.airSlim .paybackSlider .cardWrap{
+        position: absolute;
+        opacity: 0;
+        height: 90%;
+    }
+    section.airSlim .paybackSlider .cardWrap .cardItem{
+        height: inherit;
+    }
+    section.airSlim .paybackSlider .dotsArea{
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.airSlim .paybackSlider .dotsArea .dotItem{
+        width: 15px;
+        height: 15px;
+        display: block;
+        border: 1px solid #000;
+        background: #ffffff;
+        border-radius: 50%;
+        margin: 0px 5px;
+        cursor: pointer;
+    }
+    section.airSlim .paybackSlider .dotsArea .dotItem.active{
+        background: #cecece;
+    }
+    section.airSlim .paybackSlider .cardWrap.active{
+        opacity: 1;
+        z-index: 2;
+    }
+    /* SECTION 1/2 END */
+}
+@media screen and (max-width: 576px){
+    #switcher div{
+        width: 40%;
+    }
+    #switcher div:not(.active){
+        width: 60%;
+    }
+}
