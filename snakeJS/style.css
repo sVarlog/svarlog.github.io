@@ -14,7 +14,7 @@ body{
     margin: 0;
     overflow: hidden;
     position: relative;
-    background: rgb(90,97,167);
+    background: linear-gradient(180deg, rgb(90,97,167), rgba(124,133,231,1));
 }
 #parameters{
     position: absolute;
