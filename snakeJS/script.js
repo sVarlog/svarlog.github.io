@@ -166,6 +166,10 @@ function startGame(diff){
         if (e.keyCode == 37 || e.keyCode == 65 && direction != 'right') {
             direction = 'left';
         }
+        if (e.keyCode == 32) {
+            e.preventDefault();
+            return false;
+        }
         if (e.keyCode == 38 || e.keyCode == 87 && direction != 'down') {
             direction = 'up';
         }
