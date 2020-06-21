@@ -1,0 +1,150 @@
+*{
+    transition: .5s;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+#area{
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    flex-wrap: wrap;
+    background: #000;
+    position: absolute;
+    left: calc(50% - 600px);
+    /* top: calc(50% - 600); */
+}
+.cell{
+    box-sizing: border-box;
+    background: #000;
+    border: 0;
+}
+#area .score{
+    position: absolute;
+    left: 0;
+    top: -5%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+#score span{
+    text-align: center;
+    margin-right: 10px;
+}
+#pause{
+    position: absolute;
+    top: -5%;
+    right: 0;
+    cursor: pointer;
+}
+#pauseWrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -2;
+}
+#pauseWrap.active{
+    opacity: 1;
+    z-index: 10;
+}
+#pauseWrap #resume{
+    display: flex;
+    width: 40px;
+    justify-content: space-between;
+}
+#pauseWrap #resume:before{
+    content: '';
+    width: 10px;
+    height: 70px;
+    background: #fff;
+    display: block;
+}
+#pauseWrap #resume:after{
+    content: '';
+    width: 10px;
+    height: 70px;
+    background: #fff;
+    display: block;
+}
+.snake{
+    background:rgba(0,255,0,.25);
+    border-radius: 0!important;
+    position: relative;
+    z-index: 2;
+    transition: .7s;
+}
+.head{
+    border-radius: 10%;
+    transition: 0s;
+    background: rgba(0,255,0,.75)!important;
+    position: relative;
+    z-index: 5;
+}
+.target{
+    position: relative;
+    transition: 0s;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.target:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#gameResult{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0s;
+    opacity: 0;
+    z-index: -2;
+}
+#gameResult.active{
+    opacity: 1;
+    z-index: 10;
+}
+#gameResult .wrap{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+#gameResult .score{
+    display: flex;
+    flex-direction: column;
+}
+#gameResult .score span{
+    text-align: center;
+    margin-bottom: 15px;
+}
+#gameResult .newGame{
+    margin-top: 15px;
+    cursor: pointer;
+}
