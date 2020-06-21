@@ -12,7 +12,6 @@ let rows = 20;
 let posX = 1;
 let posY = 1;
 
-
 window.onload = choise;
 function choise() {
     diffBtn.forEach(function(el){
@@ -78,12 +77,14 @@ function startGame(diff){
             let num = document.createElement('span');
             num.classList.add('point');
             num.innerHTML = '+' + (100/diff).toFixed(2);
-            num.style.left = `${+target.offsetLeft}px`;
-            num.style.top = `${+target.offsetTop}px`;
+            num.style.left = `${+target.offsetLeft + (document.querySelector('.cell').offsetWidth)}px`;
+            num.style.top = `${+target.offsetTop + (document.querySelector('.cell').offsetHeight)}px`;
             document.body.prepend(num);
+            document.querySelector('.point').classList.add('active');
+            console.log(document.querySelector('.point'))
             setTimeout(function(){
                 num.remove();
-            }, 500)
+            }, 1000)
             target.classList.remove('target');
             score += 100/diff;
             snakeBody.push(snakeBody[snakeBody.length - 1]);

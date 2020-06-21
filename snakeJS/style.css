@@ -183,6 +183,10 @@ span.point{
     position: absolute;
     color: #fff;
     transition: .5s;
-    transform: translateY(100px);
+    transform: translateY(0px);
     z-index: 9;
+}
+span.point.active{
+    transition: .5s;
+    transform: translateY(50px);
 }
