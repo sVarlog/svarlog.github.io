@@ -11,6 +11,31 @@ body{
     overflow: hidden;
     position: relative;
 }
+#parameters{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#parameters .parWrap{
+    background: #fff;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#parameters .parWrap button{
+    margin-top: 10px;
+    cursor: pointer;
+}
 #area{
     display: flex;
     width: 1200px;
@@ -20,7 +45,8 @@ body{
     background: #000;
     position: absolute;
     left: calc(50% - 600px);
-    /* top: calc(50% - 600); */
+    transition: 0s;
+    opacity: 0;
 }
 .cell{
     box-sizing: border-box;
@@ -32,11 +58,10 @@ body{
     left: 0;
     top: -5%;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
-#score span{
+#area .score span{
     text-align: center;
     margin-right: 10px;
 }
@@ -136,15 +161,28 @@ body{
     justify-content: center;
     align-items: center;
 }
-#gameResult .score{
+#gameResult .score,
+#gameResult .time{
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 }
-#gameResult .score span{
+#gameResult .score span,
+#gameResult .time span{
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+#gameResult input::placeholder{
+    text-align: center;
 }
 #gameResult .newGame{
     margin-top: 15px;
     cursor: pointer;
+}
+span.point{
+    position: absolute;
+    color: #fff;
+    transition: .5s;
+    transform: translateY(100px);
+    z-index: 9;
 }
