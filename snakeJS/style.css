@@ -42,15 +42,38 @@ body{
     height: 600px;
     margin: auto;
     flex-wrap: wrap;
-    background: #000;
     position: absolute;
     left: calc(50% - 600px);
     transition: 0s;
     opacity: 0;
 }
+#area .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.background video{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+.background:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,.75);
+}
 .cell{
     box-sizing: border-box;
-    background: #000;
     border: 0;
 }
 #area .score{
