@@ -84,7 +84,7 @@ function startGame(diff){
             console.log(document.querySelector('.point'))
             setTimeout(function(){
                 num.remove();
-            }, 1000)
+            }, 1000);
             target.classList.remove('target');
             score += 100/diff;
             snakeBody.push(snakeBody[snakeBody.length - 1]);
