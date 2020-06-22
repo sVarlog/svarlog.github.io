@@ -6,21 +6,51 @@ let pauseButton = document.querySelector('#pause');
 let pauseWrap = document.querySelector('#pauseWrap');
 let restartBtn = gameResult.querySelector('button.newGame');
 let parametersWrap = document.querySelector('#parameters');
-let diffBtn = parametersWrap.querySelectorAll('button');
+let settingsWrap = document.querySelector('.settings');
+let startBtn = parametersWrap.querySelector('button[data-start]');
+let settingBtn = parametersWrap.querySelector('button[data-settings]');
 let columns = 40;
 let rows = 20;
 let posX = 1;
 let posY = 1;
 
+localStorage.setItem('default', '150');
+
+let settings = new Map([
+    ['difficulty', localStorage.getItem('difficulty')],
+    ['default', localStorage.getItem('default')]
+]);
+
+settingBtn.addEventListener('click', function(){
+    settingsWrap.classList.add('active');
+});
+
+settingsWrap.querySelectorAll('button').forEach(function(el){
+    el.addEventListener('click', function(){
+        localStorage.setItem('difficulty', el.dataset.hard);
+        let saveText = document.createElement('span');
+        saveText.classList.add('textShow');
+        saveText.innerHTML = 'Настройки сохранены';
+        document.body.append(saveText);
+        settingsWrap.classList.remove('active');
+        setTimeout(function(){
+            saveText.remove();
+            location.reload();
+        }, 750);
+    })
+})
+
 window.onload = choise;
 function choise() {
-    diffBtn.forEach(function(el){
-        el.addEventListener('click', function(){
-            parametersWrap.style.opacity = '0';
-            parametersWrap.style.zIndex = '-2';
-            startGame(el.dataset.hard);
-        })
-    })
+    startBtn.addEventListener('click', function(){
+        parametersWrap.style.opacity = '0';
+        parametersWrap.style.zIndex = '-2';
+        if(settings.get('difficulty') !== null){
+            startGame(settings.get('difficulty'));    
+        } else{
+            startGame(settings.get('default'));
+        }
+    });
 }
 
 function startGame(diff){
