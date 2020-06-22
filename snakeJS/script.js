@@ -34,9 +34,8 @@ settingsWrap.querySelectorAll('button').forEach(function(el){
         document.body.append(saveText);
         settingsWrap.classList.remove('active');
         setTimeout(function(){
-            saveText.remove();
-            location.reload();
-        }, 750);
+            // saveText.remove();
+        }, 1000);
     })
 })
 
