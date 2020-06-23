@@ -3,12 +3,16 @@ let gameResult = document.querySelector('#gameResult');
 let gameModal = gameResult.querySelector('.wrap');
 let scoreWrap = document.querySelector('.score');
 let pauseButton = document.querySelector('#pause');
+let menuButton = document.querySelector('#menu');
+let menuWrap = document.querySelector('.showMenu');
 let pauseWrap = document.querySelector('#pauseWrap');
 let restartBtn = gameResult.querySelector('button.newGame');
 let parametersWrap = document.querySelector('#parameters');
 let settingsWrap = document.querySelector('.settings');
-let startBtn = parametersWrap.querySelector('button[data-start]');
-let settingBtn = parametersWrap.querySelector('button[data-settings]');
+let cancelBtn = document.querySelector('button[data-cancel]');
+let startBtn = document.querySelector('button[data-start]');
+let resumeButton = document.querySelector('button[data-resume');
+let settingBtn = document.querySelectorAll('button[data-settings]');
 let columns = 40;
 let rows = 20;
 let posX = 1;
@@ -21,11 +25,13 @@ let settings = new Map([
     ['default', localStorage.getItem('default')]
 ]);
 
-settingBtn.addEventListener('click', function(){
-    settingsWrap.classList.add('active');
+settingBtn.forEach(function(el){
+    el.addEventListener('click', function () {
+        settingsWrap.classList.add('active');
+    });
 });
 
-settingsWrap.querySelectorAll('button').forEach(function(el){
+settingsWrap.querySelectorAll('button[data-hard]').forEach(function(el){
     el.addEventListener('click', function(){
         localStorage.setItem('difficulty', el.dataset.hard);
         let saveText = document.createElement('span');
@@ -52,6 +58,10 @@ function choise() {
         }
     });
 }
+// cancel settings
+cancelBtn.addEventListener('click', function () {
+    settingsWrap.classList.remove('active')
+})
 
 function startGame(diff){
     let playTime = 0;
@@ -219,6 +229,13 @@ function startGame(diff){
         pauseWrap.classList.add('active');
     });
 
+    // open menu
+    menuButton.addEventListener('click', function () {
+        clearInterval(start);
+        clearInterval(playTimer);
+        menuWrap.classList.add('active');
+    });
+
     // resume game
     pauseWrap.addEventListener('click', function () {
         start = setInterval(move, diff);
@@ -228,6 +245,14 @@ function startGame(diff){
         }, 1000);
         pauseWrap.classList.remove('active');
     });
+    resumeButton.addEventListener('click', function(){
+        menuWrap.classList.remove('active');
+        start = setInterval(move, diff);
+        playTimer = setInterval(function () {
+            playTime += 1;
+            console.log(playTime);
+        }, 1000);
+    });   
 
     // start game
     let start = setInterval(move, diff);

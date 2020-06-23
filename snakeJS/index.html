@@ -12,10 +12,23 @@
             <button data-start>Начать игру</button>
             <button data-settings>Настройки</button>
         </div>
-        <div class="settings">
+    </div>
+
+    <div class="settings">
+        <div class="settingsWrap">
+            <span>Сложность</span>
             <button class="hard" data-hard="50">Сложная</button>
             <button class="middle" data-hard="125">Средняя</button>
             <button class="ease" data-hard="175">Легкая</button>
+            <button data-cancel>Отмена</button>
+            <p>Внимание! При смене сложности перезагружается страница!</p>
+        </div>
+    </div>
+
+    <div class="showMenu">
+        <div class="menuWrap">
+            <button data-resume>Возобновить</button>
+            <button data-settings>Настройки</button>
         </div>
     </div>
     
@@ -29,6 +42,7 @@
             <span>Счёт:</span>
             <input type="number" value="0" disabled>
         </div>
+        <button id="menu">Меню</button>
         <button id="pause">Пауза</button>
     </div>
     <div id="gameResult">
