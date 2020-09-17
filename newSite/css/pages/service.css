@@ -1,0 +1,30 @@
+p{
+	margin-top: 7px;
+	margin-bottom: 7px;
+	text-align: left!important;
+}
+section.service{
+	padding: 30px;
+}
+section.service .buttons{
+	margin-top: 10px;
+}
+section.service .buttons a{
+	margin-right: 10px;
+}
+@media screen and (max-width: 767px){
+	section.service .buttons{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	section.service .buttons a{
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 576px){
+	section.service{
+		padding: 15px;
+	}
+}

@@ -1,0 +1,180 @@
+.pageHeading h2:after,
+.pageHeading h2:before{
+	content: none;
+}
+.pageHeading h2{
+	justify-content: center;
+}
+.categories .catWrap{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 15px;
+	margin-top: 20px;
+}
+.categories .catWrap .blueCard{
+	padding: 0;
+	color: #000;
+}
+.categories .catWrap .blueCard img{
+	width: auto;
+	height: 55%;
+	display: block;
+	margin: auto;
+}
+.categories .catWrap .blueCard .textBlock{
+	padding: 20px 10px;
+	height: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.categories .catWrap .blueCard .textBlock h2{
+	font-size: 13px;
+	text-align: center;
+}
+.categories .productsWrap{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	grid-gap: 15px;
+}
+.categories .productsWrap img{
+	width: 100%;
+}
+.categories .productsWrap .item{
+	padding: 0;
+	cursor: pointer;
+	margin-top: 0;
+}
+.categories .productsWrap .item img{
+	width: 100%;
+}
+.categories .productsWrap .item .description{
+	padding: 10px;
+	padding-top: 0;
+	text-align: center;
+}
+.categories .productsWrap .item .description .rating{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+.categories .productsWrap .item .description .rating .stars{
+	display: flex;
+}
+.categories .productsWrap .item .description .rating .stars svg{
+	transform: scale(.85);
+}
+.categories .productsWrap .item .description .rating .reviews{
+	font-size: 10px;
+	font-weight: 800;
+	color: #4E4E4E;
+}
+.categories .productsWrap .item .description .price{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.categories .productsWrap .item .description .price a{
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.categories .productsWrap .item .description .price span{
+	font-size: 18px;
+	font-weight: 800;
+}
+.categories .productsWrap .item .description .price span.current{
+	font-size: 12px;
+}
+/* equipment */
+.equipmentDesc{
+	padding-left: 0;
+	padding-right: 0;
+}
+.equipmentDesc .textBlock{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.equipmentDesc img{
+	width: 100%;
+}
+.equipmentDesc p{
+	margin-top: 10px;
+}
+.equipmentDesc .heading{
+	margin-bottom: 20px;
+}
+/* variaties */
+.varieties .heading{
+	margin-bottom: 10px;
+}
+.varieties .varietiesWrap{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 15px;
+	margin-top: 20px;
+}
+.varieties .varietiesWrap .item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.varieties .customSlider .customSliderItem{
+	margin-top: 0;
+}
+@media screen and (max-width: 991px){
+	.categories .productsWrap{
+		grid-template-columns: 1fr 1fr;
+		margin: 0 50px;
+	}
+	.categories .catWrap{
+		grid-template-columns: 1fr;
+	}
+	.categories .catWrap .blueCard {
+		display: flex;
+		align-items: center;
+		width: 80%;
+		margin: auto;
+	}
+	.categories .catWrap .blueCard img{
+		height: 90%;
+		margin: 0;
+	}
+	.categories .catWrap .blueCard .textBlock h2{
+		text-align: left;
+	}
+}
+@media screen and (max-width: 767px){
+	.varieties .varietiesWrap{
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 575px){
+	.categories .catWrap .blueCard{
+		width: 100%;
+	}
+	.categories .productsWrap{
+		grid-template-columns: 1fr;
+		margin: 0;
+	}
+	.articles{
+		padding-top: 0;
+		padding-bottom: 0;
+		background: transparent;
+		box-shadow: none;
+	}
+}
+@media screen and (max-width: 375px){
+	.categories .catWrap .blueCard img{
+		height: 70%;
+	}
+}
+@media screen and (max-width: 340px){
+	.categories .catWrap .blueCard img{
+		height: 60%;
+	}
+	.categories .catWrap .blueCard .textBlock h2{
+		font-size: 12px;
+	}
+}

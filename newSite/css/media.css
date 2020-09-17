@@ -1,0 +1,424 @@
+@media screen and (max-width: 1199px){
+    /* categories */
+    section.categories a img{
+        margin-right: 10px;
+        width: 35px;
+    }
+    section.categories a span{
+        font-size: 12px;
+    }
+    /* recomendation */
+    .recomendation .newPrice{
+        font-size: 25px;
+    }
+    .recomendation .recomendationItems .special .blueCard #timerTime{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 991px){
+    section.categories{
+        padding: 10px;
+    }
+    section.categories img{
+        display: none;
+    }
+    section.categories a{
+        padding: 0 10px;
+        text-align: center;
+    }
+    section.categories a span{
+        width: 100%;
+    }
+    /* recomendation */
+    .recomendation .products img{
+        width: 85%;
+        display: block;
+        margin: auto;
+    }
+    .recomendation .products .blueCard{
+        display: flex;
+        flex-direction: column;
+    }
+    /* how we work */
+    .howWeWork .workProcess{
+        margin-top: 0;
+    }
+    .howWeWork .workProcess .item:after{
+        content: none!important;
+    }
+    .howWeWork .workProcess .item{
+        width: 60%;
+        margin-top: 0 !important;
+        margin-bottom: 15px;
+        height: 100px;
+    }
+    .howWeWork .workNumbers .blueCard{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    .howWeWork .workNumbers .blueCard p{
+        text-align: left;
+    }
+    .howWeWork .aboutCompany h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px){
+    section.categories.mobile{
+        padding: 20px;
+    }
+    section.categories.mobile .catWrap{
+        flex-direction: column;
+    }
+    section.categories .catHeading{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section.categories.active .catHeading{
+        padding-bottom: 15px;
+    }
+    section.categories.active .catHeading:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        display: block;
+        background: #336699;
+    }
+    section.categories .catHeading .catButton{
+        width: 20px;
+        height: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    section.categories .catHeading .catButton .catButtonLine{
+        width: 100%;
+        height: 2px;
+        background: #000;
+        display: block;
+    }
+    section.categories.active .catHeading .catButton .catButtonLine:nth-child(1){
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    section.categories.active .catHeading .catButton .catButtonLine:nth-child(2){
+        opacity: 0;
+        transition: .75s;
+    }
+    section.categories.active .catHeading .catButton .catButtonLine:nth-child(3){
+        position: absolute;
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    section.categories .catWrap{
+        opacity: 0;
+        z-index: -2;
+    }
+    section.categories.active .catWrap{
+        opacity: 1;
+        z-index: 2;
+    }
+    section.categories.mobile a{
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        font-weight: 800;
+        font-size: 13px;
+    }
+    section.categories.mobile a:last-child{
+        padding-bottom: 0;
+    }
+    section.categories.mobile a:after{
+        width: 100%;
+        height: 1px;
+        right: 0;
+        top: auto;
+        bottom: 0;
+    }
+    section.categories.mobile a img{
+        display: block;
+    }
+    /* recomendation */
+    .recomendation .recomendationItems{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .recomendation .special{
+        margin-bottom: 15px;
+    }
+    .recomendation .products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .recomendation .products .blueCardWrap{
+        margin-bottom: 15px!important;
+        padding: 0;
+    }
+    .recomendation .products .blueCardWrap:not(.active){
+        top: 19px;
+    }
+    .recomendation .special{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* form 2 */
+    .form2{
+        padding-top: 25px;
+    }
+    .form2 .left{
+        margin-bottom: 15px;
+    }
+    /* study */
+    .study .right p.blueList{
+        align-self: flex-start;
+    }
+    /* clients */
+    .reviews .customSlider .customSliderItem{
+        margin-top: 0;
+        padding: 0;
+        top: 0;
+    }
+    .reviews a{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 576px){
+    section.categories{
+        border-radius: 0;
+        width: 100%;
+    }
+    .recomendation .special h2.redText{
+        font-size: 30px;
+    }
+    .howWeWork .workProcess .item{
+        width: 80%;
+    }
+    .study .left{
+        padding: 0;
+    }
+    .service .row1 .right,
+    .service .row2 .right{
+        padding: 0;
+    }
+    .header{
+        margin-bottom: 0;
+    }
+    .header:not(.header-pages) .menu{
+        height: 15vh;
+        align-items: center;
+        background: #fff;
+        padding-top: 0;
+    }
+    .header:before{
+        content: none;
+    }
+    .header:after{
+        content: none;
+    }
+    .header:not(.header-pages) .gradient{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        height: 85vh;
+        overflow: hidden;
+    }
+    .header .gradient .content{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        transition: 0s !important;
+    }
+    .header .gradient .content .item{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0s;
+    }
+    .header .gradient .content .item.right{
+        transform: translateX(150%);
+    }
+    .header .gradient .content .item.left{
+        transform: translateX(-150%);
+    }
+    .header .gradient .content .item.active{
+        transform: translateX(0);
+    }
+    .header .gradient .content .item .background{
+        background: linear-gradient(to top, rgba(39,23,64,.95), rgba(51,102,153,.75));
+        width: 100%;
+        height: 100%;
+    }
+    .header .gradient .content .item.right .background{
+        margin-left: auto;
+        transform: skewX(-15deg);
+        margin-right: -15%;
+    }
+    .header .gradient .content .item.left .background{
+        margin-right: auto;
+        transform: skewX(15deg);
+        margin-left: -15%;
+    }
+    .header .gradient .content .item .background:after{
+        content: '';
+        width: 30px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        background: linear-gradient(to bottom, rgba(39,23,64,.95), rgba(51,102,153,.75));
+        z-index: 2;
+    }
+    .header .gradient .content .item.right .background:after{
+        left: 0;
+    }
+    .header .gradient .content .item.left .background:after{
+        right: 0;
+    }
+    .header .gradient .content .textBlock{
+        padding: 10px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85%;
+        height: 100%;
+    }
+    .header .gradient .content .textBlock *{
+        transition: 0s !important;
+    }
+    .header .gradient .content .item.right .textBlock{
+        align-items: flex-end;
+        right: 0;
+    }
+    .header .gradient .content .item.left .textBlock{
+        align-items: flex-start;
+        left: 0;
+    }
+    .header .gradient .content .textBlock p{
+        margin-top: 10px;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+    }
+    .header .gradient .content .item.right .textBlock p{
+        margin-right: 10px;
+    }
+    .header .gradient .content .item.left .textBlock p{
+        margin-left: 10px;
+    }
+    .header .gradient .content .textBlock h1,
+    .header .gradient .content .textBlock h2{
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+        margin-bottom: 10px;
+    }
+    .header .gradient .content .item.right .textBlock h1,
+    .header .gradient .content .item.right .textBlock h2{
+        text-align: right;
+    }
+    .header .gradient .content .item.left .textBlock h1,
+    .header .gradient .content .item.left .textBlock h2{
+        text-align: left;
+    }
+    .header .gradient .content .textBlock h1 span,
+    .header .gradient .content .textBlock h2 span{
+        font-size: 14px;
+    }
+    .header .gradient .content .item .textBlock a.whiteButton{
+        color: #000;
+        margin-top: 15px;
+    }
+    .header .gradient .content .item .textBlock .bottom{
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15%;
+        position: absolute;
+        bottom: 10px;
+    }
+    .header .gradient .content .item .textBlock .bottom a{
+        font-size: 15px;
+        text-shadow: 0 0 5px #000;
+    }
+    .header .gradient .content .item .textBlock .bottom .arrows{
+        display: flex;
+    }
+    .header .gradient .content .item .textBlock .bottom .arrows .arrow{
+        width: 40px;
+        height: 40px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .gradient .content .item .textBlock .bottom .arrows .arrow.prev{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 450px){
+    .header .gradient .content .item.right{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 400px){
+    .header .gradient .content .item.right{
+        margin-left: -5%;
+        width: 105%;
+    }
+    .header .gradient .content .item.left{
+        margin-right: -5%;
+        width: 105%;
+    }
+}
+@media screen and (max-width: 375px){
+    .header .gradient .content .item.right{
+        margin-left: -10%;
+        width: 110%;
+    }
+    .header .gradient .content .item.left{
+        margin-right: -10%;
+    }
+    .header .gradient .content .item.right .background{
+        margin-right: -20%;
+    }
+    .header .gradient .content .item.left .background{
+        margin-left: -20%;
+    }
+    .header .menu{
+        height: 12vh;
+    }
+    .header .gradient{
+        height: 88vh;
+    }
+}
+@media screen and (max-width: 330px){
+    .header .gradient .content .textBlock h1,
+    .header .gradient .content .textBlock h2{
+        font-size: 15px;
+    }
+    .header .gradient .content .textBlock span{
+        font-size: 10px;
+    }
+}

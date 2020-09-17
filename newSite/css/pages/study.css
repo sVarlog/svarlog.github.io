@@ -1,0 +1,178 @@
+section.study .customSlider{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 30px;
+	width: 80%;
+	margin: auto;
+}
+section.study .customSlider .item{
+	position: relative;
+	height: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.study .customSlider .item .wrap{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: linear-gradient(180deg, rgba(51, 102, 153, 0.65) 0%, rgba(39, 23, 64, 0.65) 100%);
+}
+section.study .customSlider .item img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+section.study .customSlider .item p{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-weight: 800;
+	font-size: 15px;
+	text-align: center;
+}
+/**/
+section.studyType{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0;
+	overflow: hidden;
+}
+section.studyType .img{
+	height: 100%;
+}
+section.studyType img{
+	width: 100%;
+	height: 100%;
+}
+section.studyType .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+section.studyType .text h3{
+	margin-bottom: 12.5px;
+}
+section.studyType .text .blueCard{
+	width: 100%;
+	margin: 7.5px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/**/
+section.consultation{
+	border-radius: 0;
+}
+section.consultation h3{
+	color: #fff;
+	margin-bottom: 15px;
+}
+section.consultation a:not(.whiteButton){
+	color: #fff;
+	margin-right: 30px;
+}
+/**/
+section.advantages{
+	padding-left: 0;
+	padding-right: 0;
+}
+section.advantages img{
+	width: 100%;
+}
+section.advantages .textBlock{
+	padding: 20px 30px 0 30px;
+}
+section.video{
+	border-radius: 0;
+	padding: 30px;
+}
+section.advantages .textBlock p{
+	margin-bottom: 10px;
+}
+/**/
+section.video .container{
+	background: rgba(255,255,255,.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+}
+section.video .container h2{
+	text-align: center;
+}
+/**/
+/**/
+.reviews1 .customSlider .item{
+	top: 0;
+}
+@media screen and (max-width: 991px){
+	section.study .customSlider{
+		grid-template-columns: 1fr 1fr;
+	}
+	/**/
+	section.studyType .text{
+		padding: 10px 30px;
+	}
+	section.studyType .text .blueCard{
+		font-size: 12px;
+		padding: 7px;
+	}
+	section.studyType .text h3{
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width: 767px){
+	section.study .customSlider{
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+		width: 50%;
+	}
+	/**/
+	section.studyType{
+		grid-template-columns: 1fr;
+	}
+	section.studyType .img2{
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+	/**/
+	section.consultation h3{
+		margin-bottom: 5px;
+	}
+	section.consultation a.whiteButton{
+		margin-top: 5px;
+	}
+	/**/
+	.reviews1 .customSlider .item{
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 575px){
+	section.advantages .textBlock{
+		padding: 10px;
+		padding-bottom: 0;
+	}
+	.advantages .textBlock p{
+		text-align: left;
+	}
+}
+@media screen and (max-width: 425px){
+	section.study .customSlider{
+		width: 70%;
+	}
+}
+@media screen and (max-width: 375px){
+	section.study .customSlider{
+		width: 90%;
+	}
+}

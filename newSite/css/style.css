@@ -1,0 +1,443 @@
+ header slider */
+.header .gradient h1{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+.header .gradient h1 span.purpleText{
+    color: #271740;
+    text-shadow: 0 0 5px #fff;
+}
+.header .content .item{
+    display: none;
+}
+/* categoriesBlock */
+section.categories{
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+}
+section.categories .catWrap a{
+    transition: 0s!important;
+}
+section.categories .catWrap{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+section.categories a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 25%;
+    position: relative;
+    color: #000;
+}
+section.categories a:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #336699;
+}
+section.categories a:last-child::after{
+    content: none;
+}
+section.categories a img{
+    width: 50px;
+    margin-right: 15px;
+}
+section.categories a span{
+    width: 60%;
+}
+section.categories .line{
+    height: 60px;
+    width: 2px;
+    margin: 0 10px;
+    background: #000;
+    display: block;
+}
+/* categories end */
+/* recomendation */
+.recomendation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.recomendation .recomendationItems .special .blueCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.25), inset 0px 0px 10px 2px #22B7D9;
+}
+.recomendation .recomendationItems .special .blueCard:hover{
+    box-shadow: 0px 0px 10px 2px #22B7D9;
+    transform: scale(1.025);
+}
+.recomendation .recomendationItems .special .blueCard .productImg{
+    position: relative;
+    margin-top: 20px;
+}
+.recomendation .recomendationItems .special .blueCard img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.recomendation .recomendationItems .special .blueCard .price .oldPrice{
+    margin-right: 10px;
+}
+.recomendation .recomendationItems .special .blueCard #timerTime{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+.recomendation .special a.blueGradient{
+    background: transparent;
+    color: #271740;
+    border: 2px solid #271740;
+}
+.recomendation .products{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+}
+.recomendation .products .blueCardWrap:nth-child(1),
+.recomendation .products .blueCardWrap:nth-child(2){
+    margin-bottom: 30px;
+}
+.recomendation .products .blueCard{
+    padding: 0;
+}
+.recomendation .products img{
+    width: 100%;
+    height: auto;
+}
+.recomendation .products .description{
+    padding: 10px;
+}
+.recomendation .products .description .priceRow{
+    width: 100%;
+}
+.recomendation .products .description .priceRow span{
+    font-size: 10px;
+    font-weight: 400;
+}
+/* recomendation end */
+/* how we work */
+.howWeWork .workProcess{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.howWeWork .workProcess .item{
+    width: 20%;
+    margin: 0 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    position: relative;
+}
+.howWeWork .workProcess .item:nth-child(1):after,
+.howWeWork .workProcess .item:nth-child(2):after{
+    content: '';
+    background: url(../img/arrows/rightArrow.png) no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: calc(-51% + 25px);
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.howWeWork .workProcess .item:nth-child(4):after{
+    content: '';
+    background: url(../img/arrows/arrowLeft.png) no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: calc(-51% + 25px);
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.howWeWork .workProcess .item:nth-child(5):after{
+    content: '';
+    background: url(../img/arrows/arrowAngleLeft.png) no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: calc(-51% + 25px);
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.howWeWork .workProcess .item:nth-child(4),
+.howWeWork .workProcess .item:nth-child(5){
+    margin-top: 6%;
+}
+.howWeWork .workProcess .item .icon{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.howWeWork .workProcess .item .icon:after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 10px rgba(34, 183, 217, 0.25);
+    left: calc(50% - 25px);
+    z-index: 1;
+}
+.howWeWork .workProcess .item .icon img{
+    width: auto;
+    height: 35px;
+    position: relative;
+    z-index: 2;
+}
+.howWeWork .workNumbers{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.howWeWork .workNumbers .blueCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+}
+.howWeWork .workNumbers .blueCard .number{
+    font-size: 25px;
+    background: linear-gradient(to bottom, #007BFF, #271740);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+/* work end */
+/* service */
+.service img{
+    width: 100%;
+}
+.service p{
+    margin-bottom: 10px;
+}
+/* service end */
+/* form2 */
+.form2{
+    border-radius: 0;
+    padding: 0;
+    color: #fff;
+}
+.form2 .left h2{
+    font-weight: 400;
+}
+.form2 .left a{
+    margin-top: 10px;
+}
+.form2 .right{
+    background: rgba(0,0,0,.5);
+    padding: 20px;
+}
+.form2 .right p.bold{
+    margin-bottom: 15px;
+}
+/* form2 end */
+/* reviews1 */
+.reviews1 .customSlider .customSliderItem{
+    top: 0;
+}
+/* reviews1 end */
+/* INST */
+section.inst{
+    padding: 50px 0 0 0;
+    cursor: pointer;
+    border: 0;
+    position: relative;
+    box-shadow: none;
+}
+section.inst:before{
+    content: '';
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, transparent, #f2f2f2);
+}
+section.inst:after{
+    content: '';
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, #f2f2f2);
+    z-index: 3;
+}
+section.inst .instBg{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    background-size: 100% 100%;
+}
+section.inst #instPhone{
+    position: absolute;
+    bottom: 0;
+    right: calc(50% - 375px);
+    width: 750px;
+    height: 500px;
+    z-index: 2;
+}
+section.inst #instPhone img{
+    height: 100%;
+}
+section.inst #instPhone a{
+    position: absolute;
+    left: 17px;
+    top: 53px;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: linear-gradient(180deg, #336699 0%, #271740 100%);
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    z-index: 5;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+}
+section.inst #instPhone a:hover{
+    background: transparent;
+    border-color: #271740;
+    color: #271740;
+}
+section.inst #instLeaf1{
+    position: absolute;
+    top: 5px;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+section.inst #instLeaf2{
+    position: absolute;
+    top: 175px;
+    left: 56%;
+    width: 125px;
+    height: 195px;
+    z-index: 3;
+}
+section.inst #instLeaf3{
+    position: absolute;
+    top: 275px;
+    left: 18%;
+    width: 305px;
+    height: 100px;
+    z-index: 3;
+}
+/* INST END */
+/* inst adaptive */
+@media screen and (max-width: 992px){
+    section.inst #instLeaf1,
+    section.inst #instLeaf2,
+    section.inst #instLeaf3{
+        display: none;
+    }
+    section.inst #instPhone{
+        max-width: 550px;
+        max-height: 400px;
+        right: calc(50% - 275px);
+    }
+    section.inst #instPhone a{
+        left: -10px;
+        top: 15px;
+    }
+}
+@media screen and (max-width: 767px){
+    section.inst #instPhone{
+        right: calc(50% - 360px);
+    }
+}
+@media screen and (max-width: 576px){
+    section.inst #instPhone{
+        max-width: 350px;
+        max-height: 275px;
+        right: calc(50% - 175px);
+    }
+    section.inst #instPhone a{
+        left: -15px;
+        top: 15px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 425px){
+    section.inst .instBg{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 37vw;
+    }
+    section.inst #instPhone{
+        max-width: 45vw;
+        max-height: 30vw;
+        right: calc(50% - 22.5vw);
+    }
+    section.inst #instPhone a{
+        left: -60px;
+        top: 0;
+    }
+}
+@media screen and (max-width: 375px){
+    section.inst #instPhone{
+        right: 0;
+        max-width: 55vw;
+        max-height: 40vw;
+    }
+    section.inst #instPhone a{
+        font-size: 4vw;
+        left: -35vw;
+        top: 10vw;
+        padding: 5px 10px;
+        border-bottom-right-radius: 20px;
+    }
+}
+/* procedures */
+.procedures .cardWrap{
+    margin-bottom: 30px;
+}
+/* procedures end */
+.modalContent[data-modal-content="special"] h2{
+    margin-bottom: 10px;
+}
+.modalContent[data-modal-content="special"] input{
+    margin: 5px 0;
+}
+.modalContent[data-modal-content="special"] p{
+    margin-bottom: 10px;
+}
+.modalContent[data-modal-content="special"] a{
+    margin-top: 10px;
+}
