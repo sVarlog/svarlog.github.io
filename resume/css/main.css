@@ -267,13 +267,12 @@ address{
 }
 /* EDUCATION */
 .education .educationWrap{
-	display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 15px;
 }
 .education .educationItem{
 	display: block;
-	width: 48%;
 	cursor: pointer;
 	border: 1px solid #ccc;
 }
