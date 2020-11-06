@@ -18,10 +18,10 @@ if(isset($_POST['name1']) and isset($_POST['tel1'])){
 	echo "3";
 	sendMail($name, $tel, $current);
 } else {
-	header('location: ' . 'https://smartsonic.mirkosmetologa.com');
+	header('location: ' . 'https://svarlog.github.io/smartSonic/');
 }
 function sendMail($name, $tel, $current){
-	mail('mirkosmetologabeauty@gmail.com', 'Данные с сайта smartSonic', "Форма:" . $current . "\n-----------------------------\n" . "Имя: " . $name . "\nТелефон: " . $tel);
+	mail('giroild@gmail.com', 'Данные с сайта smartSonic', "Форма:" . $current . "\n-----------------------------\n" . "Имя: " . $name . "\nТелефон: " . $tel);
 	header('location: ' . 'https://smartsonic.mirkosmetologa.com/thanks.php');
 }
 ?>

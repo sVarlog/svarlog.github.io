@@ -68,8 +68,7 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 	font-family: 'Cormorant SC', serif;
 }
 .heading{
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-top: 16px;
 	padding-bottom: 16px;
 	text-transform: uppercase;
 	font-weight: bold;
