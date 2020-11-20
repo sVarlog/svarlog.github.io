@@ -10,3 +10,13 @@ $('.education #stepikLayout').on('click', function(){
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
+////////////////////////////////////////////////////
+(() => {
+	let headings = document.querySelectorAll('.works .worksWrap .headingItems'),
+		items = document.querySelectorAll('.works .worksWrap .projects');
+
+	items.forEach((el, i) => {
+		let n = el.querySelectorAll('.workItem');
+		headings[i].append(`( ${n.length} )`);
+	})
+})();
