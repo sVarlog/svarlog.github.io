@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span> 
+        </div>
+    </div>
+    <div class="content-menu">
+        <h2 class="grayBg active" data-tab="1">Фильтр результатов</h2>
+        <h2 class="grayBg" data-tab="2">Таблица данных</h2>
+    </div>
+    <div class="content">
+        <div class="content-item content-filter active" data-item="1">
+            <h2 class="title">Фильтр результатов</h2>
+            <form action="#">
+                <div class="line"></div>
+                <div class="row row-first">
+                    <div class="form-left">
+                        <h3 class="heading">Цена</h3>
+                        <div class="row price-row">
+                            <div class="from">
+                                <span class="grayBg">от</span>
+                                <input type="text" class="price-from" name="price-from" value="0">
+                                <img src="img/dollar.svg" class="grayBg" alt="$">
+                            </div>
+                            <div class="to">
+                                <span class="grayBg">до</span>
+                                <input type="text" class="price-to" name="price-to" value="0">
+                                <img src="img/dollar.svg" class="grayBg" alt="$">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <span class="slider-from">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </span>
+                            <div class="slider-line">
+                                <div class="background"></div>
+                            </div>
+                            <span class="slider-to">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line hidden"></div>
+                    <div class="form-right">
+                        <h3 class="heading">Вид пчел</h3>
+                        <div class="radio-buttons">
+                            <label class="disabled">
+                                <input type="checkbox" name="big-indian-bee" disabled>
+                                <span class="grayBg">Большая индийская пчела</span>
+                            </label>
+                            <label class="disabled">
+                                <input type="checkbox" name="honey-bee" disabled>
+                                <span class="grayBg">Медоносная пчела</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="indian-bee">
+                                <span class="grayBg">Индийская пчела</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="dwarf bee">
+                                <span class="grayBg">Арликовая пчела</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row row-second">
+                    <div class="form-left">
+                        <h3 class="heading">Рейтинг пчел</h3>
+                        <div class="stars">                            
+                            <input type="radio" id="star-5" name="bee-rating" value="5">
+                            <label for="star-5" title="'Оценка 5'"></label>
+                            <input type="radio" id="star-4" name="bee-rating" value="4">
+                            <label for="star-4" title="'Оценка 4'"></label>
+                            <input type="radio" id="star-3" name="bee-rating" value="3">
+                            <label for="star-3" title="'Оценка 3'"></label>
+                            <input type="radio" id="star-2" name="bee-rating" value="2">
+                            <label for="star-2" title="'Оценка 2'"></label>
+                            <input type="radio" id="star-1" name="bee-rating" value="1">
+                            <label for="star-1" title="'Оценка 1'"></label>
+                        </div>
+                    </div>
+                    <div class="line hidden"></div>
+                    <div class="form-right">
+                        <h3 class="heading">Выбрать производителя</h3>
+                        <label class="disabled">
+                            <input type="checkbox" name="sony-1" disabled>
+                            <span class="custom-checkbox"></span>
+                            <img src="img/sony.svg" alt="sony">
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sony-2">
+                            <span class="custom-checkbox"></span>
+                            <img src="img/sony.svg" alt="sony">
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sony-3">
+                            <span class="custom-checkbox"></span>
+                            <img src="img/sony.svg" alt="sony">
+                        </label>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row row-third">
+                    <div class="form-left">
+                        <h3 class="heading">Волосатость брюшка пчелы</h3>
+                        <div class="hair-dropdown">
+                            <div class="dropdown-area"><p class="placeholder">Выбрать брюшко пчелы</p></div> 
+                            <div class="dropdown-content">
+                                <div class="dropdown-item grayBg" data-bee="1">Большая индийская пчела</div>
+                                <div class="dropdown-item grayBg" data-bee="2">Медоносная пчела</div>
+                                <div class="dropdown-item grayBg" data-bee="3">Индийская пчела</div>
+                                <div class="dropdown-item grayBg" data-bee="4">Арликовая пчела</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line hidden"></div>
+                    <div class="form-right">
+                        <h3 class="heading">Выбрать тип одежды</h3>
+                        <div class="clothes-buttons">
+                            <label>
+                                <input type="radio" name="clothes-1">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes1.svg" alt="clothes1">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="clothes-2">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes3.svg" alt="clothes3">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="clothes-3">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes4.svg" alt="clothes4">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="clothes-4">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes2.svg" alt="clothes2">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="clothes-5">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes5.svg" alt="clothes5">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="clothes-6">
+                                <div class="imgWrapp">
+                                    <img src="img/clothes6.svg" alt="clothes6">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row buttons">
+                    <button type="submit">Записать</button>
+                    <button class="reset" type="reset">Сбросить</button>
+                </div>
+            </form>
+        </div>
+        <div class="content-item content-table" data-item="2">
+            <h2 class="title grayBg">Таблица данных</h2>
+            <div class="line"></div>
+            <div class="table">
+                <div class="table-content">
+                    <div class="col col-1">
+                        <div class="head">Вид пчел</div>
+                        <div class="item"><p class="grayBg">Индийская пчела</p></div>
+                        <div class="item"><p>Арликовая пчела</p></div>
+                    </div>
+                    <div class="col col-2">
+                        <div class="head">Волосатость <div class="hidden">брюшка пчел</div></div>
+                        <div class="item"><p class="grayBg">Индийская пчела</p></div>
+                        <div class="item"><p>Арликовая пчела</p></div>
+                    </div>
+                    <div class="col col-3">
+                        <div class="head">Одежда</div>
+                        <div class="item img"><img src="img/clothes1.svg" alt="clothes"></div>
+                        <div class="item img"><img src="img/clothes1.svg" alt="clothes"></div>
+                    </div>
+                    <div class="col col-4">
+                        <div class="head">Цена</div>
+                        <div class="item price">70</div>
+                        <div class="item price">1000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
