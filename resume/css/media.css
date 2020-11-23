@@ -74,6 +74,9 @@
 	progress{
 		width: 40%;
 	}
+	.education .educationWrap{
+		grid-template-columns: 1fr;
+	}
 }
 @media (max-width: 440px) {
 	.profile-wrap .profile-photo img{
