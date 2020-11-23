@@ -18,5 +18,5 @@ $('.modal .close').on('click', function(){
 	items.forEach((el, i) => {
 		let n = el.querySelectorAll('.workItem');
 		headings[i].append(`( ${n.length} )`);
-	})
+	});
 })();

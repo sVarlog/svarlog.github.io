@@ -325,7 +325,6 @@ address{
 }
 .skills-list__item{
 	margin-bottom: 30px;
-	text-transform: uppercase;
 	display: flex;
 	justify-content: space-between;
 }
@@ -337,6 +336,11 @@ address{
 }
 .skills span{
 	font-family:'Prosto One',cursive;
+	line-height: 30px;
+	font-size: 17px;
+}
+.skills span span.bold{
+	font-weight: 700;
 }
 progress {
   background-color: #fff;
