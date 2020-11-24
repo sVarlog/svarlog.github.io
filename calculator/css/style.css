@@ -281,7 +281,7 @@ p{font-size: 16px;}
 }
 .content .content-filter form .row-first .form-right .radio-buttons label input:checked:after{
     content: '';
-    background: url(/img/check.svg) no-repeat center;
+    background: url(../img/check.svg) no-repeat center;
      position: absolute;
     z-index: 3;
     top: 0;
@@ -376,7 +376,7 @@ p{font-size: 16px;}
 }
 .content .content-filter form .row-second .form-right label input:checked + span.custom-checkbox:after{
     content: '';
-    background: url(/img/check.svg) no-repeat center;
+    background: url(../img/check.svg) no-repeat center;
     position: absolute;
     z-index: 3;
     top: 0;
