@@ -1,0 +1,130 @@
+@font-face{
+    font-family: 'Times New Roman';
+    src: url(../fonts/TimesNewRoman.ttf) format('ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Tahoma';
+    src: url(../fonts/Tahoma.ttf) format('ttf');
+    font-weight: 700;
+}
+/* same styles */
+html, body{
+    color: #000;
+}
+body{overflow-x: hidden;}
+.container{
+    max-width: 845px;
+    width: 845px;
+    margin: auto;
+    transition: 0s;
+}
+h1{
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    font-family: 'Tahoma';
+}
+h2{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    font-family: 'Tahoma';
+}
+p{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: 'Times New Roman';
+}
+.red-btn{
+    width: 115px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Tahoma';
+    background: linear-gradient(to bottom, #DA4137, #B4362D);
+    border-radius: 5px;
+    line-height: 22px;
+    color: #fff;
+}
+/* same end */
+/* header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+.header-menu{
+    display: flex;
+}
+.header-menu__item{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Tahoma';
+    color: #000;
+}
+.header-menu__item a{
+    margin-left: 29px;
+}
+/* content */
+.content{
+    display: flex;
+    background: #F0F0F0;
+    padding: 20px 30px;
+    margin-bottom: 23px;
+}
+.content-img{
+    width: 49%;
+    margin-right: auto;
+    height: 230px;
+    overflow: hidden;
+}
+.content-img img{
+    width: 100%;
+    height: inherit;
+}
+.content-text{
+    width: 50%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-text p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* description */
+.description h2{
+    margin-top: 10px;
+}
+.description p{
+    line-height: 21px;
+    margin-top: 5px;
+}
+.icons-wrapp{
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.icons-block{
+    display: flex;
+    align-items: center;
+    flex-basis: 25%;
+    justify-content: center;
+}
+.icons-block__img{
+    margin-right: 20px;
+}
+.icons-block__text{
+    font-style: italic;
+}
