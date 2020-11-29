@@ -96,6 +96,7 @@ const sliderInit = () => {
 
 const sliderRemove = () => {
     document.querySelector('.icons').style = '';
+    document.querySelector('.icons-wrapp .dots-area').remove();
 };
 
 const render = ([...func]) => {
