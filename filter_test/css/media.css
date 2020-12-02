@@ -1,0 +1,288 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 1199px) {
+    .header .secondRow .left h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .header .secondRow{
+        padding-bottom: 150px;
+    }
+    .header .secondRow .left .text{
+        margin-left: 180px;
+        position: relative;
+        z-index: 3;
+    }
+    .header .container:after{
+        -webkit-transform: scale(.7);
+            -ms-transform: scale(.7);
+                transform: scale(.7);
+        z-index: 2;
+    }
+    /**/
+    .section h2{
+        font-size: 35px;
+        letter-spacing: 0;
+    }
+    .section .customSlider .item{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .header .logo img{
+        width: 120px;
+    }
+    .header .menu a{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .header .secondRow{
+        margin-top: 50px;
+    }
+    .header .secondRow .left h1{
+        font-size: 30px;
+    }
+    .header .secondRow .left .text{
+        margin-left: 0;
+    }
+    .header .secondRow form{
+        width: 330px;
+        padding: 30px 20px;
+    }
+    /**/
+    .section{
+        margin-top: 30px;
+    }
+    .section h2{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .section .firstRow{
+        margin-bottom: 30px;
+    }
+    .section .wrapper{
+        width: 250px;
+        height: 80px;
+    }
+    .section .wrapper span.blue{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .section .customSlider .item{
+        width: 220px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header .menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+    }
+    .header .secondRow{
+        margin-top: 30px;
+
+    }
+    .header .secondRow .left{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-bottom: 30px;
+    }
+    .header .secondRow .right{
+        width: 100%;
+    }
+    .header .secondRow .left h1{
+        font-size: 25px;
+        width: 85%;
+        line-height: 30px;
+        margin-top: 0;
+    }
+    .header .secondRow .left .text{
+        margin-top: 0;
+    }
+    .header .secondRow .left .text span{
+        font-size: 14px;
+    }
+    .header .secondRow form{
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 3;
+    }
+    .header .container:after{
+        bottom: -30px;
+    }
+    /**/
+    .section .wrapper{
+        width: 190px;
+        height: 70px;
+    }
+    .section .wrapper span.blue{
+        margin-left: 0;
+    }
+    .section .customSlider .item{
+        width: 160px;
+    }
+    .section .customSlider .numbers{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 0;
+        margin-top: 30px;
+    }
+    .section .customSlider{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header .menu{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header .menu a:nth-child(1){
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
+    .header .secondRow .left{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .header .secondRow .left h1{
+        width: auto;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .header .secondRow .left .text{
+        margin-top: 15px;
+    }
+    .header .secondRow .left .text span{
+        font-size: 12px;
+    }
+    .header .secondRow form{
+        width: 70%;
+        margin: auto;
+    }
+    /**/
+    .section .firstRow{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+    }
+    .section .firstRow .wrapper{
+        margin-top: 15px;
+    }
+    .section .customSlider .sliderWrapp{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .section .customSlider .sliderInner{
+        margin-left: 0;
+    }
+    .section .customSlider .item{
+        width: 100%;
+    }
+    .section .customSlider .arrows .arrowPrev{
+        left: 25px;
+    }
+    .section .customSlider .arrows .arrowNext{
+        right: 25px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .header .logo img{
+        width: 80px;
+    }
+    .header .menu a{
+        font-size: 13px;
+    }
+    .header .menu a > img{
+        margin-right: 5px;
+        height: 15px;
+    }
+    .header .secondRow form{
+        width: 100%;
+    }
+    .header .container:after{
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+        width: 300px;
+        height: 175px;
+        bottom: 10px;
+        left: calc(50% - 150px);
+        background-size: 100%;
+    }
+    .header .secondRow .left h1{
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .header .logo img{
+        width: 70px;
+    }
+    .header .menu{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .header .menu a:nth-child(1){
+        -ms-grid-column: auto;
+            grid-column-start: auto;
+        -ms-grid-column-span: NaN;
+        grid-column-end: auto;
+    }
+    .header .menu a{
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        font-size: 12px;
+        line-height: 19px;
+    }
+}
