@@ -1,0 +1,205 @@
+@media screen and (max-width: 991px) {
+    .container{
+        max-width: 700px;
+        width: 700px;
+    }
+    h1{
+        font-size: 19px;
+        line-height: 24px;
+    }
+    h2{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    p{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .content-img img{
+        width: auto;
+        margin-left: -60px;
+    }
+    .description p{
+        line-height: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: 500px;
+        width: 500px;
+        padding-bottom: 75px;
+    }
+    .header-menu__item{
+        font-size: 13px;
+    }
+    .header-menu__item a{
+        margin-left: 20px;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
+    .content-img{
+        width: 100%;
+        height: auto;
+    }
+    .content-img img{
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+    }
+    .content-text{
+        width: 100%;
+    }
+    .icons-block{
+        flex-basis: 50%;
+    }
+    .icons-block__text{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .container{
+        max-width: 320px;
+        width: 320px;
+    }
+    h1{
+        font-size: 17px;
+        line-height: 22px;
+    }
+    h2{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    p{
+        font-size: 11px;
+        line-height: 14px;
+    }
+    .content-text p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .description p {
+        font-size: 11px;
+        line-height: 14px;
+    }
+    .icons-block{
+        flex-basis: 100%;
+    }
+    .icons-block__text{
+        width: 140px;
+    }
+    /*  */
+    .menu-btn{
+        width: 25px;
+        height: 15px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu-btn__line{
+        width: 100%;
+        height: 2px;
+        background: #000;
+        display: block;
+    }
+    .wrapper.menu-active{
+        transform: rotateY(90deg) translateX(-300px);
+        transform-origin: top left;
+    }
+    .new-menu{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotateY(-90deg) translateX(300px);
+        transform-origin: top right;
+        transition: 0s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid;
+    }
+    .new-menu.menu-active{
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+    .new-menu .header-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .new-menu .header-menu .header-menu__item{
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .menu-close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .menu-close:before,
+    .menu-close:after {
+        position: absolute;
+        content: ' ';
+        height: 100%;
+        right: 10px;
+        width: 2px;
+        background-color: #333;
+    }
+    .menu-close:before {
+        transform: rotate(45deg);
+    }
+    .menu-close:after {
+        transform: rotate(-45deg);
+    }
+    .icons-wrapp{
+        overflow: hidden;
+    }
+    .icons-block{
+        flex-basis: 25%;
+    }
+    .icons-block__text{
+        width: auto;
+    }
+    .icons-wrapp{
+        margin-bottom: 15px;
+    }
+    .icons-wrapp .dots-area{
+        height: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .icons-wrapp .dots-area .dot{
+        background: #dad4d4;
+        height: 15px;
+        width: 15px;
+        display: block;
+        border-radius: 50%;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid #fff;
+        transition: 1s;
+    }
+    .icons-wrapp .dots-area .dot.active{
+        background: #999999;
+        border: 1px solid #000;
+    }
+}
+@media screen and (max-width: 350px) {
+    .container {
+        max-width: 300px;
+        width: 300px;
+    }
+}

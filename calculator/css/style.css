@@ -281,7 +281,11 @@ p{font-size: 16px;}
 }
 .content .content-filter form .row-first .form-right .radio-buttons label input:checked:after{
     content: '';
+<<<<<<< HEAD
     background: url(../img/checkItem.svg) no-repeat center;
+=======
+    background: url(../img/check.svg) no-repeat center;
+>>>>>>> 8d192ac3b1e325c91b496ecf706a83d51dc96498
      position: absolute;
     z-index: 3;
     top: 0;
@@ -376,7 +380,11 @@ p{font-size: 16px;}
 }
 .content .content-filter form .row-second .form-right label input:checked + span.custom-checkbox:after{
     content: '';
+<<<<<<< HEAD
     background: url(../img/checkIcon.svg) no-repeat center;
+=======
+    background: url(../img/check.svg) no-repeat center;
+>>>>>>> 8d192ac3b1e325c91b496ecf706a83d51dc96498
     position: absolute;
     z-index: 3;
     top: 0;
