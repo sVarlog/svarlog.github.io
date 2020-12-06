@@ -2,13 +2,12 @@
 	.container{
 		width: 90%;
 	}
-	.profile-info{
-		padding: 20px 30px 50px 30px;
-	}
 }
 @media (max-width: 980px) {
 	.works .projects .workItem{
 		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.language{
 		margin-right: 15px;
@@ -20,6 +19,8 @@
 	.container{
 		flex-direction: column;
 		width: 70%;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	.resume{
 		margin-top: 20px;
@@ -38,10 +39,6 @@
 	.container{
 		width: 85%;
 	}
-	.resume-wrap{
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
 }
 @media (max-width: 565px) {
 	.logo-img{
@@ -54,9 +51,6 @@
 	}
 }
 @media (max-width: 495px) {
-	.resume-wrap{
-		padding: 15px;
-	}
 	.list-item{
 		padding-left: 25px;
 	}
@@ -79,9 +73,6 @@
 	}
 }
 @media (max-width: 440px) {
-	.profile-wrap .profile-photo img{
-		height: 235px;
-	}
 	.works .projects .workItem .itemWrap{
 		font-size: 16px;
 	}
