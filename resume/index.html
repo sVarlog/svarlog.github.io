@@ -5,41 +5,57 @@
 	<title>Резюме</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Prosto+One&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 	<div class="container">
-		<div class="profile" id="profile">
+		<div class="profile wow fadeInLeft" id="profile">
 			<div class="profile-wrap">
-				<a href="index.html">Ru</a>
+				<a href="index.html" class="wow zoomIn" data-wow-delay=".5s">Ru</a>
 				<!-- <a href="indexEng.html">Eng</a> -->
-				<div class="profile-photo">
-					<img src="img/MyImg.jpeg" alt="myImg">
+				<div class="profile-photo wow fadeIn" data-wow-delay=".5s">
+					<img src="img/MyImg2.jpg" alt="myImg">
 				</div>
 			</div>
 			<div class="profile-info">
-				<h2 class="heading heading-light">Профиль</h2>
-				<p class="profile-text">Привет! Я Михаил Носов, мне 21 год, я frontent разработчик, разработал более 15 сайтов, занимаюсь версткой и интеграцией с CMS WordPress. Программные языки: JavaScript, PHP. В данный момент изучаю UI/UX дизайн и ReactJS/Redux. Так же увлекаюсь английским языком(Intermediate, B1)</p>
+				<h2 class="heading heading-light wow fadeInLeft" data-wow-delay=".5s">Профиль</h2>
+				<p class="profile-text wow fadeInLeft" data-wow-delay=".5s">Привет! Я Михаил Носов, мне 21 год, я frontent разработчик, разработал более 15 сайтов, занимаюсь версткой и интеграцией с CMS WordPress. Программные языки: JavaScript, PHP. В данный момент изучаю UI/UX дизайн и ReactJS/Redux. Так же увлекаюсь английским языком(Intermediate, B1)</p>
 				<div class="contacts">
-					<div class="contacts-item">
+					<div class="contacts-item wow fadeInLeft">
 						<h3 class="contacts-title">
 							<i class="fas fa-envelope"></i>
 							Почта:
 						</h3>
 						<a href="mailto:giroild@gamil.com" target="_blank" class="contacts-text">giroild@gamil.com</a>
 					</div>
-					<div class="contacts-item">
+					<div class="contacts-item wow fadeInLeft">
+						<h3 class="contacts-title">
+							<i class="fab fa-telegram-plane"></i>
+							Telegram:
+						</h3>
+						<a href="https://t.me/killerings" target="_blank" class="contacts-text">Killerings</a>
+					</div>
+					<div class="contacts-item wow fadeInLeft">
+						<h3 class="contacts-title">
+							<i class="fab fa-linkedin-in"></i>
+							LinkedIn:
+						</h3>
+						<a href="https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%BD%D0%BE%D1%81%D0%BE%D0%B2-574614183/" target="_blank" class="contacts-text">LinkedIn.com</a>
+					</div>
+					<div class="contacts-item wow fadeInLeft">
 						<h3 class="contacts-title">
 							<i class="fab fa-behance"></i>
 							Behance:
 						</h3>
 						<a href="https://www.behance.net/sVarlog" target="_blank" class="contacts-text">www.behance.net/sVarlog</a>
 					</div>
-					<div class="contacts-item">
+					<div class="contacts-item wow fadeInLeft">
 						<h3 class="contacts-title">
 							<i class="fab fa-github"></i>
 							GitHub
@@ -47,17 +63,17 @@
 						<a href="https://github.com/sVarlog" target="_blank" class="contacts-text">github.com/sVarlog</a>
 					</div>
 				</div>
-				<h2 class="heading heading-light">Языки</h2>
+				<h2 class="heading heading-light wow fadeInLeft">Языки</h2>
 				<div class="languages">
-					<div class="language">
+					<div class="language wow zoomIn">
 						<span class="language-text">Русский</span>
 						<strong class="languages-per">90%</strong>
 					</div>
-					<div class="language">
+					<div class="language wow zoomIn">
 						<span class="language-text">Украинский</span>
 						<strong class="languages-per">90%</strong>
 					</div>
-					<div class="language">
+					<div class="language wow zoomIn">
 						<span class="language-text">Английский</span>
 						<strong class="languages-per">55%</strong>
 					</div>
@@ -69,9 +85,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="resume" id="resume">
+		<div class="resume wow fadeInRight" id="resume">
 			<div class="resume-wrap">
-				<div class="logo">
+				<div class="logo wow zoomIn" data-wow-delay=".5s">
 					<div class="logo-lines logo-lines_left">
 						<span class="logo-line"></span>
 						<span class="logo-line"></span>
@@ -87,66 +103,66 @@
 					</div>
 				</div>
 				<div class="about">
-					<h1 class="name">Михаил Носов</h1>
-					<span class="position">Design / Frontend / WordPress</span>
-					<div class="about-contacts">
+					<h1 class="name wow fadeInRight">Михаил Носов</h1>
+					<span class="position wow fadeInRight">Design / Frontend / ReactJS / WordPress</span>
+					<div class="about-contacts wow fadeInRight">
 						<a href="mailto:giroild@gamil.com"><b>Email:</b> giroild@gmail.com</a> 
 					</div>
-					<div class="about-contacts">
+					<div class="about-contacts wow fadeInRight">
 						<a href="t.me/killerings"><b>Telegram:</b> @killerings</a> 
 					</div>
 				</div>
 				<div class="education">
-					<h2 class="heading heading-dark heading-skills">Сертификаты:</h2>
+					<h2 class="heading heading-dark heading-skills wow fadeInDown">Сертификаты:</h2>
 					<div class="educationWrap">
-						<div class="educationItem" id="stepikLayout">
+						<div class="educationItem wow zoomIn" id="stepikLayout">
 							<img src="img/Education/stepikLayout.jpg" alt="stepik">
 						</div>
-						<div class="educationItem" id="wp">
+						<div class="educationItem wow zoomIn" id="wp">
 							<img src="img/Education/WP_patent.png" alt="wp wayup">
 						</div>
-						<div class="educationItem" id="stepikJS">
+						<div class="educationItem wow zoomIn" id="stepikJS">
 							<img src="img/Education/sertificate_JS.jpg" alt="JS stepik">
 						</div>
 					</div>
 				</div>
 				<div class="skills">
-					<h2 class="heading heading-dark heading-skills">Навыки</h2>
-					<p class="text-center">Навыки работы с:</p>
-					<p class="text-center mb">
+					<h2 class="heading heading-dark heading-skills wow fadInDown">Навыки</h2>
+					<p class="text-center wow fadeInRight">Навыки работы с:</p>
+					<p class="text-center mb wow fadeInRight">
 						<span><span class="bold">Design</span> - Photoshop, Figma, Adobe XD; 
 						  <br> <span class="bold">DevTools</span> - Webpack, Babel, GitHub, Git, Less/Scss;
 						  <br> <span class="bold">Development</span> - ReactJS, jQuery, Bootstrap4, БЭМ, Wordpress(Woocommerce, Elementor, ACF)</span>
 					</p>
 					<ul class="skills-list">
 						<li class="skills-list__item">
-							<span>HTML5/CSS3</span>
-						    <progress max="100" value="95"></progress>
+							<span class="wow fadeInLeft">HTML5/CSS3</span>
+						    <progress class="wow fadeInRight" max="100" value="95"></progress>
 						</li>
 						<li class="skills-list__item">
-							<span>JavaScript</span>
-						    <progress max="100" value="65"></progress>
+							<span class="wow fadeInLeft">JavaScript</span>
+						    <progress class="wow fadeInRight" max="100" value="65"></progress>
 						</li>
 						<li class="skills-list__item">
-							<span>WordPress</span>
-						    <progress max="100" value="65"></progress>
+							<span class="wow fadeInLeft">WordPress</span>
+						    <progress class="wow fadeInRight" max="100" value="65"></progress>
 						</li>
 						<li class="skills-list__item">
-							<span>PHP</span>
-						    <progress max="100" value="40"></progress>
+							<span class="wow fadeInLeft">PHP</span>
+						    <progress class="wow fadeInRight" max="100" value="40"></progress>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container c2">
+	<div class="container c2 wow fadeInUp">
 		<div class="works">
 			<div class="worksWrap">
-				<h2 class="heading heading-dark main-heading">Мои работы:</h2>
-				<h2 class="heading heading-dark">JavaScript <span class="headingItems"></span> :</h2>
+				<h2 class="heading heading-dark main-heading wow fadeInDown">Мои работы:</h2>
+				<h2 class="heading heading-dark wow fadeInLeft">JavaScript <span class="headingItems"></span> :</h2>
 				<div class="projects projectJS">
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>CustomSlider</h2>
 							<p>Разработка слайдера.</p>
@@ -157,7 +173,7 @@
 						</span>
 						<img src="img/sliderDemo.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>GOT-app (SPA)</h2>
 							<p>Разработка SPA приложения на ReactJS, с использованием state, getState, useEffect, fetch, API</p>
@@ -168,7 +184,7 @@
 						</span>
 						<img src="img/GOT-db.jpg" alt="GOTapp">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Postapp(SPA)</h2>
 							<p>Разработка SPA приложения, todolist с использованием ReactJS</p>
@@ -180,9 +196,9 @@
 						<img src="img/postapp.jpg" alt="postapp">
 					</div>
 				</div>
-				<h2 class="heading heading-dark">Верстка <span class="headingItems"></span> :</h2>
+				<h2 class="heading heading-dark wow fadeInLeft">Верстка <span class="headingItems"></span> :</h2>
 				<div class="projects projectMarkup">
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Food site</h2>
 							<p>Верстка сайта + настройка JS скриптов. С использованием webpack/babel/less.</p>
@@ -191,7 +207,7 @@
 						</span>
 						<img src="img/Food.jpg" alt="Food">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Shop</h2>
 							<p>Верстка сайта по макету, анимация, разделение файлов. Вырезал сетку с bootstrap(производительность). Оптимизация загрузки. Интеграция с WordPress+woocommerce + настройка.</p>
@@ -200,7 +216,7 @@
 						</span>
 						<img src="img/mirkosmetologa.com.ua.jpg" alt="Mirkosmetologa">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Pressoterapia</h2>
 							<p>Верстка сайта по макету, анимация, разделение файлов, отпимизация загрузки.</p>
@@ -208,7 +224,7 @@
 						</span>
 						<img src="img/press-landing.jpg" alt="Press">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>SmartSonic landing</h2>
 							<p>Верстка сайта по макету, анимация, разделение файлов, оптимизация загрузки.</p>
@@ -216,7 +232,7 @@
 						</span>
 						<img src="img/SmartSonic.jpg" alt="Smart Sonic">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Filter</h2>
 							<p>Верстка тестового задания.</p>
@@ -224,7 +240,7 @@
 						</span>
 						<img src="img/filter_test.jpg" alt="filter test img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Modern-leaf</h2>
 							<p>Разработка дизайна и верстка. С использованием flex, grid, parallax.</p>
@@ -232,7 +248,7 @@
 						</span>
 						<img src="img/Modern-leaf.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Calculator</h2>
 							<p>Выполнение тестового задания, с использованием только jQuery, и чистой верстки</p>
@@ -241,42 +257,42 @@
 						</span>
 						<img src="img/calculator.jpg" alt="Calculator">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/MOGO/" target="_blank" class="itemWrap">
 							<h2>MoGo template</h2>
 							<p>Верстка по PSD макету с использованием bootstrap4, flex-box, css Grid и js библиотек.</p>
 						</a>
 						<img src="img/MoGo.jpg" alt="MoGo img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/Construction%20company/index.html" target="_blank" class="itemWrap">
 							<h2>Construct company</h2>
 							<p>Верстка по figma макету с использованием bootstrap4, flex-box и js библиотек.</p>
 						</a>
 						<img src="img/construction.png" alt="Construct img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/Bouncy/BouncyLayout/index.html" target="_blank" class="itemWrap">
 							<h2>Bouncy</h2>
 							<p>Верстка по PSD макету с использованием bootstrap4, flex-box и js библиотек.</p>
 						</a>
 						<img src="img/Bouncy.jpg" alt="Bouncy img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/Alexis-landing/index.html" target="_blank" class="itemWrap">
 							<h2>Alexis</h2>
 							<p>Верстка по PSD макету с использованием bootstrap4, flex-box и js библиотек.</p>
 						</a>
 						<img src="img/Alexis.jpg" alt="Alexis img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/MDBproj/index.html" target="_blank" class="itemWrap">
 							<h2>MDB site</h2>
 							<p>Один из первых сверстаных сайтов. Верстка по видео.</p>
 						</a>
 						<img src="img/MDBsite.jpg" alt="MDB site img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<a href="https://svarlog.github.io/Project/index.html" target="_blank" class="itemWrap">
 							<h2>BIGFOOT</h2>
 							<p>Верстка по PSD макету с использованием flex-box и js библиотек.</p>
@@ -284,9 +300,9 @@
 						<img src="img/webShop.jpg" alt="Webshop img">
 					</div>
 				</div>
-				<h2 class="heading heading-dark">Дизайн <span class="headingItems"></span> :</h2>
+				<h2 class="heading heading-dark wow fadeInLeft">Дизайн <span class="headingItems"></span> :</h2>
 				<div class="projects projectDesign">
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Shop</h2>
 							<p>Разработка прототипа + дизайна для онлайн магазина в стиле лендинга, для более 13 страниц + моб версия.</p>
@@ -294,7 +310,7 @@
 						</span>
 						<img src="img/mirkosmetologa.com.ua.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Pressoterapia</h2>
 							<p>Разработка прототипа + дизайна для одностраничного сайта для 2 косметологических аппаратов.</p>
@@ -303,7 +319,7 @@
 						</span>
 						<img src="img/press-landing.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>SmartSonic landing</h2>
 							<p>Разработка дизайна для одностраничного сайта для косметологического аппарата.</p>
@@ -312,7 +328,7 @@
 						</span>
 						<img src="img/SmartSonic.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Skazka-land</h2>
 							<p>Разработка дизайна для сайта украшения домов/дворов/помещений.</p>
@@ -321,7 +337,7 @@
 						</span>
 						<img src="img/Skazka-land.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Modern-leaf</h2>
 							<p>Разработка дизайна и верстка. С использованием flex, grid, parallax.</p>
@@ -329,7 +345,7 @@
 						</span>
 						<img src="img/Modern-leaf.jpg" alt="Modern-leaf img">
 					</div>
-					<div class="workItem">
+					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Modern-leaf</h2>
 							<p>Разработка дизайна визитки для студии красоты.</p>
@@ -360,6 +376,10 @@
 			<iframe src="certificate/stepik-certificate.pdf"></iframe>
 		</div>
 	</div>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 	<script src="js/jQuery.3.4.1.js"></script>
 	<script src="js/script.js"></script>
 </body>

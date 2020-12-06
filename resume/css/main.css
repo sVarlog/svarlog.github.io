@@ -1,6 +1,6 @@
 html{box-sizing: border-box;}
 *, *:after, *:before{box-sizing: inherit;}
-h1, h2, h3, h4, h5, h6{font-family:'Prosto One',cursive;margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6{font-family:'Ubuntu', sans-serif;font-weight:700;margin:0;padding:0;text-transform:uppercase;}
 p,a,li{font-family:'Cormorant SC',serif;}
 a{text-decoration:none;}
 body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);background-size:200%200%;animation:gradient 5s ease infinite;font-family:'Roboto',sans-serif;position:relative;overflow-x:hidden;}
@@ -29,22 +29,21 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 }
 .profile-wrap{
 	position: relative;
-	padding: 30px 25px 0 25px;
+	padding: 0;
 }
 .profile-wrap .profile-photo img{
-	height: 300px;
+	width: 100%;
 	display: block;
 	margin: auto;
 }
 .profile-wrap a{
 	font-size: 20px;
-	color: rgba(168,168,168,.94);
-	border: 1px solid rgba(168,168,168,.44);
+	color: #000;
+	background: #fff;
+	border: 1px solid #000;
 	transition: .4s ease;
 	font-weight: 700;
-}
-.profile-wrap a:hover{
-	background-color: rgba(0,0,0,.9);
+	padding: 10px;
 }
 .profile-wrap a:nth-child(1) {
 	position: absolute;
@@ -57,12 +56,12 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 	right: 35px;
 }
 .profile-info{
-	padding: 50px 30px 70px 30px;
+	padding: 20px 20px 70px 20px;
 }
 .profile-text{
-	line-height: 24.19px;
-	font-size: 13px;
-	padding-bottom: 20px;
+	line-height: 20px;
+	font-size: 16px;
+	font-family: cursive;
 }
 .languages{
 	font-family: 'Cormorant SC', serif;
@@ -75,20 +74,19 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 }
 .heading-light{
 	color: #fff;
-	border-bottom: 2px dashed #5a5a5a;
+	padding: 0;
 }
 .contacts{
 	margin-bottom: 50px;
 }
 .contacts-item{
-	padding: 20px 0;
-	border-bottom: 2px dashed #5a5a5a;
+	padding: 10px 0;
 }
 .contacts-title{
 	color: #fff;
 	font-size: 16px;
 	font-weight: 400;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 .contacts-title i{
 	margin-right: 10px;
@@ -175,20 +173,18 @@ address{
 	margin-left: 20px;
 }
 .resume{
-	padding: 20px;
+	padding: 30px 20px;
 	flex-basis: 60%;
 	background-color: #fff;
 	animation: animRight .5s ease;
 }
 .resume-wrap{
-	border: 1px solid rgba(168,168,168,.44);
-	padding: 20px;
 	height: 100%;
 }
 .logo{
 	display: flex;
 	justify-content: center;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 	font-size: 20px;
 }
 .logo-img{
@@ -200,6 +196,7 @@ address{
 	justify-content: center;
 	align-items: center;
 	font-weight: 700;
+	font-family: 'UBUNTU', sans-serif;
 }
 .logo-lines{
 	display: flex;
@@ -229,15 +226,17 @@ address{
 .name{
 	font-size: 16px;
 	text-transform: uppercase;
-	letter-spacing: 10px;
+	letter-spacing: 2px;
 	margin-bottom: 10px;
 }
 .position{
 	display: inline-block;
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #808080;
+	color: rgb(28, 28, 28);
 	margin-bottom: 10px;
+	font-family: monospace;
+	font-weight: 700;
 }
 .about-contacts{
 	font-size: 13px;
@@ -248,7 +247,7 @@ address{
 	box-sizing: border-box;
 	text-decoration: none;
 	display: inline-block;
-	color: rgba(168,168,168,.94);
+	color: rgb(63, 63, 63);
 }
 .about-contacts a::before{
 	content: '';
@@ -382,7 +381,7 @@ progress::-moz-progress-bar {
 	display: flex;
     flex-basis: 100%;
     background: #fff;
-    padding: 20px;
+    padding: 15px 20px 30px 20px;
 }
 .works .heading-dark{
 	font-size: 16px;
@@ -393,8 +392,10 @@ progress::-moz-progress-bar {
 .works .main-heading{
 	margin-left: 0;
 	border-bottom: 1px solid rgba(168,168,168,.44);
-	padding-bottom: 8px;
+	padding-bottom: 15px;
 	margin-bottom: 8px;
+	text-align: center;
+	font-size: 24px;
 }
 .works .projects{
 	display: flex;
@@ -402,8 +403,6 @@ progress::-moz-progress-bar {
 	flex-wrap: wrap;
 }
 .works .worksWrap{
-	border: 1px solid rgba(168,168,168,.44);
-    padding: 20px 10px;
     height: 100%;
     width: 100%;
 }
@@ -412,7 +411,7 @@ progress::-moz-progress-bar {
 	font-weight: 400;
 }
 .works .projects .workItem{
-	width: 45%;
+	width: calc(50% - 20px);
 	display: block;
 	margin: 10px;
 	position: relative;
@@ -432,15 +431,15 @@ progress::-moz-progress-bar {
 	align-items: center;
 	flex-direction: column;
 	color: #fff;
-	padding: 20px 30px;
+	padding: 20px;
 	text-align: center;
 }
 .works .projects .workItem .itemWrap:before{
 	content: '';
 	position: absolute;
 	top: 5%;
-	right: 5%;
-	left: 5%;
+	right: 2.5%;
+	left: 2.5%;
 	bottom: 5%;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
@@ -451,8 +450,8 @@ progress::-moz-progress-bar {
 	content: '';
 	position: absolute;
 	top: 5%;
-	right: 5%;
-	left: 5%;
+	right: 2.5%;
+	left: 2.5%;
 	bottom: 5%;
 	border-right: 1px solid #fff;
 	border-left: 1px solid #fff;
