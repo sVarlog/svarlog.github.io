@@ -7,6 +7,9 @@ $('.education #stepikJS').on('click', function () {
 $('.education #stepikLayout').on('click', function(){
 	$('#stepikModal').show(500);
 });
+$('.education #udemyJS').on('click', function () {
+	$('#udemyModal').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
