@@ -1,16 +1,21 @@
 $('.education #wp').on('click', function(){
+	$('#wpModal iframe').attr('src', $('#wpModal iframe').data('src'));
 	$('#wpModal').show(500);
 });
 $('.education #stepikJS').on('click', function () {
+	$('#stepikJSModal iframe').attr('src', $('#stepikJSModal iframe').data('src'));
 	$('#stepikJSModal').show(500);
 });
 $('.education #stepikLayout').on('click', function(){
+	$('#stepikModal iframe').attr('src', $('#stepikModal iframe').data('src'));
 	$('#stepikModal').show(500);
 });
 $('.education #udemyJS').on('click', function () {
+	$('#udemyModal iframe').attr('src', $('#udemyModal iframe').data('src'));
 	$('#udemyModal').show(500);
 });
 $('.education #layoutWayup').on('click', function () {
+	$('#layoutWModal iframe').attr('src', $('#layoutWModal iframe').data('src'));
 	$('#layoutWModal').show(500);
 });
 $('.modal .close').on('click', function(){
