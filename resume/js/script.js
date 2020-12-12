@@ -10,6 +10,9 @@ $('.education #stepikLayout').on('click', function(){
 $('.education #udemyJS').on('click', function () {
 	$('#udemyModal').show(500);
 });
+$('.education #layoutWayup').on('click', function () {
+	$('#layoutWModal').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
