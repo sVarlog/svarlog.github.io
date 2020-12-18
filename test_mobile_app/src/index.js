@@ -4,4 +4,5 @@ import sendForm from './modules/sendForm.js';
 window.addEventListener('DOMContentLoaded', () => {
     modals('button.modalOpen', '.modal');
     sendForm('.modal', '.modalLoad', '.modalConfirm', '.modalConfirm .send');
+    // fullScreen();
 });
