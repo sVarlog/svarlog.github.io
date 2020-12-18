@@ -287,7 +287,7 @@ span.conditions a{
     width: 50px;
     padding: 0;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
 }
 .modal .modalContent .inputWrapp .input input.cardYear.active{
     opacity: 1;
@@ -302,7 +302,7 @@ span.conditions a{
     width: 35px;
     padding: 0;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
 }
 .modal .modalContent .inputWrapp .input input.cardCvv.active{
     opacity: 1;
