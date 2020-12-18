@@ -14,7 +14,7 @@ const modals = (modalOpen, modalWrapp) => {
             document.body.classList.remove('modalActive');
         } else {
             swipe = modal.addEventListener('touchmove', (e) => {
-                if ((e.changedTouches[0].pageY) > (startY + 50 || startY - 50)) {
+                if ((e.changedTouches[0].pageY) > (startY + 50)) {
                     modal.classList.remove('active');
                     modal.removeEventListener('touchstart', modalHide);
                     swipe = null;
