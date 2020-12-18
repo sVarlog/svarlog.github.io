@@ -197,6 +197,7 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
         if (cardNumber) {
             let newStr = cardNumber.substring(cardNumber.length - 4, cardNumber.length);
             input[0].value = `***${newStr}`;
+            console.log(newStr);
         }
     };
 
