@@ -1,5 +1,6 @@
-const sendForm = (modalSelector, loadItem, confirmModal) => {
+const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
     let modal = document.querySelector(modalSelector),
+        sendBtn = document.querySelector(confirmSend),
         formData = modal.querySelector('form'),
         conrfirm = document.querySelector(confirmModal),
         conrfirmClose = conrfirm.querySelector('.modalClose'),
@@ -53,6 +54,13 @@ const sendForm = (modalSelector, loadItem, confirmModal) => {
         e.preventDefault();
         modal.classList.remove('active');
         complete();
+    });
+
+    console.log(confirmSend);
+
+    sendBtn.addEventListener('click', () => {
+        conrfirm.classList.remove('active');
+        loading();
     });
 };
 

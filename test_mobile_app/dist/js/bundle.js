@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('button.modalOpen', '.modal');
-    (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad', '.modalConfirm');
+    (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad', '.modalConfirm', '.modalConfirm .send');
 });
 
 /***/ }),
@@ -79,8 +79,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-const sendForm = (modalSelector, loadItem, confirmModal) => {
+const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
     let modal = document.querySelector(modalSelector),
+        sendBtn = document.querySelector(confirmSend),
         formData = modal.querySelector('form'),
         conrfirm = document.querySelector(confirmModal),
         conrfirmClose = conrfirm.querySelector('.modalClose'),
@@ -134,6 +135,13 @@ const sendForm = (modalSelector, loadItem, confirmModal) => {
         e.preventDefault();
         modal.classList.remove('active');
         complete();
+    });
+
+    console.log(confirmSend);
+
+    sendBtn.addEventListener('click', () => {
+        conrfirm.classList.remove('active');
+        loading();
     });
 };
 
