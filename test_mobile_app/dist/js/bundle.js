@@ -194,14 +194,13 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
 
     const hideNum = () => {
         if (cardNumber) {
-            let newStr = cardNumber.substring(cardNumber.length - 4, cardNumber.length);
+            let newCardNumber = cardNumber.replace(/\s/g, '');
+            let newStr = newCardNumber.substring(newCardNumber.length - 4, newCardNumber.length);
             input[0].value = `***${newStr}`;
-            console.log(newStr);
         }
     };
 
     const showInputs = () => {
-        console.log(cardNumber.length);
         if (cardNumber.length > 13) {
             input.forEach((el, i) => {
                 if (i > 0) {
