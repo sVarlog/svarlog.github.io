@@ -177,7 +177,7 @@ span.conditions a{
     background: rgba(0,0,0,.65);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-    transition: .5s;
+    transition: .1s;
     opacity: 0;
     z-index: -1;
     overflow: hidden;
@@ -238,6 +238,8 @@ span.conditions a{
     left: 15px;
     height: 16px;
     top: calc(50% - 8px);
+    display: flex;
+    align-items: center;
 }
 .modal .modalContent .inputWrapp .input .card img{
     max-width: 30px;
@@ -360,7 +362,7 @@ span.conditions a{
     bottom: 0;
     background: #fff;
     padding: 15px;
-    transition: .5s;
+    transition: .1s;
     z-index: -1;
     opacity: 0;
     overflow: hidden;
@@ -396,7 +398,7 @@ span.conditions a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: .5s;
+    transition: .1s;
     background: rgba(0,0,0,.65);
     color: #fff;
     font-family: 'Gilroy';

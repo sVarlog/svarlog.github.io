@@ -71,11 +71,11 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
     const changeImage = (n) => {
         let filename = imgSrc.split("/").pop();
         if (n === 4) {
-            img.src = imgSrc.replace(filename, '') + 'Visa.png';
+            img.src = imgSrc.replace(filename, '') + 'Visa.svg';
         } else if (n === 2) {
-            img.src = imgSrc.replace(filename, '') + 'Mir.png';
+            img.src = imgSrc.replace(filename, '') + 'Mir.svg';
         } else if (n === 5) {
-            img.src = imgSrc.replace(filename, '') + 'MasterCard.png';
+            img.src = imgSrc.replace(filename, '') + 'MasterCard.svg';
         } else {
             img.src = imgSrc;
         }
