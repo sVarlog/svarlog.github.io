@@ -72,7 +72,7 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
     const changeImage = (n) => {
         let filename = imgSrc.split("/").pop();
         if (n === 4) {
-            img.src = imgSrc.replace(filename, '') + 'visa.png';
+            img.src = imgSrc.replace(filename, '') + 'Visa.png';
         } else if (n === 2) {
             img.src = imgSrc.replace(filename, '') + 'Mir.png';
         } else if (n === 5) {
