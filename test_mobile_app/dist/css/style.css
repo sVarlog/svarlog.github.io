@@ -281,7 +281,7 @@ span.conditions a{
 .modal .modalContent .inputWrapp .input input.cardYear{
     position: absolute;
     background: transparent;
-    right: 70px;
+    right: 92px;
     width: auto;
     box-shadow: none;
     width: 50px;
@@ -296,10 +296,10 @@ span.conditions a{
 .modal .modalContent .inputWrapp .input input.cardCvv{
     position: absolute;
     background: transparent;
-    right: 20px;
+    right: 18px;
     width: auto;
     box-shadow: none;
-    width: 30px;
+    width: 35px;
     padding: 0;
     opacity: 0;
     z-index: 0;
