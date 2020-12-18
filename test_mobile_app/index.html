@@ -61,8 +61,8 @@
                     <div class="card">
                         <img src="dist/img/icons/cardIcon.svg" alt="card">
                     </div>
-                    <input type="number" class="cardNumber" name="number" placeholder="Номер карты">
-                    <input type="number" class="cardYear" name="year" placeholder="ММ/ГГ">
+                    <input type="text" class="cardNumber" name="number" placeholder="Номер карты">
+                    <input type="text" class="cardYear" name="year" placeholder="ММ/ГГ">
                     <input type="password" class="cardCvv" name="cvv" placeholder="CVV">
                     <button class="next"><img src="dist/img/icons/arrowCard.svg" alt="arrow"></button>
                 </div>
@@ -70,6 +70,13 @@
             <button class="submit" type="submit" disabled>Привязать</button>
             <span class="conditions">Нажимая на кнопку, вы соглашаетесь с <a href="#">условиями использования</a> сервиса и <a href="#">политикой конфиденциальности</a></span>
         </form>
+    </div>
+
+    <div class="modalConfirm">
+        <span class="modalClose">Закрыть</span>
+        <div class="content">
+            <!-- content here -->
+        </div>
     </div>
 
     <div class="modalLoad">

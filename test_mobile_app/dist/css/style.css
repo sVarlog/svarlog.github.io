@@ -1,7 +1,7 @@
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{
     max-width: 375px;
-    width: 375px;
+    width: 100%;
     overflow: hidden;
     margin: auto;
 }
@@ -173,7 +173,6 @@ span.conditions a{
     overflow: hidden;
 }
 .modal .modalContent{
-    height: 328px;
     width: 100%;
     background: #fff;
     position: absolute;
@@ -236,10 +235,10 @@ span.conditions a{
     width: 100%;
     height: 50px;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0px 0px 5px #CACACA;
     border: 0;
     outline: none;
-    padding-left: 50px;
     font-family: 'Gilroy';
     font-size: 16px;
     color: #1d1d1f;
@@ -248,7 +247,11 @@ span.conditions a{
     border: 0;
     outline: 0;
     height: 50px;
+    padding-left: 50px;
     width: 100%;
+    appearance: textarea;
+    -webkit-appearance: textarea;
+    -moz-appearance: textarea;
 }
 .modal .modalContent .inputWrapp .input input.cardYear{
     position: absolute;
@@ -302,6 +305,7 @@ span.conditions a{
 }
 .modal .modalContent button.submit{
     height: 40px;
+    min-height: 40px;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
@@ -314,6 +318,31 @@ span.conditions a{
 .modal .modalContent button:disabled{
     opacity: .2;
 }
+/* modal confirm */
+.modalConfirm{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    padding: 15px;
+    transition: .5s;
+    z-index: -1;
+    opacity: 0;
+}
+.modalConfirm.active{
+    opacity: 1;
+    z-index: 1;
+}
+.modalConfirm .content{
+    margin-top: 30px;
+}
+.modalConfirm .modalClose{
+    color: #4892F3;
+    font-family: 'Gilroy';
+}
+/* modal load */
 .modalLoad{
     position: absolute;
     width: 100%;

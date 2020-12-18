@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('button.modalOpen', '.modal');
-    (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad');
+    (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad', '.modalConfirm');
 });
 
 /***/ }),
@@ -59,7 +59,7 @@ const modals = (modalOpen, modalWrapp) => {
     const modalShow = () => {
         modal.classList.add('active');
         modal.addEventListener('touchstart', modalHide);
-        (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.default)('.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
+        (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.default)('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
     };
 
     btn.addEventListener('click', modalShow);
@@ -79,9 +79,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-const sendForm = (modalSelector, loadItem) => {
-    console.log(loadItem);
+const sendForm = (modalSelector, loadItem, confirmModal) => {
     let modal = document.querySelector(modalSelector),
+        formData = modal.querySelector('form'),
+        conrfirm = document.querySelector(confirmModal),
+        conrfirmClose = conrfirm.querySelector('.modalClose'),
         loadModal = document.querySelector(loadItem),
         form = modal.querySelector('form'),
         loadItems = loadModal.querySelectorAll('span'),
@@ -89,10 +91,21 @@ const sendForm = (modalSelector, loadItem) => {
         totalSeconds = 15,
         curr = 0;
 
+    const formReset = () => {
+        conrfirm.classList.remove('active');
+        formData.reset();
+    };
+
+    const complete = () => {
+        conrfirm.classList.add('active');
+        conrfirmClose.addEventListener('click', () => {
+            formReset();
+        });
+    };
+
     const loading = () => {
         loadModal.classList.add('active');
         let process = () => {
-            console.log(curr);
             curr++;
             if (curr >= loadItems.length - 1) {
                 curr = 0;
@@ -120,7 +133,7 @@ const sendForm = (modalSelector, loadItem) => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         modal.classList.remove('active');
-        loading();
+        complete();
     });
 };
 
@@ -138,14 +151,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-const validation = (inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
+const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
     let input = document.querySelectorAll(inpSelector),
+        formItem = document.querySelector(formSelector),
         img = document.querySelector(iSelector),
         inpWrapp = document.querySelector(inputWrapp),
         btn = document.querySelector(nextBtn),
         sBtn = document.querySelector(submitBtn),
         imgSrc = img.src,
-        cardNumber;
+        cardNumber = '';
+
+    const showNextBtn = (bool = true) => {
+        if (bool) {
+            inpWrapp.classList.add('active');
+        } else {
+            inpWrapp.classList.remove('active');
+        }
+    };
 
     const showNum = () => {
         if (cardNumber) {
@@ -158,30 +180,43 @@ const validation = (inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
     const hideNum = () => {
         if (cardNumber) {
             let newStr = cardNumber.substring(cardNumber.length - 4, cardNumber.length);
-            console.log('test');
             input[0].value = `***${newStr}`;
         }
     };
 
-    const changeFocus = (n) => {
-        input[n].focus();
-    }; 
-
-    const activeBtn = () => {
-        sBtn.removeAttribute('disabled');
+    const showInputs = () => {
+        console.log(cardNumber.length);
+        if (cardNumber.length > 13) {
+            input.forEach((el, i) => {
+                if (i > 0) {
+                    el.classList.add('active');
+                }
+            });
+            showNextBtn(false);
+        }
     };
 
-    const disableBtn = () => {
-        sBtn.setAttribute('disabled', true);
+    const hideInputs = () => {
+        input.forEach((el, i) => {
+            if (i > 0) {
+                el.classList.remove('active');
+            }
+        });
+    };
+
+    const activateBtn = (bool = true) => {
+        if (cardNumber.length > 13 && input[1].value.length === 5 && input[2].value.length === 3) {
+            sBtn.removeAttribute('disabled');
+        } else if (!bool) {
+            sBtn.removeAttribute('disabled');
+            console.log('test');
+        } else {
+            sBtn.setAttribute('disabled', true);
+        }
     };
 
     const nextStep = () => {
-        inpWrapp.classList.remove('active');
-        input.forEach((el, i) => {
-            if (i > 0) {
-                el.classList.add('active');
-            }
-        });
+        showInputs();
         hideNum();
         changeFocus(1);
     };
@@ -199,14 +234,10 @@ const validation = (inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
         }
     };
 
-    const checkCvv = (inp, n) => {
+    const checkCvv = (inp) => {
         let cardCode = inp.value.replace(/\D/g, '').substring(0, 3);
         inp.value = cardCode;
-        if (n >= 3) {
-            activeBtn();
-        } else {
-            disableBtn();
-        }
+        activateBtn();
     };
 
     const checkYear = (inp, n) => {
@@ -222,41 +253,60 @@ const validation = (inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
         let cardCode = inp.value.replace(/\D/g, '').substring(0, 16);
         cardCode = cardCode != '' ? cardCode.match(/.{1,4}/g).join(' ') : '';
         inp.value = cardCode;
-        cardNumber = input[0].value;
         if (n >= 19) {
             cardNumber = input[0].value;
             nextStep();
+            showNextBtn(false);
         } else if (n > 13) {
-            inpWrapp.classList.add('active');
+            cardNumber = input[0].value;
+            showNextBtn(true);
         } else {
-            inpWrapp.classList.remove('active');
+            showNextBtn(false);
         }
+    };
+
+    const changeFocus = (n) => {
+        input[n].focus();
     };
 
     input[0].addEventListener('input', () => {
         changeImage(+input[0].value[0]);
         checkNumbers(input[0], input[0].value.length);
+        activateBtn();
     });
 
     input[1].addEventListener('input', () => {
         checkYear(input[1], input[1].value.length);
+        activateBtn();
     });
     
     input[2].addEventListener('input', () => {
         checkCvv(input[2], input[2].value.length);
+        activateBtn();
     });
 
     btn.addEventListener('click', (e) => {
         e.preventDefault();
+        activateBtn();
         nextStep();
     });
 
     input[0].addEventListener('focus', () => {
         showNum();
+        showNextBtn();
+        activateBtn();
+        hideInputs();
     });
 
     input[0].addEventListener('blur', () => {
         hideNum();
+        showInputs();
+    });
+
+    formItem.addEventListener('reset', () => {
+        cardNumber = '';
+        changeImage();
+        hideInputs();
     });
 };
 

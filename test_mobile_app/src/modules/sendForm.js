@@ -1,6 +1,8 @@
-const sendForm = (modalSelector, loadItem) => {
-    console.log(loadItem);
+const sendForm = (modalSelector, loadItem, confirmModal) => {
     let modal = document.querySelector(modalSelector),
+        formData = modal.querySelector('form'),
+        conrfirm = document.querySelector(confirmModal),
+        conrfirmClose = conrfirm.querySelector('.modalClose'),
         loadModal = document.querySelector(loadItem),
         form = modal.querySelector('form'),
         loadItems = loadModal.querySelectorAll('span'),
@@ -8,10 +10,21 @@ const sendForm = (modalSelector, loadItem) => {
         totalSeconds = 15,
         curr = 0;
 
+    const formReset = () => {
+        conrfirm.classList.remove('active');
+        formData.reset();
+    };
+
+    const complete = () => {
+        conrfirm.classList.add('active');
+        conrfirmClose.addEventListener('click', () => {
+            formReset();
+        });
+    };
+
     const loading = () => {
         loadModal.classList.add('active');
         let process = () => {
-            console.log(curr);
             curr++;
             if (curr >= loadItems.length - 1) {
                 curr = 0;
@@ -39,7 +52,7 @@ const sendForm = (modalSelector, loadItem) => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         modal.classList.remove('active');
-        loading();
+        complete();
     });
 };
 

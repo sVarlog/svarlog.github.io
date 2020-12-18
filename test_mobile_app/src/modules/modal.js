@@ -25,7 +25,7 @@ const modals = (modalOpen, modalWrapp) => {
     const modalShow = () => {
         modal.classList.add('active');
         modal.addEventListener('touchstart', modalHide);
-        validation('.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
+        validation('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
     };
 
     btn.addEventListener('click', modalShow);
