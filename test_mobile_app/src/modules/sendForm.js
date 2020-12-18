@@ -52,7 +52,9 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        formData.reset();
         modal.classList.remove('active');
+
         complete();
     });
 
