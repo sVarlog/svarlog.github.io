@@ -20,11 +20,13 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
         conrfirm.classList.add('active');
         conrfirmClose.addEventListener('click', () => {
             formReset();
+            document.body.classList.remove('modalActive');
         });
     };
 
     const loading = () => {
         loadModal.classList.add('active');
+        document.body.classList.add('modalActive');
         let process = () => {
             curr++;
             if (curr >= loadItems.length - 1) {
@@ -47,6 +49,7 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
         setTimeout(() => {
             clearInterval(timer);
             loadModal.classList.remove('active');
+            document.body.classList.remove('active');
         }, totalSeconds * 1000);
     };
 
@@ -54,7 +57,6 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
         e.preventDefault();
         formData.reset();
         modal.classList.remove('active');
-
         complete();
     });
 

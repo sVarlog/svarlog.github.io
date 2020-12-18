@@ -5,6 +5,12 @@ body{
     overflow: hidden;
     margin: auto;
 }
+body.modalActive{
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+}
 h1,h2,h3{
     font-family: 'Gilroy';
     font-weight: 600;

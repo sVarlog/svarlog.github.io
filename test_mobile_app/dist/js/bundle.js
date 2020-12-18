@@ -45,18 +45,21 @@ const modals = (modalOpen, modalWrapp) => {
         if (t.classList.contains('modal') && type === 'click') {
             modal.classList.remove('active');
             modal.removeEventListener('touchstart', modalHide);
+            document.body.classList.remove('modalActive');
         } else {
             swipe = modal.addEventListener('touchmove', (e) => {
                 if ((e.changedTouches[0].pageY) > (startY + 50 || startY - 50)) {
                     modal.classList.remove('active');
                     modal.removeEventListener('touchstart', modalHide);
                     swipe = null;
+                    document.body.classList.remove('modalActive');
                 }
             });
         }
     };
 
     const modalShow = () => {
+        document.body.classList.add('modalActive');
         modal.classList.add('active');
         modal.addEventListener('touchstart', modalHide);
         (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.default)('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
@@ -101,11 +104,13 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
         conrfirm.classList.add('active');
         conrfirmClose.addEventListener('click', () => {
             formReset();
+            document.body.classList.remove('modalActive');
         });
     };
 
     const loading = () => {
         loadModal.classList.add('active');
+        document.body.classList.add('modalActive');
         let process = () => {
             curr++;
             if (curr >= loadItems.length - 1) {
@@ -128,11 +133,13 @@ const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
         setTimeout(() => {
             clearInterval(timer);
             loadModal.classList.remove('active');
+            document.body.classList.remove('active');
         }, totalSeconds * 1000);
     };
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        formData.reset();
         modal.classList.remove('active');
         complete();
     });
