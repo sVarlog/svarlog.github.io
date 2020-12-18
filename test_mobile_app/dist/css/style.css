@@ -3,6 +3,7 @@ body{
     max-width: 375px;
     width: 375px;
     overflow: hidden;
+    margin: auto;
 }
 h1,h2,h3{
     font-family: 'Gilroy';

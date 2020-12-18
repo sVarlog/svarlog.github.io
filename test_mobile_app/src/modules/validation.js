@@ -8,20 +8,24 @@ const validation = (inpSelector, iSelector, inputWrapp, nextBtn, submitBtn) => {
         cardNumber;
 
     const showNum = () => {
-        input[0].value = cardNumber;
+        if (cardNumber) {
+            input[0].value = cardNumber;
+        }
         input[1].value = '';
         input[2].value = '';
     };
 
     const hideNum = () => {
-        let newStr = cardNumber.substring(cardNumber.length - 4, cardNumber.length);
-        input[0].value = `***${newStr}`;
+        if (cardNumber) {
+            let newStr = cardNumber.substring(cardNumber.length - 4, cardNumber.length);
+            console.log('test');
+            input[0].value = `***${newStr}`;
+        }
     };
 
-    const changeFocus = (n = 0) => {
+    const changeFocus = (n) => {
         input[n].focus();
     }; 
-    changeFocus();
 
     const activeBtn = () => {
         sBtn.removeAttribute('disabled');
