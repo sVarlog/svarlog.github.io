@@ -175,7 +175,8 @@ span.conditions a{
     bottom: 0;
     left: 0;
     background: rgba(0,0,0,.65);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     transition: .5s;
     opacity: 0;
     z-index: -1;
@@ -208,7 +209,8 @@ span.conditions a{
     height: 4px;
     background: #fff;
     border-radius: 2px;
-    align-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
 }
 .modal .modalContent h2{
     font-size: 18px;
@@ -258,9 +260,23 @@ span.conditions a{
     height: 50px;
     padding-left: 50px;
     width: 100%;
-    appearance: textarea;
-    -webkit-appearance: textarea;
-    -moz-appearance: textarea;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal .modalContent .inputWrapp .input input:-ms-input-placeholder{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal .modalContent .inputWrapp .input input::-ms-input-placeholder{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal .modalContent .inputWrapp .input input::placeholder{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
 }
 .modal .modalContent .inputWrapp .input input.cardYear{
     position: absolute;
@@ -307,6 +323,14 @@ span.conditions a{
 .modal .modalContent .inputWrapp .input.active .next{
     opacity: 1;
     z-index: 1;
+}
+.modal .modalContent .inputWrapp .input input:-ms-input-placeholder{
+    color: #828283;
+    font-family: inherit;
+}
+.modal .modalContent .inputWrapp .input input::-ms-input-placeholder{
+    color: #828283;
+    font-family: inherit;
 }
 .modal .modalContent .inputWrapp .input input::placeholder{
     color: #828283;
@@ -377,7 +401,8 @@ span.conditions a{
     color: #fff;
     font-family: 'Gilroy';
     font-weight: 600;
-    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
     opacity: 0;
     z-index: -1;
     overflow: hidden;
