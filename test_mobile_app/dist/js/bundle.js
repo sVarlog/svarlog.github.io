@@ -17,7 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('button.modalOpen', '.modal');
     (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad', '.modalConfirm', '.modalConfirm .send');
-    // fullScreen();
 });
 
 /***/ }),
