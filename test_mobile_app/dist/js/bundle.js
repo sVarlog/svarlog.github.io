@@ -240,11 +240,11 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
     const changeImage = (n) => {
         let filename = imgSrc.split("/").pop();
         if (n === 4) {
-            img.src = imgSrc.replace(filename, '') + '/visa.png';
+            img.src = imgSrc.replace(filename, '') + 'visa.png';
         } else if (n === 2) {
-            img.src = imgSrc.replace(filename, '') + '/Mir.png';
+            img.src = imgSrc.replace(filename, '') + 'Mir.png';
         } else if (n === 5) {
-            img.src = imgSrc.replace(filename, '') + '/MasterCard.png';
+            img.src = imgSrc.replace(filename, '') + 'MasterCard.png';
         } else {
             img.src = imgSrc;
         }
@@ -309,7 +309,7 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
 
     input[0].addEventListener('focus', () => {
         showNum();
-        showNextBtn();
+        showNextBtn(false);
         activateBtn();
         hideInputs();
     });
