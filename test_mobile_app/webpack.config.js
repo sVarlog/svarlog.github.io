@@ -1,13 +1,25 @@
 'use strict';
 
-let path = require('path');
-
+// make friends page
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: './src/makeFriendCard.js',
     output: {
-        filename: 'bundle.js',
-        path: __dirname + '/dist/js'
+        filename: 'makeFriendCard.js',
+        path: __dirname + '/dist/js/makeFriendCard/'
+    },
+    watch: true,
+
+    devtool: "source-map",
+};
+
+// money page
+module.exports = {
+    mode: 'development',
+    entry: './src/moneyPage.js',
+    output: {
+        filename: 'moneyPage.js',
+        path: __dirname + '/dist/js/moneyPage/'
     },
     watch: true,
 

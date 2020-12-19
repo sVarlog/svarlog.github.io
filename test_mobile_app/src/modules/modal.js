@@ -1,8 +1,6 @@
-import validation from './validation.js';
-
 const modals = (modalOpen, modalWrapp) => {
     let modal = document.querySelector(modalWrapp),
-        btn = document.querySelector(modalOpen),
+        btn = document.querySelectorAll(modalOpen),
         swipe = null;
 
     const modalHide = (eStart, type = 'click') => {
@@ -24,14 +22,16 @@ const modals = (modalOpen, modalWrapp) => {
         }
     };
 
-    const modalShow = () => {
+    const modalShow = (e) => {
+        e.preventDefault();
         document.body.classList.add('modalActive');
         modal.classList.add('active');
         modal.addEventListener('touchstart', modalHide);
-        validation('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
     };
 
-    btn.addEventListener('click', modalShow);
+    btn.forEach(el => {
+        el.addEventListener('click', modalShow);
+    });
 };
 
 export default modals;
