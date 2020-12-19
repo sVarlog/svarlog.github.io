@@ -215,6 +215,8 @@ body{
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
     z-index: 1;
+    border-radius: 13px;
+    overflow: hidden;
 }
 /*  */
 .content .moneyLinks{
