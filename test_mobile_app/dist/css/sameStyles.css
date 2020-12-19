@@ -4,6 +4,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     margin: auto;
+    padding: 15px;
 }
 body.modalActive{
     height: 100vh;
@@ -17,6 +18,29 @@ h1,h2,h3{
 }
 p{font-family: 'Gilroy';}
 a{color: inherit;}
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a.back{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15.6px;
+    text-decoration: none;
+}
+.header a.back img{
+    margin-right: 3px;
+}
+.header h2{
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
 /* modals */
 .modal{
     position: fixed;
@@ -71,4 +95,44 @@ a{color: inherit;}
     font-size: 15px;
     width: 90%;
     margin-top: 5px;
+}
+/* menu */
+.menuBottom{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ECECEC;
+    background: #fafafa;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+.menuBottom .menuItem{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 10px;
+    color: #aeaeb1;
+    width: 20%;
+    position: relative;
+}
+.menuBottom .menuItem:not(.button) img{
+    margin-bottom: 4px;
+}
+.menuBottom .menuItem .notice{
+    position: absolute;
+    top: -3px;
+    right: 15px;
+    font-size: 11px;
+    font-family: 'Gilroy';
+    letter-spacing: 2%;
+    background: #EA4E3D;
+    border-radius: 8.5px;
+    padding: 1px 5px;
 }

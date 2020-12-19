@@ -1,8 +1,5 @@
 /* header */
 .header{
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 10px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -20,6 +17,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .header .heading h2{
     color: #1D1D1F;

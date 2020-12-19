@@ -7,6 +7,9 @@ body{
     overflow-x: hidden;
     padding-bottom: 51px;
 }
+.header h2{
+    margin-left: -40px;
+}
 /* body bg */
 .bodyWrapp{
     position: absolute;
@@ -53,29 +56,6 @@ body{
     top: 274px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-}
-/* header */
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-.header a.back{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-family: 'Gilroy';
-    font-weight: 500;
-    font-size: 15.6px;
-    text-decoration: none;
-}
-.header a.back img{
-    margin-right: 3px;
-}
-.header h2{
-    font-size: 17px;
-    font-weight: 500;
-    margin-left: -40px;
-    color: #fff;
 }
 /* content */
 .content .balance{
@@ -283,44 +263,4 @@ body{
     margin-left: auto;
     margin-right: -14px;
     background: #ececec;
-}
-/* menu */
-.menu{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid #ECECEC;
-    background: #fafafa;
-    padding-bottom: 5px;
-    padding-top: 8px;
-    display: flex;
-    justify-content: space-around;
-}
-.menu .menuItem{
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gilroy';
-    font-weight: 600;
-    font-size: 10px;
-    color: #aeaeb1;
-    width: 20%;
-    position: relative;
-}
-.menu .menuItem:not(.button) img{
-    margin-bottom: 4px;
-}
-.menu .menuItem .notice{
-    position: absolute;
-    top: -3px;
-    right: 15px;
-    font-size: 11px;
-    font-family: 'Gilroy';
-    letter-spacing: 2%;
-    background: #EA4E3D;
-    border-radius: 8.5px;
-    padding: 1px 5px;
 }
