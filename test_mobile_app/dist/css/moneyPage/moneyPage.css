@@ -1,6 +1,11 @@
+html{
+    overflow-x: hidden;
+}
 body{
     padding: 15px;
     position: relative;
+    overflow-x: hidden;
+    padding-bottom: 51px;
 }
 /* body bg */
 .bodyWrapp{
@@ -139,6 +144,7 @@ body{
 .content .customSlider .sliderWrapp{
     width: calc(100% + 30px);
     margin-left: -15px;
+    overflow: hidden;
 }
 .content .customSlider .sliderInner {
     display: flex;
@@ -206,7 +212,8 @@ body{
     left: 0;
     top: 0;
     background: rgba(42, 88, 133, 0.15);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     z-index: 1;
 }
 /*  */
@@ -252,7 +259,7 @@ body{
     color: #989898;
 }
 .content .moneyLinks .moneyLinksLine{
-    height: 2px;
+    height: .5px;
     width: 90%;
     margin-left: auto;
     margin-right: -14px;
