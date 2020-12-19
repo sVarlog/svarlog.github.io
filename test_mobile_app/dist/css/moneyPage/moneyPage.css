@@ -44,7 +44,7 @@ body{
     width: 30px;
     height: 30px;
     left: 5px;
-    top: 254px;
+    bottom: 52px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
 }
@@ -53,7 +53,7 @@ body{
     width: 30px;
     height: 30px;
     right: 97px;
-    top: 274px;
+    bottom: 32px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
 }
@@ -74,7 +74,7 @@ body{
 .content .balanceWrapp{
     display: flex;
     flex-direction: column;
-    background: rgba(255,255,255,.20);
+    background: rgb(62 201 169);
     width: 100%;
     margin-top: 25px;
     border-radius: 10px;
