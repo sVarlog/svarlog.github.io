@@ -70,6 +70,7 @@ const validation = (type = false, reset = false) => {
     let element = document.querySelector('.cardNumberSlider .input input');
     element.setAttribute('data-valid', false);
     reset ? element.value = '' : element.value = element.value;
+    reset ? confirm.cardNumber = false : '';
     
     if (type === 'card') {
         let newStr = element.value = element.value.replace(/\D/g, '').substring(0, 16);
@@ -91,7 +92,7 @@ const validation = (type = false, reset = false) => {
     } else if (type === 'webMoney') {
         let newStr = element.value = element.value.replace(/\D/g, '').substring(0, 12);
         element.value = `E${newStr}`;
-        if (+element.value.replace(/\D/g, '').length === 11) {
+        if (+element.value.replace(/\D/g, '').length === 12) {
             confirm.cardNumber = true;
         } else {
             confirm.cardNumber = false;
