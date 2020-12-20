@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../dist/css/fonts.css">
+    <link rel="stylesheet" href="../dist/css/sameStyles.css">
+    <link rel="stylesheet" href="../dist/css/withdrawPage/withdrawPage.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="moneyPage.html" class="back"><img src="../dist/img/icons/blueBackArrow.svg" alt="Left arrow">Назад</a>
+        <h2>Вывести деньги</h2>
+    </header>
+
+    <div class="slider withdrawTypeSlider">
+        <div class="sliderWrapp">
+            <div class="sliderInner">
+                <div class="item card">
+                    <div class="balanceLeft">
+                        <div class="icons">
+                            <img src="../dist/img/icons/Visa.svg" alt="visa">
+                            <img src="../dist/img/icons/MasterCard.svg" alt="masterCard">
+                        </div>
+                        <p>Банковская карта</p>
+                    </div>
+                    <div class="balanceRight">
+                        <div class="icon">
+                            <img src="../dist/img/icons/WalletIcon.svg" alt="wallet">
+                        </div>
+                        <p><span class="balance">125 233,65</span> <span class="currency">₽</span></p>
+                    </div>
+                </div>
+                <div class="item qiwi">
+                    <div class="balanceLeft">
+                        <div class="icons">
+                            <img src="../dist/img/icons/payQiwiIcon.svg" alt="qiwi">
+                        </div>
+                        <p>Банковская карта</p>
+                    </div>
+                    <div class="balanceRight">
+                        <div class="icon">
+                            <img src="../dist/img/icons/WalletIcon.svg" alt="wallet">
+                        </div>
+                        <p><span class="balance">125 233,65</span> <span class="currency">₽</span></p>
+                    </div>
+                </div>
+                <div class="item webMoney">
+                    <div class="balanceLeft">
+                        <div class="icons">
+                            <img src="../dist/img/icons/withdrawWebMoneyIcon.svg" alt="webMoney">
+                        </div>
+                        <p>Webmoney</p>
+                    </div>
+                    <div class="balanceRight">
+                        <div class="icon">
+                            <img src="../dist/img/icons/WalletIcon.svg" alt="wallet">
+                        </div>
+                        <p><span class="balance">125 233,65</span> <span class="currency">₽</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider cardNumberSlider">
+        <div class="sliderWrapp">
+            <div class="sliderInner">
+                <div class="item card">
+                    <div class="input">
+                        <input type="text" inputmode="numeric" placeholder="Номер карты получателя">
+                    </div>
+                </div>
+                <div class="item card">
+                    <div class="text">
+                        <span>Сохраненные реквизиты</span>
+                        <h2>4276 3800 3904 0964</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sum">
+        <div class="input">
+            <span class="num"></span>
+            <input type="text" placeholder="Введите сумму">
+        </div>
+        <span class="commission">Комиссия <span class="cNumber">0</span>₽</span>
+        <button class="send">
+            <div class="text">Перевести <span class="number"></span></div>
+        </button>
+    </div>
+
+    <section class="menuBottom">
+        <a href="#" class="menuItem">
+            <img src="../dist/img/icons/HouseIcon.svg" alt="House">Главное
+        </a>
+        <a href="#" class="menuItem">
+            <div class="notice">16</div>
+            <img src="../dist/img/icons/NotificationIcon.svg" alt="House">Уведомления
+        </a>
+        <a href="#" class="menuItem button">
+            <img src="../dist/img/icons/MenuButtonIcon.svg" alt="menuIcon">
+        </a>
+        <a href="#" class="menuItem">
+            <div class="notice">16</div>
+            <img src="../dist/img/icons/ChatIcon.svg" alt="House">Чаты
+        </a>
+        <a href="#" class="menuItem">
+            <img src="../dist/img/icons/PersonIcon.svg" alt="House">Я
+        </a>
+    </section>
+    
+    <script src="../dist/js/withdrawPage/withdrawPage.js"></script>
+</body>
+</html>

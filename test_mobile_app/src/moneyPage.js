@@ -2,7 +2,7 @@ import customSlider from './modules/customSlider.js';
 import modals from './modules/modal.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-    customSlider('.customSlider', '.sliderInner', '.item');
+    customSlider('.customSlider', '.sliderWrapp','.sliderInner', '.item', false, 15);
     modals('.openModalProcessed', '.modalProcessed');
     modals('.openRebilsModal', '.modalRebils');
     modals('.openPercentModal', '.modalPercent');

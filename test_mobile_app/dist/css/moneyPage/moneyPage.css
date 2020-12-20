@@ -2,13 +2,25 @@ html{
     overflow-x: hidden;
 }
 body{
-    padding: 15px;
     position: relative;
     overflow-x: hidden;
-    padding-bottom: 51px;
+    padding-top: 51px;
+    padding-bottom: 15px;
+}
+.header{
+    background: #23AA8B;
+}
+.header a.back{
+    color: #fff;
+    left: 14px;
+}
+.header a.headerLink{
+    position: absolute;
+    right: 14px;
+    display: flex;
 }
 .header h2{
-    margin-left: -40px;
+    color: #fff;
 }
 /* body bg */
 .bodyWrapp{
@@ -60,7 +72,7 @@ body{
 /* content */
 .content .balance{
     font-family: 'Gilroy';
-    margin-top: 42px;
+    margin-top: 22px;
     font-size: 25px;
     font-weight: 600;
     color: #fff;

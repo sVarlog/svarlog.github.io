@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-const customSlider = (sliderSelector, sliderInnerSelector, itemSelector) => {
+const customSlider = (sliderSelector, sliderInnerSelector, itemSelector, dots) => {
     let slider = document.querySelector(sliderSelector),
         inner = slider.querySelector(sliderInnerSelector),
         items = slider.querySelectorAll(itemSelector),
@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_0__.default)('.customSlider', '.sliderInner', '.item');
+    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_0__.default)('.customSlider', '.sliderInner', '.item', false);
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_1__.default)('.openModalProcessed', '.modalProcessed');
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_1__.default)('.openRebilsModal', '.modalRebils');
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_1__.default)('.openPercentModal', '.modalPercent');

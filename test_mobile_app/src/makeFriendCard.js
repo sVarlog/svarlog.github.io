@@ -1,6 +1,6 @@
 import modals from './modules/modal.js';
 import sendForm from './modules/sendForm.js';
-import validation from './modules/validation.js';
+import validation from './modules/friendCardValidation.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     modals('button.modalOpen', '.modal');
