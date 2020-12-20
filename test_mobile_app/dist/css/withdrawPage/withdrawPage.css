@@ -1,5 +1,5 @@
 body{
-    padding-bottom: 51px;
+    padding-bottom: 61px;
 }
 .header{
     border-bottom: 1px solid #ececec;
@@ -8,6 +8,10 @@ body{
 .slider{
     margin-top: 15px;
     margin-bottom: 33px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding-left: 15px;
+    overflow: hidden;
 }
 .slider .sliderWrapp{
     display: flex;
