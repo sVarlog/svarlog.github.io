@@ -136,6 +136,7 @@ body{
     font-size: 15px;
     color: #1D1D1F;
     margin-bottom: 21px;
+    text-align: center;
 }
 .authorization button{
     width: 100%;
@@ -281,6 +282,84 @@ body{
 }
 .authorization .halfRegistration .passWrapp input:last-child{
     margin-bottom: 0;
+}
+/*  */
+.authorization .login{
+    display: none;
+}
+.authorization .login.active{
+    display: block;
+    margin-bottom: 82px;
+}
+.authorization .login p{
+    margin-bottom: 19px;
+}
+.authorization .login .pass{
+    position: relative;
+    margin-bottom: 21px;
+}
+.authorization .login .pass span{
+    position: absolute;
+    right: 19px;
+    top: calc(50% - 9px);
+    font-size: 15px;
+    line-height: 18px;
+    height: 18px;
+    color: #4892F3;
+    font-family: 'Gilroy';
+}
+.authorization .login .pass input{
+    margin-bottom: 0;
+}
+.authorization .enterText{
+    display: flex;
+    flex-direction: column;
+    color: #8A96A3;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    margin-top: 10px;
+    margin-bottom: 82px;
+}
+.authorization .enterText a{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4892F3;
+}
+/*  */
+.authorization .forgot{
+    width: 100%;
+    display: none;
+}
+.authorization .forgot.active{
+    display: block;
+}
+.authorization .forgot p{
+    margin-bottom: 5px;
+}
+.authorization .forgot span{
+    font-family: 'Gilroy';
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.authorization .forgot .row{
+    display: flex;
+}
+.authorization .forgot .row .toLogin{
+    width: 46px;
+    min-width: 46px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
 }
 /*  */
 span.conditions{

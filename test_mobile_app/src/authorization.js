@@ -2,16 +2,31 @@ const authInit = () => {
     let formWrapp = document.querySelector('.authorization'),
         firstPart = formWrapp.querySelector('.firstPart'),
         secondPart = formWrapp.querySelector('.halfRegistration'),
-        changeBtn = formWrapp.querySelector('button.email.next'),
+        loginPart = formWrapp.querySelector('.login'),
+        forgotPart = formWrapp.querySelector('.forgot'),
+        changeBtns = formWrapp.querySelectorAll('.registerItem'),
         backBtn = formWrapp.querySelector('button.back'),
         send = formWrapp.querySelector('button.registration'),
         validationInput = formWrapp.querySelector('.inputPhone'),
         inpOne = formWrapp.querySelector('.passWrapp .passFirst'),
-        inpSec = formWrapp.querySelector('.passWrapp .passRepeat');
+        inpSec = formWrapp.querySelector('.passWrapp .passRepeat'),
+        enterBtns = formWrapp.querySelectorAll('.enter'),
+        forgotPassBtn = formWrapp.querySelector('.forgotPass'),
+        toLoginBtn = formWrapp.querySelector('.toLogin');
 
-    firstPart.classList.add('active');
-    secondPart.classList.remove('active');
     send.setAttribute('disabled', true);
+
+    const showItem = (n = 0) => {
+        let items = [firstPart, secondPart, loginPart, forgotPart];
+        items.forEach((el, i) => {
+            el.classList.remove('active');
+            if (i === n) {
+                console.log(i, n);
+                el.classList.add('active');
+            }
+        });
+    };
+    showItem();
 
     const checkBtn = (type) => {
         const validateEmail = (val) => {
@@ -64,21 +79,13 @@ const authInit = () => {
         }
     };
 
-    const change = (dir = next) => {
-        if (dir === 'next') {
-            firstPart.classList.remove('active');
-            secondPart.classList.add('active');
-        } else if (dir === 'prev') {
-            firstPart.classList.add('active');
-            secondPart.classList.remove('active');
-        }
-    };
-
-    changeBtn.addEventListener('click', () => {
-        change('next');
+    changeBtns.forEach(el => {
+        el.addEventListener('click', () => {
+            showItem(1);
+        });
     });
     backBtn.addEventListener('click', () => {
-        change('prev');
+        showItem(0);
     });
     validationInput.addEventListener('input', () => {
         validation(validationInput);
@@ -88,6 +95,17 @@ const authInit = () => {
     });
     inpSec.addEventListener('input', () => {
         checkBtn('email');
+    });
+    enterBtns.forEach(el => {
+        el.addEventListener('click', () => {
+            showItem(2);
+        });
+    });
+    forgotPassBtn.addEventListener('click', () => {
+        showItem(3);
+    });
+    toLoginBtn.addEventListener('click', () => {
+        showItem(2);
     });
 };
 

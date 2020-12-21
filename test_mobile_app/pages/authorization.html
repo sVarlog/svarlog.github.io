@@ -55,7 +55,7 @@
                 <img src="../dist/img/icons/authTgIcon.svg" alt="tg"> 
                 С помощью Telegram
             </button>
-            <button class="email auth next">
+            <button class="email auth registerItem">
                 <img src="../dist/img/icons/authEmailIcon.svg" alt="email">
                 Ввести Телефон или Email
             </button>
@@ -69,6 +69,7 @@
             </button>
             <h2 class="enterText">Уже есть аккаунт? <a href="#" class="enter">Войти</a></h2>
         </div>
+        <!-- register -->
         <form action="#" class="halfRegistration">
             <label>
                 <span>Телефон или email</span>
@@ -86,22 +87,31 @@
             </div>
             <h2 class="enterText">Уже есть аккаунт? <a href="#" class="enter">Войти</a></h2>
         </form>
+        <!-- login -->
         <form action="#" class="login">
-            <label>
-                <span>Телефон или email</span>
-                <input type="text" class="inputPhone">
-            </label>
+            <p>Зарегистрируйтесь или авторизуйтесь</p>
             <div class="passWrapp">
-                <input type="password" class="pass passFirst" placeholder="Пароль">
-                <input type="password" class="pass passRepeat" placeholder="Повторите Пароль">
+                <input type="email" placeholder="Email">
+                <div class="pass">
+                    <input type="password" placeholder="Пароль">
+                    <span class="forgotPass">Забыли?</span>
+                </div>
             </div>
+            <button class="enter">Войти</button>
+            <h2 class="enterText">Еще нет аккаунта? <a href="#" class="registerItem">Зарегестироваться</a></h2>
+        </form>
+        <!-- forgot -->
+        <form action="#" class="forgot">
+            <p>Забыли пароль?</p>
+            <span>Мы вышлем вам новый пароль на почту</span>            
+            <input type="text" class="" placeholder="Почта или телефон">
             <div class="row">
-                <button class="back">
+                <button class="toLogin">
                     <img src="../dist/img/icons/authBlueArrowToLeftIcon.svg" alt="arrow">
                 </button>
-                <button class="registration">Зарегестироваться</button>
+                <button class="enter">Отправить</button>
             </div>
-            <h2 class="enterText">Уже есть аккаунт? <a href="#" class="enter">Войти</a></h2>
+            <h2 class="enterText">Еще нет аккаунта? <a href="#" class="registerItem">Зарегестироваться</a></h2>
         </form>
     </div>
 
