@@ -311,7 +311,8 @@ body{
 .authorization .login .pass input{
     margin-bottom: 0;
 }
-.authorization .enterText{
+.authorization .login .enterText,
+.authorization .forgot .enterText{
     display: flex;
     flex-direction: column;
     color: #8A96A3;
@@ -321,7 +322,8 @@ body{
     margin-top: 10px;
     margin-bottom: 82px;
 }
-.authorization .enterText a{
+.authorization .login .enterText a,
+.authorization .forgot .enterText a{
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;

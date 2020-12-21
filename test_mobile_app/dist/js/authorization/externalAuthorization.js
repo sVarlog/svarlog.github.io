@@ -2,86 +2,42 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/authorization.js":
-/*!******************************!*\
-  !*** ./src/authorization.js ***!
-  \******************************/
+/***/ "./src/externalAuthorization.js":
+/*!**************************************!*\
+  !*** ./src/externalAuthorization.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/authorizationValidation.js */ "./src/modules/authorizationValidation.js");
 
 
-const authInit = () => {
-    let formWrapp = document.querySelector('.authorization'),
-        firstPart = formWrapp.querySelector('.firstPart'),
-        secondPart = formWrapp.querySelector('.halfRegistration'),
-        loginPart = formWrapp.querySelector('.login'),
-        forgotPart = formWrapp.querySelector('.forgot'),
-        changeBtns = formWrapp.querySelectorAll('.registerItem'),
-        backBtn = formWrapp.querySelector('button.back'),
-        send = formWrapp.querySelector('button.registration'),
-        validationInput = formWrapp.querySelector('.inputPhone'),
-        inpOne = formWrapp.querySelector('.passWrapp .passFirst'),
-        inpSec = formWrapp.querySelector('.passWrapp .passRepeat'),
-        enterBtns = formWrapp.querySelectorAll('.enter'),
-        forgotPassBtn = formWrapp.querySelector('.forgotPass'),
-        toLoginBtn = formWrapp.querySelector('.toLogin');
+let formWrapp = document.querySelector('.registration'),
+    validationInput = formWrapp.querySelector('.inputPhone'),
+    regBtn = formWrapp.querySelector('button.regBtn'),
+    inpOne = formWrapp.querySelector('.passWrapp .passFirst'),
+    inpSec = formWrapp.querySelector('.passWrapp .passRepeat');
 
-    send.setAttribute('disabled', true);
+    regBtn.setAttribute('disabled', true);
 
-    const showItem = (n = 0) => {
-        let items = [firstPart, secondPart, loginPart, forgotPart];
-        items.forEach((el, i) => {
-            el.classList.remove('active');
-            if (i === n) {
-                console.log(i, n);
-                el.classList.add('active');
-            }
-        });
-    };
-    showItem();
-
-    changeBtns.forEach(el => {
-        el.addEventListener('click', () => {
-            showItem(1);
-        });
-    });
-    backBtn.addEventListener('click', () => {
-        showItem(0);
-    });
+window.addEventListener('DOMContentLoaded', () => {
     validationInput.addEventListener('input', () => {
         const fnNum = () => {
-            (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('phone', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration')
+            (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('phone', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.regBtn');
         };
 
         const fnEmail = () => {
-            (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration')
+            (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.regBtn');
         };
 
         (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.validation)(formWrapp, validationInput, 'label span', '.passWrapp', 'Телефон', 'Email', 'Телефон или Email', fnNum, fnEmail);
     });
     inpOne.addEventListener('input', () => {
-        (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration');
+        (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.regBtn');
     });
     inpSec.addEventListener('input', () => {
-        (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration');
+        (0,_modules_authorizationValidation_js__WEBPACK_IMPORTED_MODULE_0__.checkBtn)('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.regBtn');
     });
-    enterBtns.forEach(el => {
-        el.addEventListener('click', () => {
-            showItem(2);
-        });
-    });
-    forgotPassBtn.addEventListener('click', () => {
-        showItem(3);
-    });
-    toLoginBtn.addEventListener('click', () => {
-        showItem(2);
-    });
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-    authInit();
 });
 
 /***/ }),
@@ -215,8 +171,8 @@ const validation = (fWrapp, el, lText, pWrap, firstT, secondT, thirdT, funcNumbe
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./src/authorization.js");
+/******/ 	__webpack_require__("./src/externalAuthorization.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=authorization.js.map
+//# sourceMappingURL=externalAuthorization.js.map

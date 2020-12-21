@@ -101,4 +101,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// external authorization page
+{
+    mode: 'development',
+    entry: './src/externalRegistration.js',
+    output: {
+        filename: 'externalRegistration.js',
+        path: __dirname + '/dist/js/authorization/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];

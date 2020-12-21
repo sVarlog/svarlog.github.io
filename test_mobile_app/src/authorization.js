@@ -1,3 +1,5 @@
+import {checkBtn, validation} from './modules/authorizationValidation.js';
+
 const authInit = () => {
     let formWrapp = document.querySelector('.authorization'),
         firstPart = formWrapp.querySelector('.firstPart'),
@@ -28,57 +30,6 @@ const authInit = () => {
     };
     showItem();
 
-    const checkBtn = (type) => {
-        const validateEmail = (val) => {
-            let reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-            return reg.test(val);
-        }
-
-        if (type === 'phone') {
-            if (validationInput.value.length > 10) {
-                send.removeAttribute('disabled');
-            } else {
-                send.setAttribute('disabled', true);
-            }
-        } else if (type === 'email') {
-            if (validateEmail(validationInput.value) && inpOne.value === inpSec.value && inpOne.value != '') {
-                send.removeAttribute('disabled');
-            } else {
-                send.setAttribute('disabled', true);
-            }
-        }
-    };
-
-    const validation = (el) => {
-        let inputVal = el.value,
-            labelText = formWrapp.querySelector('label span'),
-            passWrapp = formWrapp.querySelector('.passWrapp');
-        
-        const number = () => {
-            labelText.innerText = 'Телефон';
-            labelText.classList.add('active');
-            passWrapp.classList.remove('active');
-            checkBtn('phone');
-        };
-        
-        const email = () => {
-            labelText.innerText = 'Email';
-            labelText.classList.add('active');
-            passWrapp.classList.add('active');
-            checkBtn('email');
-        };
-
-        if (!inputVal.match(/\D/g) && inputVal.length > 0) {
-            number();
-        } else if (inputVal.match(/(\d|\D)/g) && inputVal.length > 0) {
-            email();
-        } else if (inputVal.length === 0) {
-            labelText.innerText = 'Телефон или Email';
-            labelText.classList.remove('active');
-            passWrapp.classList.remove('active');
-        }
-    };
-
     changeBtns.forEach(el => {
         el.addEventListener('click', () => {
             showItem(1);
@@ -88,13 +39,21 @@ const authInit = () => {
         showItem(0);
     });
     validationInput.addEventListener('input', () => {
-        validation(validationInput);
+        const fnNum = () => {
+            checkBtn('phone', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration')
+        };
+
+        const fnEmail = () => {
+            checkBtn('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration')
+        };
+
+        validation(formWrapp, validationInput, 'label span', '.passWrapp', 'Телефон', 'Email', 'Телефон или Email', fnNum, fnEmail);
     });
     inpOne.addEventListener('input', () => {
-        checkBtn('email');
+        checkBtn('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration');
     });
     inpSec.addEventListener('input', () => {
-        checkBtn('email');
+        checkBtn('email', '.inputPhone', '.passWrapp .passFirst', '.passWrapp .passRepeat', 'button.registration');
     });
     enterBtns.forEach(el => {
         el.addEventListener('click', () => {
