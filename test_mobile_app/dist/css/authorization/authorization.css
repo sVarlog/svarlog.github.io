@@ -286,6 +286,9 @@ body{
 /*  */
 .authorization .login{
     display: none;
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .authorization .login.active{
     display: block;
@@ -333,6 +336,8 @@ body{
 .authorization .forgot{
     width: 100%;
     display: none;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .authorization .forgot.active{
     display: block;

@@ -8,6 +8,7 @@ const authInit = () => {
         forgotPart = formWrapp.querySelector('.forgot'),
         changeBtns = formWrapp.querySelectorAll('.registerItem'),
         backBtn = formWrapp.querySelector('button.back'),
+        toBackItems = formWrapp.querySelectorAll('.toBack'),
         send = formWrapp.querySelector('button.registration'),
         validationInput = formWrapp.querySelector('.inputPhone'),
         inpOne = formWrapp.querySelector('.passWrapp .passFirst'),
@@ -23,7 +24,6 @@ const authInit = () => {
         items.forEach((el, i) => {
             el.classList.remove('active');
             if (i === n) {
-                console.log(i, n);
                 el.classList.add('active');
             }
         });
@@ -65,6 +65,11 @@ const authInit = () => {
     });
     toLoginBtn.addEventListener('click', () => {
         showItem(2);
+    });
+    toBackItems.forEach(el => {
+        el.addEventListener('click', () => {
+            showItem(0);
+        });
     });
 };
 
