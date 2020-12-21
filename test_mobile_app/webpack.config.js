@@ -102,12 +102,36 @@ module.exports = [{
 
     devtool: "source-map",
 },
-// external authorization page
+// external registration page
 {
     mode: 'development',
     entry: './src/externalRegistration.js',
     output: {
         filename: 'externalRegistration.js',
+        path: __dirname + '/dist/js/authorization/'
+    },
+    watch: true,
+
+    devtool: "source-map",
+},
+// external authorization page
+{
+    mode: 'development',
+    entry: './src/externalAuthorization.js',
+    output: {
+        filename: 'externalAuthorization.js',
+        path: __dirname + '/dist/js/authorization/'
+    },
+    watch: true,
+
+    devtool: "source-map",
+},
+// forgot pass page
+{
+    mode: 'development',
+    entry: './src/externalForgotPass.js',
+    output: {
+        filename: 'externalForgotPass.js',
         path: __dirname + '/dist/js/authorization/'
     },
     watch: true,

@@ -191,11 +191,11 @@ body{
 .authorization input{
     width: 100%;
     height: 48px;
-    border: 1px solid #cecece;
+    border: 1px solid #ececec;
     border-radius: 10px;
     outline: none;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Gilroy';
     font-weight: 500;
     color: #1d1d1f;
@@ -306,6 +306,7 @@ body{
 .authorization .login .pass span{
     position: absolute;
     right: 19px;
+    font-weight: 500;
     top: calc(50% - 9px);
     font-size: 15px;
     line-height: 18px;

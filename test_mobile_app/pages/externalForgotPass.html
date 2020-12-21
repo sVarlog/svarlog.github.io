@@ -5,60 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../dist/css/fonts.css">
     <link rel="stylesheet" href="../dist/css/sameStyles.css">
-    <link rel="stylesheet" href="../dist/css/authorization/externalRegistration.css">
+    <link rel="stylesheet" href="../dist/css/authorization/externalForgotPass.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         <div class="heading">
-            <h2>Регистрация</h2>
+            <h2>Забыли пароль?</h2>
         </div>
     </header>
 
-    <div class="authorization">
-        <button class="oneClick auth">
-            <img src="../dist/img/icons/authOneClickIcon.svg" alt="oneClick">
-            В 1 клик
-        </button>
-        <button class="telegram auth">
-            <img src="../dist/img/icons/authTgIcon.svg" alt="tg"> 
-            С помощью Telegram
-        </button>
-        <button class="facebook auth">
-            <img src="../dist/img/icons/authFbIcon.svg" alt="fb">
-            С помощью Facebook
-        </button>
-        <button class="vk auth">
-            <img src="../dist/img/icons/authVkIcon.svg" alt="vk">
-            С помощью Vk
-        </button>
-    </div>
-
-    <div class="lineRow">
-        <div class="line"></div>
-        <span>Или</span>
-        <div class="line"></div>
+    <div class="forgotText">
+        <p>Мы вышлем вам новый пароль на <br> вашу почту</p>
     </div>
     
-    <form action="#" class="registration">
-        <label>
-            <span>Телефон или email</span>
-            <input type="text" class="inputPhone">
-        </label>
-        <div class="passWrapp">
-            <input type="password" class="pass passFirst" placeholder="Пароль">
-            <input type="password" class="pass passRepeat" placeholder="Повторите Пароль">
-        </div>
+    <form action="#" class="forgotPass">
+        <input type="text" name="forgotPass" class="forgot" placeholder="Почта или телефон">
         <div class="row">
-            <button class="regBtn">Зарегестироваться</button>
+            <a href="externalAuthorization.html" class="back">
+                <img src="../dist/img/icons/authBlueArrowToLeftIcon.svg" alt="arrow">
+            </a>
+            <button class="forgotPassBtn">Отправить</button>
         </div>
     </form>
-
-    <h2 class="enterText">Уже есть аккаунт? <a href="externalAuthorization.html" class="enter">Войти</a></h2>
-
-    <div class="conditionsWrap">
-        <span class="conditions">Нажимая на кнопку, вы соглашаетесь с <a href="#">условиями использования</a> сервиса и <a href="#">политикой конфиденциальности</a></span>
-    </div>
 
     <div class="descrBlock">
         <div class="row">
@@ -114,6 +83,6 @@
         </a>
     </section>
 
-    <script src="../dist/js/authorization/externalRegistration.js"></script>
+    <script src="../dist/js/authorization/externalForgotPass.js"></script>
 </body>
 </html>

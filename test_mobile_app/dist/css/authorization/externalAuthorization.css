@@ -12,7 +12,7 @@ body{
 }
 /*  */
 .authorization{
-    margin-top: 13px;
+    margin-top: 21px;
 }
 .authorization button{
     width: 100%;
@@ -71,7 +71,7 @@ body{
     background: #ececec;
 }
 /*  */
-.registration input{
+.authorization input{
     width: 100%;
     height: 48px;
     border: 1px solid #ececec;
@@ -84,21 +84,21 @@ body{
     color: #1d1d1f;
     margin-bottom: 8px;
 }
-.registration input::placeholder{
+.authorization input::placeholder{
     font-family: 'Gilroy';
     font-weight: 500;
     font-size: 15px;
     line-height: 17px;
     color: #888888;
 }
-.registration label{
+.authorization label{
     position: relative;
     height: 48px;
     min-height: 48px;
     display: flex;
     margin-bottom: 8px;
 }
-.registration label > span{
+.authorization label > span{
     position: absolute;
     top: calc(50% - 8.5px);
     left: 10px;
@@ -109,18 +109,17 @@ body{
     color: #888888;
     transition: .3s;
 }
-.registration label > span.active{
+.authorization label > span.active{
     font-size: 12px;
     line-height: 10px;
     top: 5px;
 }
-.registration button{
+.authorization button.enterBtn{
     width: 100%;
     height: 44px;
     min-height: 44px;
     max-height: 44px;
     margin-bottom: 16px;
-    margin-top: 13px;
     border-radius: 22px;
     border: 0;
     outline: 0;
@@ -130,49 +129,57 @@ body{
     font-size: 15px;
     position: relative;
 }
-.registration .passWrapp{
+.authorization .passWrapp{
     display: none;
 }
-.registration .passWrapp.active {
+.authorization .passWrapp.active {
     display: block;
 }
-.registration .regBtn{
+.authorization .enterBtn{
     background: linear-gradient(90deg, #01C99B 0%, #4892F3 100%);
 }
-.registration .regBtn:disabled{
+.authorization .enterBtn:disabled{
     opacity: .3;
 }
 /*  */
 .enterText{
     font-family: 'Gilroy';
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
-    color: #1D1D1F;
-    margin-top: 8px;
+    color: #8A96A3;
+    margin-top: 5px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 164px;
 }
 .enterText > a{
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Gilroy';
     font-weight: 600;
     color: #4892F3;
     text-decoration: none;
+    margin-top: -3px;
 }
 /*  */
-.conditionsWrap{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 125px;
+.authorization .pass{
+    position: relative;
+    margin-bottom: 21px;
 }
-span.conditions{
-    font-family: 'Roboto';
-    color: #8A96A3;
-    margin-top: 13px;
-    font-size: 12px;
-    text-align: center;
+.authorization .pass .forgotPass{
+    position: absolute;
+    right: 19px;
+    top: calc(50% - 9px);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    height: 18px;
+    color: #4892F3;
+    font-family: 'Gilroy';
+    text-decoration: none;
 }
-span.conditions a{
-    color: inherit;
+.authorization .pass input{
+    margin-bottom: 0;
 }
 /*  */
 .descrBlock{

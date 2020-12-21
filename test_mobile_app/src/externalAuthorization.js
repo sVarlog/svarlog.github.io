@@ -1,7 +1,3 @@
-/******/ (() => { // webpackBootstrap
-/*!**************************************!*\
-  !*** ./src/externalAuthorization.js ***!
-  \**************************************/
 let enterBtn = document.querySelector('.enterBtn'),
     mailInput = document.querySelector('input.email'),
     passInput = document.querySelector('input.password');
@@ -41,6 +37,3 @@ window.addEventListener('DOMContentLoaded', () => {
         check();
     });
 });
-/******/ })()
-;
-//# sourceMappingURL=externalAuthorization.js.map

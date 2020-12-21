@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../dist/css/fonts.css">
     <link rel="stylesheet" href="../dist/css/sameStyles.css">
-    <link rel="stylesheet" href="../dist/css/authorization/externalRegistration.css">
+    <link rel="stylesheet" href="../dist/css/authorization/externalAuthorization.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         <div class="heading">
-            <h2>Регистрация</h2>
+            <h2>Авторизация</h2>
         </div>
     </header>
 
     <div class="authorization">
-        <button class="oneClick auth">
-            <img src="../dist/img/icons/authOneClickIcon.svg" alt="oneClick">
-            В 1 клик
-        </button>
         <button class="telegram auth">
             <img src="../dist/img/icons/authTgIcon.svg" alt="tg"> 
             С помощью Telegram
@@ -40,25 +36,19 @@
         <div class="line"></div>
     </div>
     
-    <form action="#" class="registration">
-        <label>
-            <span>Телефон или email</span>
-            <input type="text" class="inputPhone">
-        </label>
-        <div class="passWrapp">
-            <input type="password" class="pass passFirst" placeholder="Пароль">
-            <input type="password" class="pass passRepeat" placeholder="Повторите Пароль">
+    <form action="#" class="authorization">
+        <input type="email" name="email" class="email" placeholder="Email">
+        <div class="pass">
+            <input type="password" class="password" placeholder="Пароль">
+            <a href="externalForgotPass.html" class="forgotPass">Забыли?</a>
         </div>
         <div class="row">
-            <button class="regBtn">Зарегестироваться</button>
+            <button class="enterBtn">Войти</button>
         </div>
     </form>
 
-    <h2 class="enterText">Уже есть аккаунт? <a href="externalAuthorization.html" class="enter">Войти</a></h2>
+    <h2 class="enterText">Еще нет аккаунта? <a href="externalRegistration.html" class="register">Зарегистрироваться</a></h2>
 
-    <div class="conditionsWrap">
-        <span class="conditions">Нажимая на кнопку, вы соглашаетесь с <a href="#">условиями использования</a> сервиса и <a href="#">политикой конфиденциальности</a></span>
-    </div>
 
     <div class="descrBlock">
         <div class="row">
@@ -114,6 +104,6 @@
         </a>
     </section>
 
-    <script src="../dist/js/authorization/externalRegistration.js"></script>
+    <script src="../dist/js/authorization/externalAuthorization.js"></script>
 </body>
 </html>
