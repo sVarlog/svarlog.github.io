@@ -9,7 +9,7 @@ button.setAttribute('disabled', true);
 console.log(input, button);
 
 const check = () => {
-    if (input.value.length > 7) {
+    if (input.value.length >= 5) {
         console.log('test');
         button.removeAttribute('disabled');
     } else {
