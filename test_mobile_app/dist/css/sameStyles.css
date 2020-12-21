@@ -145,6 +145,9 @@ a{color: inherit;}
     width: 20%;
     position: relative;
 }
+.menuBottom .menuItem.active svg > path{
+    fill: #4892F3;
+}
 .menuBottom .menuItem .notice{
     position: absolute;
     top: 3px;
