@@ -211,6 +211,8 @@ body{
 /*  */
 .authorization .firstPart{
     display: none;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .authorization .firstPart.active{
     display: block;
