@@ -188,6 +188,10 @@ body{
     width: 100%;
     height: 100%;
     z-index: 1;
+    opacity: 0;
+}
+.sum .input .num.active{
+    opacity: 1;
 }
 .sum input{
     width: 100%;

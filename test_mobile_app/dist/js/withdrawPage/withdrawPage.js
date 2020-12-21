@@ -163,6 +163,59 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
 
 /***/ }),
 
+/***/ "./src/modules/modal.js":
+/*!******************************!*\
+  !*** ./src/modules/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+const modals = (modalOpen, modalWrapp) => {
+    let modal = document.querySelector(modalWrapp),
+        btn = document.querySelectorAll(modalOpen),
+        swipe = null;
+
+    const modalHide = (eStart, type = 'click') => {
+        let t = eStart.target,
+            startY = eStart.targetTouches[0].pageY;
+        if (t.classList.contains('modal') && type === 'click') {
+            modal.style.transition = ".5s";
+            modal.classList.remove('active');
+            modal.removeEventListener('touchstart', modalHide);
+            document.body.classList.remove('modalActive');
+        } else {
+            swipe = modal.addEventListener('touchmove', (e) => {
+                if ((e.changedTouches[0].pageY) > (startY + 50)) {
+                    modal.style.transition = ".5s";
+                    modal.classList.remove('active');
+                    modal.removeEventListener('touchstart', modalHide);
+                    swipe = null;
+                    document.body.classList.remove('modalActive');
+                }
+            });
+        }
+    };
+
+    const modalShow = (e) => {
+        e.preventDefault();
+        modal.style.transition = "0s";
+        document.body.classList.add('modalActive');
+        modal.classList.add('active');
+        modal.addEventListener('touchstart', modalHide);
+    };
+
+    btn.forEach(el => {
+        el.addEventListener('click', modalShow);
+    });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modals);
+
+/***/ }),
+
 /***/ "./src/withdrawPage.js":
 /*!*****************************!*\
   !*** ./src/withdrawPage.js ***!
@@ -171,6 +224,8 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_customSlider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/customSlider.js */ "./src/modules/customSlider.js");
+/* harmony import */ var _modules_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal.js */ "./src/modules/modal.js");
+
 
 
 let windowWidth = document.documentElement.offsetWidth,
@@ -214,8 +269,10 @@ const calculateCommision = () => {
 
     if (sumInput.value.length > 0) {
         sumInput.classList.add('active');
+        textBlock.classList.add('active');
     } else {
         sumInput.classList.remove('active');
+        textBlock.classList.remove('active');
     }
     
     newStr = newStr.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
@@ -285,13 +342,16 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
         input.placeholder = placeHolders[n];
     };
 
-    const changeItem = (n = 0) => {
-        classArr.forEach(cls => {
-            targetChange.forEach(el => {
-                el.classList.remove(cls);
-                el.classList.add(classArr[n]);
+    const changeItem = (n = 0, check = true) => {
+        console.log('test');
+        if (check) {
+            classArr.forEach(cls => {
+                targetChange.forEach(el => {
+                    el.classList.remove(cls);
+                    el.classList.add(classArr[n]);
+                });
             });
-        });
+        }
         confirmValidation();
     };
 
@@ -300,9 +360,13 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
             if (mutation.attributeName === 'data-slide') {
                 currNumber = mutation.target.dataset.slide;
                 changePlaceholder(currNumber);
-                changeItem(currNumber);
+                console.log(mutation.target, targetObserve);
+                if (mutation.target === targetObserve.querySelector('.sliderInner')) {
+                    changeItem(currNumber, true);
+                }
                 validation(false, true);
                 if (mutation.target === secondTargetObserve) {
+                    changeItem(currNumber, false);
                     if (+secondTargetObserve.dataset.slide > 0) {
                         confirm.cardNumber = true;
                     } else {
@@ -351,6 +415,7 @@ window.addEventListener('DOMContentLoaded', () => {
         calculateCommision();
         confirmValidation();
     });
+    (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_1__.default)('.send', '.paySuccess');
 });
 
 window.addEventListener('resize', () => {

@@ -1,4 +1,5 @@
 import customSlider from './modules/customSlider.js';
+import modal from './modules/modal.js';
 
 let windowWidth = document.documentElement.offsetWidth,
     input = document.querySelector('.cardNumberSlider .input input'),
@@ -41,8 +42,10 @@ const calculateCommision = () => {
 
     if (sumInput.value.length > 0) {
         sumInput.classList.add('active');
+        textBlock.classList.add('active');
     } else {
         sumInput.classList.remove('active');
+        textBlock.classList.remove('active');
     }
     
     newStr = newStr.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
@@ -112,13 +115,16 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
         input.placeholder = placeHolders[n];
     };
 
-    const changeItem = (n = 0) => {
-        classArr.forEach(cls => {
-            targetChange.forEach(el => {
-                el.classList.remove(cls);
-                el.classList.add(classArr[n]);
+    const changeItem = (n = 0, check = true) => {
+        console.log('test');
+        if (check) {
+            classArr.forEach(cls => {
+                targetChange.forEach(el => {
+                    el.classList.remove(cls);
+                    el.classList.add(classArr[n]);
+                });
             });
-        });
+        }
         confirmValidation();
     };
 
@@ -127,9 +133,13 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
             if (mutation.attributeName === 'data-slide') {
                 currNumber = mutation.target.dataset.slide;
                 changePlaceholder(currNumber);
-                changeItem(currNumber);
+                console.log(mutation.target, targetObserve);
+                if (mutation.target === targetObserve.querySelector('.sliderInner')) {
+                    changeItem(currNumber, true);
+                }
                 validation(false, true);
                 if (mutation.target === secondTargetObserve) {
+                    changeItem(currNumber, false);
                     if (+secondTargetObserve.dataset.slide > 0) {
                         confirm.cardNumber = true;
                     } else {
@@ -178,6 +188,7 @@ window.addEventListener('DOMContentLoaded', () => {
         calculateCommision();
         confirmValidation();
     });
+    modal('.send', '.paySuccess');
 });
 
 window.addEventListener('resize', () => {
