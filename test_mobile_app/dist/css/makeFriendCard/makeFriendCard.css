@@ -1,15 +1,4 @@
 /* header */
-.header{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.header a{
-    align-self: center;
-    display: flex;
-    position: absolute;
-    left: 0;
-}
 .header .heading{
     display: flex;
     flex-direction: column;
@@ -18,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding-top: 10px;
 }
 .header .heading h2{
     color: #1D1D1F;

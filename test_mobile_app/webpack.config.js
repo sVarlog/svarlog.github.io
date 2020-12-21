@@ -38,3 +38,16 @@ module.exports = {
 
     devtool: "source-map",
 };
+
+// authorization page
+module.exports = {
+    mode: 'development',
+    entry: './src/authorization.js',
+    output: {
+        filename: 'authorization.js',
+        path: __dirname + '/dist/js/authorization/'
+    },
+    watch: true,
+
+    devtool: "source-map",
+};

@@ -1,0 +1,287 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+/* header */
+.header{
+    background: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.header .heading h2{
+    color: #1D1D1F;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: .5;
+}
+.header .heading p{
+    font-size: 18px;
+    font-weight: 500;
+}
+/* content */
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 30px;
+}
+.content .row{
+    width: 100%;
+    display: flex;
+}
+.content .firstRow{
+    align-items: center;
+}
+.content .firstRow .image{
+    position: relative;
+}
+.content .firstRow .image .icon{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+.content .firstRow .name{
+    margin-left: 20px;
+}
+.content .firstRow .name h2{
+    font-weight: 500;
+    font-size: 20px;
+}
+.content .firstRow .name p{
+    font-weight: 500;
+    font-size: 18px;
+}
+.content .secondRow{
+    flex-direction: column;
+    margin: 15px 35px;
+    margin-bottom: 19px;
+    padding: 22px 30px 22px 30px;
+    background: #F9FAFE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.15);
+}
+.content .secondRow h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.content .secondRow .item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.content .secondRow .item p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.content .thirdRow{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background: linear-gradient(#fff, #fff);
+    background-clip: padding-box;
+    padding-top: 10px;
+    padding-bottom: 21px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Roboto';
+}
+.content .thirdRow::after {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background: linear-gradient(to right, #01C79B, #4493EE);
+    content: '';
+    z-index: -1;
+    border-radius: 15px;
+}
+.content .thirdRow h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+.content .thirdRow p{
+    font-size: 14px;
+}
+.content .thirdRow span{
+    font-size: 14px;
+    color: #8f8f8f;
+}
+/*  */
+.authorization{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.authorization p{
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15px;
+    color: #1D1D1F;
+    margin-bottom: 21px;
+}
+.authorization button{
+    width: 100%;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    margin-bottom: 8px;
+    border-radius: 22px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+}
+.authorization button.auth img{
+    position: absolute;
+    left: 23px;
+    top: 10px;
+}
+.authorization button.oneClick{
+    background: linear-gradient(90deg, #FFF589 0%, #FF4240 100%),#C4C4C4;
+}
+.authorization button.telegram{
+    background: #1E96C8;
+}
+.authorization button.email{
+    background: linear-gradient(90.04deg, #01C99B 0.03%, #4892F3 99.97%),#C4C4C4;
+}
+.authorization button.facebook{
+    background: #157DC3;
+}
+.authorization button.vk{
+    background: #5181B8;
+}
+.authorization h2{
+    font-family: 'Gilroy';
+    font-size: 15px;
+    font-weight: 500;
+    color: #1D1D1F;
+    margin-top: 8px;
+}
+.authorization h2 > a{
+    font-size: 18px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    color: #4892F3;
+    text-decoration: none;
+}
+.authorization input{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+/*  */
+.authorization .firstPart{
+    display: none;
+}
+.authorization .firstPart.active{
+    display: block;
+}
+.authorization .halfRegistration{
+    display: none;
+}
+.authorization .halfRegistration.active{
+    display: block;
+}
+/*  */
+.authorization .halfRegistration{
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.authorization .halfRegistration .row{
+    margin-top: 17px;
+    display: flex;
+}
+.authorization .halfRegistration .row .back{
+    width: 46px;
+    min-width: 46px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.authorization .halfRegistration .row button.registration{
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #01C99B 0%, #4892F3 100%);
+}
+.authorization .halfRegistration .row button.registration:disabled{
+    opacity: .3;
+}
+.authorization .halfRegistration label{
+    position: relative;
+    height: 48px;
+    min-height: 48px;
+    display: flex;
+    margin-bottom: 8px;
+}
+.authorization .halfRegistration label > span{
+    position: absolute;
+    top: calc(50% - 8.5px);
+    left: 10px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: #8a96a3;
+    transition: .3s;
+}
+.authorization .halfRegistration label > span.active{
+    font-size: 12px;
+    line-height: 10px;
+    top: 5px;
+}
+.authorization .halfRegistration .passWrapp{
+    display: none;
+}
+.authorization .halfRegistration .passWrapp.active{
+    display: block;
+}
+.authorization .halfRegistration .passWrapp input:last-child{
+    margin-bottom: 0;
+}
+/*  */
+span.conditions{
+    font-family: 'Roboto';
+    color: #8A96A3;
+    margin-top: 13px;
+    font-size: 12px;
+    text-align: center;
+}
+span.conditions a{
+    color: inherit;
+}
