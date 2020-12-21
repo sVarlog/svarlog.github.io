@@ -31,6 +31,48 @@ const authInit = () => {
 
     send.setAttribute('disabled', true);
 
+    const forgotPassBtnCheck = () => {
+        let forgotEnterBtn = formWrapp.querySelector('.forgotEnterBtn'),
+            forgotPassInput = formWrapp.querySelector('.forgotPassInput');
+        
+        forgotEnterBtn.setAttribute('disabled', true);
+
+        const check = () => {
+            if (forgotPassInput.value.length >= 5) {
+                forgotEnterBtn.removeAttribute('disabled');
+            } else {
+                forgotEnterBtn.setAttribute('disabled', true);
+            }
+        };
+
+        forgotPassInput.addEventListener('input', check);
+    };
+    forgotPassBtnCheck();
+
+    const loginFormCheck = () => {
+        let inputMail = formWrapp.querySelector('.login .loginInput'),
+            inputPass = formWrapp.querySelector('.login .passInput'),
+            loginBtn = formWrapp.querySelector('.login .loginEnter');
+
+        loginBtn.setAttribute('disabled', 'true');
+
+        const validateEmail = (val) => {
+            let reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+            return reg.test(val);
+        }
+
+        const check = () => {
+            if (validateEmail(inputMail.value) && inputPass.value.length >= 3) {
+                loginBtn.removeAttribute('disabled');
+            } else {
+                loginBtn.setAttribute('disabled', 'true');
+            }
+        };
+        inputMail.addEventListener('input', check);
+        inputPass.addEventListener('input', check);
+    };
+    loginFormCheck();
+
     const showItem = (n = 0) => {
         let items = [firstPart, secondPart, loginPart, forgotPart];
         items.forEach((el, i) => {

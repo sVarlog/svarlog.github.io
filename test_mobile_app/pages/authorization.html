@@ -91,25 +91,25 @@
         <form action="#" class="login">
             <p>Зарегистрируйтесь или авторизуйтесь</p>
             <div class="passWrapp">
-                <input type="email" placeholder="Email">
+                <input type="email" class="loginInput" placeholder="Email">
                 <div class="pass">
-                    <input type="password" placeholder="Пароль">
+                    <input type="password" class="passInput" placeholder="Пароль">
                     <span class="forgotPass">Забыли?</span>
                 </div>
             </div>
-            <button class="enter">Войти</button>
+            <button class="loginEnter">Войти</button>
             <h2 class="enterText">Еще нет аккаунта? <a href="#" class="toBack">Зарегистрироваться</a></h2>
         </form>
         <!-- forgot -->
         <form action="#" class="forgot">
             <p>Забыли пароль?</p>
             <span>Мы вышлем вам новый пароль на почту</span>            
-            <input type="text" class="" placeholder="Почта или телефон">
+            <input type="text" class="forgotPassInput" placeholder="Почта или телефон">
             <div class="row">
                 <button class="toLogin">
                     <img src="../dist/img/icons/authBlueArrowToLeftIcon.svg" alt="arrow">
                 </button>
-                <button class="enter">Отправить</button>
+                <button class="forgotEnterBtn">Отправить</button>
             </div>
             <h2 class="enterText">Еще нет аккаунта? <a href="#" class="toBack">Зарегестироваться</a></h2>
         </form>

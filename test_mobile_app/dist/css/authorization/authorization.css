@@ -335,6 +335,12 @@ body{
     line-height: 18px;
     color: #4892F3;
 }
+.authorization .loginEnter{
+    background: linear-gradient(90deg, #01C99B 0%, #4892F3 100%);
+}
+.authorization .loginEnter:disabled{
+    opacity: .3;
+}
 /*  */
 .authorization .forgot{
     width: 100%;
@@ -370,6 +376,12 @@ body{
     justify-content: center;
     align-items: center;
     margin-right: 12px;
+}
+.authorization .forgot .row button.forgotEnterBtn{
+    background: linear-gradient(90deg, #01C99B 0%, #4892F3 100%);
+}
+.authorization .forgot .row button.forgotEnterBtn:disabled{
+    opacity: .3;
 }
 /*  */
 span.conditions{
