@@ -11,155 +11,23 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal.js */ "./src/modules/modal.js");
 /* harmony import */ var _modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sendForm.js */ "./src/modules/sendForm.js");
+/* harmony import */ var _modules_friendCardValidation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/friendCardValidation.js */ "./src/modules/friendCardValidation.js");
+
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('button.modalOpen', '.modal');
     (0,_modules_sendForm_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modal', '.modalLoad', '.modalConfirm', '.modalConfirm .send');
+    (0,_modules_friendCardValidation_js__WEBPACK_IMPORTED_MODULE_2__.default)('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
 });
 
 /***/ }),
 
-/***/ "./src/modules/modal.js":
-/*!******************************!*\
-  !*** ./src/modules/modal.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _validation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validation.js */ "./src/modules/validation.js");
-
-
-const modals = (modalOpen, modalWrapp) => {
-    let modal = document.querySelector(modalWrapp),
-        btn = document.querySelector(modalOpen),
-        swipe = null;
-
-    const modalHide = (eStart, type = 'click') => {
-        let t = eStart.target,
-            startY = eStart.targetTouches[0].pageY;
-        if (t.classList.contains('modal') && type === 'click') {
-            modal.classList.remove('active');
-            modal.removeEventListener('touchstart', modalHide);
-            document.body.classList.remove('modalActive');
-        } else {
-            swipe = modal.addEventListener('touchmove', (e) => {
-                if ((e.changedTouches[0].pageY) > (startY + 50)) {
-                    modal.classList.remove('active');
-                    modal.removeEventListener('touchstart', modalHide);
-                    swipe = null;
-                    document.body.classList.remove('modalActive');
-                }
-            });
-        }
-    };
-
-    const modalShow = () => {
-        document.body.classList.add('modalActive');
-        modal.classList.add('active');
-        modal.addEventListener('touchstart', modalHide);
-        (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.default)('.modal form', '.inputWrapp .input input', '.inputWrapp .input .card img', '.inputWrapp .input', '.inputWrapp .next', 'button.submit');
-    };
-
-    btn.addEventListener('click', modalShow);
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modals);
-
-/***/ }),
-
-/***/ "./src/modules/sendForm.js":
-/*!*********************************!*\
-  !*** ./src/modules/sendForm.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
-    let modal = document.querySelector(modalSelector),
-        sendBtn = document.querySelector(confirmSend),
-        formData = modal.querySelector('form'),
-        conrfirm = document.querySelector(confirmModal),
-        conrfirmClose = conrfirm.querySelector('.modalClose'),
-        loadModal = document.querySelector(loadItem),
-        form = modal.querySelector('form'),
-        loadItems = loadModal.querySelectorAll('span'),
-        seconds = loadModal.querySelector('#seconds'),
-        totalSeconds = 15,
-        curr = 0;
-
-    const formReset = () => {
-        conrfirm.classList.remove('active');
-        formData.reset();
-    };
-
-    const complete = () => {
-        conrfirm.classList.add('active');
-        conrfirmClose.addEventListener('click', () => {
-            formReset();
-            document.body.classList.remove('modalActive');
-        });
-    };
-
-    const loading = () => {
-        loadModal.classList.add('active');
-        document.body.classList.add('modalActive');
-        let process = () => {
-            curr++;
-            if (curr >= loadItems.length - 1) {
-                curr = 0;
-            }
-            loadItems.forEach((el, i) => {
-                el.classList.remove('active');
-                if (i === curr) {
-                    el.classList.add('active');
-                }
-            });
-            if (totalSeconds > 0) {
-                seconds.innerHTML = totalSeconds -= 1;
-            }
-        };
-        process();
-
-        let timer = setInterval(process, 1000);
-
-        setTimeout(() => {
-            clearInterval(timer);
-            loadModal.classList.remove('active');
-            document.body.classList.remove('active');
-        }, totalSeconds * 1000);
-    };
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        formData.reset();
-        modal.classList.remove('active');
-        complete();
-    });
-
-    console.log(confirmSend);
-
-    sendBtn.addEventListener('click', () => {
-        conrfirm.classList.remove('active');
-        loading();
-    });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendForm);
-
-/***/ }),
-
-/***/ "./src/modules/validation.js":
-/*!***********************************!*\
-  !*** ./src/modules/validation.js ***!
-  \***********************************/
+/***/ "./src/modules/friendCardValidation.js":
+/*!*********************************************!*\
+  !*** ./src/modules/friendCardValidation.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -326,6 +194,143 @@ const validation = (formSelector, inpSelector, iSelector, inputWrapp, nextBtn, s
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validation);
+
+/***/ }),
+
+/***/ "./src/modules/modal.js":
+/*!******************************!*\
+  !*** ./src/modules/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+const modals = (modalOpen, modalWrapp) => {
+    let modal = document.querySelector(modalWrapp),
+        btn = document.querySelectorAll(modalOpen),
+        swipe = null;
+
+    const modalHide = (eStart, type = 'click') => {
+        let t = eStart.target,
+            startY = eStart.targetTouches[0].pageY;
+        if (t.classList.contains('modal') && type === 'click') {
+            modal.style.transition = ".5s";
+            modal.classList.remove('active');
+            modal.removeEventListener('touchstart', modalHide);
+            document.body.classList.remove('modalActive');
+        } else {
+            swipe = modal.addEventListener('touchmove', (e) => {
+                if ((e.changedTouches[0].pageY) > (startY + 50)) {
+                    modal.style.transition = ".5s";
+                    modal.classList.remove('active');
+                    modal.removeEventListener('touchstart', modalHide);
+                    swipe = null;
+                    document.body.classList.remove('modalActive');
+                }
+            });
+        }
+    };
+
+    const modalShow = (e) => {
+        e.preventDefault();
+        modal.style.transition = "0s";
+        document.body.classList.add('modalActive');
+        modal.classList.add('active');
+        modal.addEventListener('touchstart', modalHide);
+    };
+
+    btn.forEach(el => {
+        el.addEventListener('click', modalShow);
+    });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modals);
+
+/***/ }),
+
+/***/ "./src/modules/sendForm.js":
+/*!*********************************!*\
+  !*** ./src/modules/sendForm.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+const sendForm = (modalSelector, loadItem, confirmModal, confirmSend) => {
+    let modal = document.querySelector(modalSelector),
+        sendBtn = document.querySelector(confirmSend),
+        formData = modal.querySelector('form'),
+        conrfirm = document.querySelector(confirmModal),
+        conrfirmClose = conrfirm.querySelector('.modalClose'),
+        loadModal = document.querySelector(loadItem),
+        form = modal.querySelector('form'),
+        loadItems = loadModal.querySelectorAll('span'),
+        seconds = loadModal.querySelector('#seconds'),
+        totalSeconds = 15,
+        curr = 0;
+
+    const formReset = () => {
+        conrfirm.classList.remove('active');
+        formData.reset();
+    };
+
+    const complete = () => {
+        conrfirm.classList.add('active');
+        conrfirmClose.addEventListener('click', () => {
+            formReset();
+            document.body.classList.remove('modalActive');
+        });
+    };
+
+    const loading = () => {
+        loadModal.classList.add('active');
+        document.body.classList.add('modalActive');
+        let process = () => {
+            curr++;
+            if (curr >= loadItems.length - 1) {
+                curr = 0;
+            }
+            loadItems.forEach((el, i) => {
+                el.classList.remove('active');
+                if (i === curr) {
+                    el.classList.add('active');
+                }
+            });
+            if (totalSeconds > 0) {
+                seconds.innerHTML = totalSeconds -= 1;
+            }
+        };
+        process();
+
+        let timer = setInterval(process, 1000);
+
+        setTimeout(() => {
+            clearInterval(timer);
+            loadModal.classList.remove('active');
+            document.body.classList.remove('active');
+        }, totalSeconds * 1000);
+    };
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formData.reset();
+        modal.classList.remove('active');
+        complete();
+    });
+
+    console.log(confirmSend);
+
+    sendBtn.addEventListener('click', () => {
+        conrfirm.classList.remove('active');
+        loading();
+    });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendForm);
 
 /***/ })
 

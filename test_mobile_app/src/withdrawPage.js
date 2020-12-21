@@ -116,7 +116,6 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
     };
 
     const changeItem = (n = 0, check = true) => {
-        console.log('test');
         if (check) {
             classArr.forEach(cls => {
                 targetChange.forEach(el => {
@@ -132,9 +131,8 @@ const observeItems = ({ firstSelector, secondSelector, items, classes, placehold
         for (let mutation of mutationsList) {
             if (mutation.attributeName === 'data-slide') {
                 currNumber = mutation.target.dataset.slide;
-                changePlaceholder(currNumber);
-                console.log(mutation.target, targetObserve);
                 if (mutation.target === targetObserve.querySelector('.sliderInner')) {
+                    changePlaceholder(currNumber);
                     changeItem(currNumber, true);
                 }
                 validation(false, true);

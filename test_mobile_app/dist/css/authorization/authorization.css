@@ -172,14 +172,15 @@ body{
 .authorization button.vk{
     background: #5181B8;
 }
-.authorization h2{
+.authorization .enterText{
     font-family: 'Gilroy';
     font-size: 15px;
     font-weight: 500;
     color: #1D1D1F;
     margin-top: 8px;
+    text-align: center;
 }
-.authorization h2 > a{
+.authorization .enterText > a{
     font-size: 18px;
     font-family: 'Gilroy';
     font-weight: 600;
@@ -198,6 +199,13 @@ body{
     font-weight: 500;
     color: #1d1d1f;
     margin-bottom: 8px;
+}
+.authorization input::placeholder{
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: #888888;
 }
 /*  */
 .authorization .firstPart{
@@ -257,7 +265,7 @@ body{
     font-weight: 500;
     font-size: 15px;
     line-height: 17px;
-    color: #8a96a3;
+    color: #888888;
     transition: .3s;
 }
 .authorization .halfRegistration label > span.active{
