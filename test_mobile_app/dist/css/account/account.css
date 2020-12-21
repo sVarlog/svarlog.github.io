@@ -9,8 +9,8 @@ body{
     font-family: Gilroy;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 45px;
+    line-height: 54px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     display: flex;
@@ -83,9 +83,15 @@ body{
     right: 0;
     position: fixed;
     z-index: 11;
+    height: 51px;
+    max-height: 51px;
+    min-height: 51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .page-account .page-account__title-box {
-    padding: 14px 40px 17px;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -120,7 +126,8 @@ body{
 .page-account .page-account__title .acMenu svg {
     width: 24px;
     height: auto;
-    margin-left: 15px;
+    position: absolute;
+    right: 12px;
 }
 .page-account__title .beck {
     position: absolute;
@@ -147,21 +154,34 @@ body{
     font-size: 16px;
     line-height: 19px;
     color: #1D1D1F;
-    text-align: center;
-}
-.page-account__avatar {
-    width: 75px;
-    height: 75px;
     display: flex;
     justify-content: center;
-    /*z-index: 44;*/
+    align-items: center;
+}
+.page-account__title .name img{
+    margin-left: 1px;
+}
+.page-account__title .online{
+    text-align: center;
+    font-family: 'Gilroy';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.page-account__title .online.active{
+    color: #468ade;
+}
+.page-account__avatar {
+    width: 92px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: -38px;
+    top: -48px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
     background-color: #CBCBCB;
-    /*margin: -69px auto 1px;*/
     z-index: 2;
 }
 .page-account__avatar .verity {
@@ -169,20 +189,14 @@ body{
     right: 8px;
     bottom: 4px;
 }
-.page-account__avatar img {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: all .3s ease;
-    opacity: 0;
+.page-account__avatar .avatarCheck{
+    position: absolute;
+    right: 3px;
+    bottom: 4px;
 }
-.page-account__avatar img.load {
-    opacity: 1;
-}
-.page-account__avatar img.noLoad {
-    opacity: 0;
-    display: none;
+.page-account__avatar .avatarGarland{
+    position: absolute;
+    top: 10px;
 }
 .page-account__avatar-none {
     width: 70px;
@@ -240,6 +254,7 @@ body{
     text-align: center;
     position: relative;
     z-index: 2;
+    margin-top: 10px;
 }
 .page-account__info {
     padding: 0 20px;
@@ -297,8 +312,8 @@ body{
     font-family: Gilroy;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
     color: #1D1D1F;
     text-decoration: none;
     border: 1px solid #ECECEC;
@@ -310,9 +325,11 @@ body{
     width: 205px;
     height: 40px;
     margin: 0 2.5px;
+    color: #469BFC;
 }
 .page-account__btnSettings svg {
-    margin-right: 4.5px;
+    margin-right: 6px;
+    margin-left: -3px;
 }
 .page-account__btnOpen.support {
     padding: 7px 15px;
@@ -328,8 +345,8 @@ body{
     filter: none;
 }
 .page-account__price {
-    padding: 0 20px;
-    margin-bottom: 15px;
+    padding: 0 10px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: Gilroy;
     font-style: normal;
@@ -339,6 +356,7 @@ body{
     color: #1D1D1F;
     position: relative;
     z-index: 3;
+    margin-top: 9px;
 }
 .page-account__buttonSetting {
     display: flex;
@@ -357,7 +375,24 @@ body{
     justify-content: center;
     margin: 0 2.5px;
 }
-.page-account__buttonSetting .book {
+.page-account__buttonSetting .gift {
+    width: 40px;
+    height: 40px;
+    background: rgba(219, 219, 219, 0.5);
+    backdrop-filter: blur(50px);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2.5px;
+    position: relative;
+}
+.page-account__buttonSetting .gift .giftNotification{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.page-account__buttonSetting .wallet{
     width: 40px;
     height: 40px;
     background: rgba(219, 219, 219, 0.5);
@@ -408,147 +443,74 @@ body{
     text-align: center;
     color: #959595;
 }
-.page-account__list ul {
+/*  */
+.page-account__list ul{
+    margin-right: 2px;
+    margin-left: 2px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 2px;
 }
-.page-account__videBox {
-    opacity: 0;
-    transition: all .3s ease;
-}
-.page-account__videBox.load {
-    opacity: 1;
-}
-.page-account__list ul li {
-    /*width: 50%;*/
-    width: 33.3333%;
-    border: 3.5px solid #fff;
-    /* border: 2px solid #fff; */
-    /*height: 266px;*/
-    height: 205px;
-    position: relative;
+.page-account__list ul > li.list{
+    margin-right: 2px;
+    margin-left: 2px;
     border-radius: 10px;
-    background: #CBCBCB;
-}
-.page-account__list ul li:before {
-    width: 100%;
-    height: 100%;
-    content: '';
-    top: 0;
-    left: 0;
-    z-index: 2;
-    position: absolute;
-    border-radius: 5px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 47.92%, rgba(0, 0, 0, 0.2) 82.81%, rgba(0, 0, 0, 0.8) 100%);
-}
-.page-account__list ul li.no-active:after {
-    width: 100%;
-    height: 100%;
-    content: '';
-    top: 0;
-    left: 0;
-    z-index: 3;
-    position: absolute;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.15);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.page-account__list ul li .desc {
-    position: absolute;
-    bottom: 16px;
-    left: 5px;
-    right: 9px;
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 16px;
-    z-index: 4;
-    color: #FFFFFF;
-    max-height: 32px;
     overflow: hidden;
+    height: 182px;
+    position: relative;
+    width: calc(33.3% - 4px);
 }
-.page-account__list ul li .noInf {
+.page-account__list ul > li.list .listImage{
+    width: 100%;
+    height: auto;
+}
+.page-account__list ul > li.list .listWrapp{
     position: absolute;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8.5px;
-    top: 4px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 47.92%, rgba(0, 0, 0, 0.2) 82.81%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+.page-account__list ul>li.list .price{
+    position: absolute;
     right: 4px;
-    z-index: 4;
-    padding: 2px 6px;
-}
-.page-account__list ul li .noInf .noInf-follow {
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-}
-.page-account__list ul li .noInf .noInf-price {
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 600;
+    top: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgba(0,0,0,.3);
+    border-radius: 8.5px;
+    color: #fff;
+    font-family: 'Gilroy';
     font-size: 12px;
     line-height: 14px;
-    color: #FFFFFF;
-}
-.page-account__list ul li .noInf .noInf-priceSell {
-    font-family: Gilroy;
-    font-style: normal;
     font-weight: 600;
-    font-size: 12px;
-    line-height: 14px;
-    color: #FFFFFF;
 }
-.page-account__list ul li .noInf.sell {
-    padding: 2px;
-}
-.page-account__list ul li .price {
+.page-account__list ul>li.list .description{
     position: absolute;
-    top: 10px;
-    right: 10px;
+    left: 5px;
+    bottom: 8px;
+    z-index: 2;
+}
+.page-account__list ul>li.list .description .videoPlay{
     display: flex;
     align-items: center;
-    font-family: Gilroy;
-    font-style: normal;
+    font-size: 11px;
+    line-height: 13px;
+    font-family: 'Gilroy';
+    color: #fff;
+}
+.page-account__list ul>li.list .description .videoPlay svg{
+    margin-right: 5px;
+}
+.page-account__list ul>li.list .description .text{
+    color: #fff;
+    font-family: 'Gilroy';
+    font-size: 12px;
     font-weight: 600;
-    font-size: 17px;
-    line-height: 20px;
-    color: #FFFFFF;
+    line-height: 15px;
+    margin-bottom: 3px;
 }
-.page-account__list ul li .price svg {
-    margin-left: 3px;
-    margin-top: -2px;
-}
-.page-account__list ul li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    background: #C4C4C4;
-}
-.page-account__list ul li.no-active {
-    overflow: hidden;
-}
-.page-account__list ul li.no-active img {
-    filter: blur(7px);
-}
-.page-account__list ul li.loading:after {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 2;
-    position: absolute;
-    content: '';
-    border-radius: 10px;
-    left: 0;
-    top: 0;
-    background-image: url(../image/load.gif);
-    background-position: center center;
-    background-size: 48px;
-    background-repeat: no-repeat;
+.menuBottom{
+    z-index: 3;
 }
