@@ -15,12 +15,22 @@ const check = () => {
     } else {
         button.setAttribute('disabled', true);
     }
-}
+};
+
+const showLang = (btn, element) => {
+    let button = document.querySelector(btn),
+        dropdown = document.querySelector(element);
+
+    button.addEventListener('click', (e) => {
+        dropdown.classList.toggle('active');
+    });
+};
 
 window.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('input', () => {
         check();
     });
+    showLang('.lang', '.lang');
 });
 /******/ })()
 ;
