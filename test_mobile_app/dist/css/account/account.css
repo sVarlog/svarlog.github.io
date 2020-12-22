@@ -453,6 +453,7 @@ body{
 .page-account__list ul > li.list{
     margin-right: 2px;
     margin-left: 2px;
+    margin-bottom: 4px;
     border-radius: 10px;
     overflow: hidden;
     height: 182px;
@@ -462,6 +463,7 @@ body{
 .page-account__list ul > li.list .listImage{
     width: 100%;
     height: auto;
+    min-height: 182px;
 }
 .page-account__list ul > li.list .listWrapp{
     position: absolute;
