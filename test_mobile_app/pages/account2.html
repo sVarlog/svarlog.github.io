@@ -396,18 +396,13 @@
                         title: 'MDN',
                         text: 'Learn web development on MDN!',
                         url: 'https://developer.mozilla.org',
-                    };
-                    if(navigator.canShare && navigator.canShare({ files: filesArray })) {
-                        console.log(navigator.canShare && navigator.canShare({ files: filesArray }));
-                    } else {
-                        console.log(navigator);
-                    }
+                    };                    
                     shareBtn.addEventListener('click', async () => {
-                        try {
+                        if(navigator.canShare && navigator.canShare({ files: filesArray })) {
                             await navigator.share(shareData)
                             share.textContent = 'MDN shared successfully'
-                        } catch(err) {
-                            share.textContent = 'Error: ' + err
+                        } else {
+                            share.textContent = 'Error: '
                         }
                     });
                 </script>
