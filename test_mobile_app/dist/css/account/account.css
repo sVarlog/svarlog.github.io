@@ -893,8 +893,6 @@ body{
 }
 .modalLogout{
     background: none!important;
-    backdrop-filter: none!important;
-    /* transition: 0s!important; */
 }
 .modalLogout .modalWrapp{
     width: 100%;
