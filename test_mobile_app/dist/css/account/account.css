@@ -555,6 +555,8 @@ body{
 .page-account__list ul>li.list.hidden .listWrapp{
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    overflow: hidden;
 }
 .page-account__list ul>li.list .price{
     position: absolute;
