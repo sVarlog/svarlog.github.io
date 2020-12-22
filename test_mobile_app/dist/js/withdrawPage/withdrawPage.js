@@ -200,7 +200,7 @@ const modals = (modalOpen, modalWrapp) => {
 
             const hide = (eType, event1) => {
                 if (eType === 'click') {
-                    modal.style.transition = ".5s";
+                    modal.style.transition = ".25s";
                     modal.classList.remove('active');
                     document.body.classList.remove('modalActive');
                 } else if (eType === 'move') {
@@ -208,7 +208,7 @@ const modals = (modalOpen, modalWrapp) => {
                         return;
                     }
                     if ((event1.changedTouches[0].pageY) > (startY + 125)) {
-                        modal.style.transition = ".5s";
+                        modal.style.transition = ".25s";
                         modal.classList.remove('active');
                         document.body.classList.remove('modalActive');
                     }

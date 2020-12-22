@@ -129,6 +129,18 @@ body{
     position: absolute;
     right: 12px;
 }
+.page-account__title-box .complainMenu{
+    position: absolute;
+    height: 16px;
+    right: 30px;
+    top: calc(50% - 8px);
+}
+.page-account__title a.back{
+    position: absolute;
+    left: 14px;
+    height: 16px;
+    top: calc(50% - 8px);
+}
 .page-account__title .beck {
     position: absolute;
     left: 15px;
@@ -167,6 +179,7 @@ body{
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
+    color: #707579;
 }
 .page-account__title .online.active{
     color: #468ade;
@@ -537,7 +550,7 @@ body{
     z-index: 1;
 }
 .page-account__list ul>li.list.hidden .listWrapp{
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(8px);
 }
 .page-account__list ul>li.list .price{
     position: absolute;
