@@ -891,6 +891,35 @@ body{
     outline: none;
     border: 0;
 }
+.modalLogout{
+    background: none!important;
+    backdrop-filter: none!important;
+    /* transition: 0s!important; */
+}
+.modalLogout .modalWrapp{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.65);
+    opacity: 0;
+    z-index: 1;
+    transition: .5s;
+}
+.modalLogout.active{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.modalLogout.active .modalWrapp{
+    opacity: 1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.modalLogout .contentModal{
+    z-index: 2;
+}
+.modalLogout .modalClose {
+    width: calc(100% - 20px);
+}
 /*  */
 .complainModal .complainBtn{
     padding-top: 17px;

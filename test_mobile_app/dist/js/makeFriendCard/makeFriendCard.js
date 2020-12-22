@@ -258,8 +258,6 @@ const modals = (modalOpen, modalWrapp) => {
 
     const modalShow = (e) => {
         e.preventDefault();
-        console.log('testt');
-        modal.style.transition = "0s";
         document.body.classList.add('modalActive');
         modal.classList.add('active');
         modal.addEventListener('touchstart', modalHide);
