@@ -149,4 +149,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// support page
+{
+    mode: 'development',
+    entry: './src/supportPage.js',
+    output: {
+        filename: 'supportPage.js',
+        path: __dirname + '/dist/js/supportPage/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];

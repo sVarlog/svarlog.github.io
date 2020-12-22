@@ -387,9 +387,33 @@
             <div class="modalWrapp"></div>
             <div class="modalContent">
                 <h2>Поделиться</h2>
+                <button class="shareBtn">123</button>
+                <div class="shareWrapp">test</div>
+                <script>
+                    let share = document.querySelector('.shareWrapp'),
+                        shareBtn = document.querySelector('.shareBtn');
+                    const shareData = {
+                        title: 'MDN',
+                        text: 'Learn web development on MDN!',
+                        url: 'https://developer.mozilla.org',
+                    };
+                    if(navigator.canShare && navigator.canShare({ files: filesArray })) {
+                        console.log(navigator.canShare && navigator.canShare({ files: filesArray }));
+                    } else {
+                        console.log(navigator);
+                    }
+                    shareBtn.addEventListener('click', async () => {
+                        try {
+                            await navigator.share(shareData)
+                            share.textContent = 'MDN shared successfully'
+                        } catch(err) {
+                            share.textContent = 'Error: ' + err
+                        }
+                    });
+                </script>
                 <ul>
                     <li>
-                        <a href="#"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a target="_blank" href="#"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42Z"
                                     fill="#2375B5"></path>
@@ -406,7 +430,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a target="_blank" href="#"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42Z"
                                     fill="#30C305"></path>
