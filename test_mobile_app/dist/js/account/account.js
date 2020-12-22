@@ -19,7 +19,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     progressNumbers = document.querySelector('.modalGift .numbers'),
     observerTarget = document.querySelector('.modalGift .customSlider .sliderInner'),
     currNumber = 1,
-    logoutBtn = document.querySelector('.page-account_logout');
+    logoutBtn = document.querySelector('.page-account_logout'),
+    complainBtn = document.querySelector('.complainMenu');
 
 btn.setAttribute('disabled', true);
 
@@ -116,6 +117,9 @@ window.addEventListener('load', () => {
     (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 5, 95);
     if (logoutBtn) {
         (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.page-account_logout', '.modalLogout');
+    }
+    if (complainBtn) {
+        (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.complainMenu', '.complainModal');
     }
 });
 

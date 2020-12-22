@@ -6,7 +6,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     progressNumbers = document.querySelector('.modalGift .numbers'),
     observerTarget = document.querySelector('.modalGift .customSlider .sliderInner'),
     currNumber = 1,
-    logoutBtn = document.querySelector('.page-account_logout');
+    logoutBtn = document.querySelector('.page-account_logout'),
+    complainBtn = document.querySelector('.complainMenu');
 
 btn.setAttribute('disabled', true);
 
@@ -103,5 +104,8 @@ window.addEventListener('load', () => {
     customSlider('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 5, 95);
     if (logoutBtn) {
         modal('.page-account_logout', '.modalLogout');
+    }
+    if (complainBtn) {
+        modal('.complainMenu', '.complainModal');
     }
 });
