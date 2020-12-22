@@ -137,4 +137,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// account pass page
+{
+    mode: 'development',
+    entry: './src/account.js',
+    output: {
+        filename: 'account.js',
+        path: __dirname + '/dist/js/account/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];

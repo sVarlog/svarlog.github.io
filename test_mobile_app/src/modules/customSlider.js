@@ -1,4 +1,4 @@
-const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSelector, dots, padding = 0) => {
+const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSelector, dots, padding = 0, stepWidht = 100) => {
     let slider = document.querySelector(sliderSelector),
         wrap = slider.querySelector(wrappSelector),
         inner = slider.querySelector(sliderInnerSelector),
@@ -7,6 +7,8 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
         windowWidth = document.body.offsetWidth,
         currentSlide = 0,
         pd = padding;
+
+    inner.setAttribute('data-slide', 0);
 
     const changeDot = (n) => {
         if (wrap.querySelector('.dotsArea')) {
@@ -29,7 +31,7 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
                 currentSlide += 1;
             }
             changeDot(currentSlide);
-            inner.style.transform = `translateX(-${(+itemWidth + newPd) * +currentSlide}px)`;
+            inner.style.transform = `translateX(-${((+itemWidth + newPd) * +currentSlide) * (stepWidht / 100)}px)`;
             inner.setAttribute('data-slide', currentSlide);
         } else if (dir === 'right') {
             if (currentSlide <= 0) {
@@ -38,10 +40,10 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
                 currentSlide -= 1;
             }
             changeDot(currentSlide);
-            inner.style.transform = `translateX(-${(+itemWidth + newPd) * +currentSlide}px)`;
+            inner.style.transform = `translateX(-${((+itemWidth + newPd) * +currentSlide) * (stepWidht / 100)}px)`;
             inner.setAttribute('data-slide', currentSlide);
         } else if (typeof(dir) === 'number') {
-            inner.style.transform = `translateX(-${(+itemWidth + newPd) * dir}px)`;
+            inner.style.transform = `translateX(-${((+itemWidth + newPd) * dir) * (stepWidht / 100)}px)`;
             inner.setAttribute('data-slide', dir);
         }
     };
@@ -88,6 +90,7 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
     };
 
     const start = () => {
+        console.log('start');
         items.forEach(el => {
             el.addEventListener('touchstart', handleTouchStart, false);
         });
@@ -107,7 +110,12 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
     };
 
     const events = () => {
+        console.log('events');
+        console.log(((+itemWidth + pd) * +items.length + pd), windowWidth);
+        console.log(itemWidth);
+        console.log(items[0]);
         if (((+itemWidth + pd) * +items.length + pd) >= +windowWidth) {
+            console.log('work');
             start();
         } else {
             disable();
@@ -116,6 +124,7 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
 
     const init = () => {
         itemWidth = items[0].offsetWidth;
+        console.log(itemWidth);
         windowWidth = document.body.offsetWidth;
         inner.style.width = `${(itemWidth + pd) * items.length}px`;
         events();
