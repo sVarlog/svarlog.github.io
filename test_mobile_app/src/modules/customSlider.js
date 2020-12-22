@@ -90,7 +90,6 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
     };
 
     const start = () => {
-        console.log('start');
         items.forEach(el => {
             el.addEventListener('touchstart', handleTouchStart, false);
         });
@@ -110,12 +109,7 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
     };
 
     const events = () => {
-        console.log('events');
-        console.log(((+itemWidth + pd) * +items.length + pd), windowWidth);
-        console.log(itemWidth);
-        console.log(items[0]);
         if (((+itemWidth + pd) * +items.length + pd) >= +windowWidth) {
-            console.log('work');
             start();
         } else {
             disable();
@@ -124,7 +118,6 @@ const customSlider = (sliderSelector, wrappSelector, sliderInnerSelector, itemSe
 
     const init = () => {
         itemWidth = items[0].offsetWidth;
-        console.log(itemWidth);
         windowWidth = document.body.offsetWidth;
         inner.style.width = `${(itemWidth + pd) * items.length}px`;
         events();

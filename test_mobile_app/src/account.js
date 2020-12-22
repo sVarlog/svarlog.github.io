@@ -5,7 +5,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     nText = document.querySelector('.modalGift .numberText'),
     progressNumbers = document.querySelector('.modalGift .numbers'),
     observerTarget = document.querySelector('.modalGift .customSlider .sliderInner'),
-    currNumber = 1;
+    currNumber = 1,
+    logoutBtn = document.querySelector('.page-account_logout');
 
 btn.setAttribute('disabled', true);
 
@@ -100,4 +101,7 @@ window.addEventListener('load', () => {
     modal('.page-account__buttonSetting .gift', '.modalGift');
     showForm();
     customSlider('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 5, 95);
+    if (logoutBtn) {
+        modal('.page-account_logout', '.modalLogout');
+    }
 });

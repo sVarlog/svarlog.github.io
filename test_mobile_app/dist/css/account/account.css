@@ -331,6 +331,34 @@ body{
     margin-right: 6px;
     margin-left: -3px;
 }
+.page-account_authorized{
+    width: 140px;
+    height: 40px;
+    border-radius: 13px;
+    background: #ebecef;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gilroy';
+    font-size: 16px;
+    line-height: 19px;
+    color: #136bfc;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+}
+.page-account_authorized img{
+    margin-right: 5px;
+}
+.page-account_logout{
+    padding: 12px;
+    height: 40px;
+    max-height: 40px;
+    border-radius: 13px;
+    background: #ebecef;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+}
 .page-account__btnOpen.support {
     padding: 7px 15px;
     border: 1px solid #DADBDE;
@@ -364,6 +392,40 @@ body{
     align-items: center;
     margin-bottom: 13px;
 }
+/*  */
+.page-account__buttonSetting .page-account_buttonFriens{
+    width: 250px;
+    height: 40px;
+    position: relative;
+    background: linear-gradient(90deg, #01C99B 15.89%, #4892F3 100%);
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.page-account__buttonSetting .page-account_buttonFriens .free{
+    background: #EA4E3D;
+    border-radius: 8.5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+/*  */
 .page-account__buttonSetting .share {
     width: 40px;
     height: 40px;
@@ -474,6 +536,9 @@ body{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 47.92%, rgba(0, 0, 0, 0.2) 82.81%, rgba(0, 0, 0, 0.8) 100%);
     z-index: 1;
 }
+.page-account__list ul>li.list.hidden .listWrapp{
+    backdrop-filter: blur(20px);
+}
 .page-account__list ul>li.list .price{
     position: absolute;
     right: 4px;
@@ -487,6 +552,7 @@ body{
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
+    z-index: 2;
 }
 .page-account__list ul>li.list .description{
     position: absolute;
@@ -504,6 +570,9 @@ body{
 }
 .page-account__list ul>li.list .description .videoPlay svg{
     margin-right: 5px;
+}
+.page-account__list ul>li.list.hidden .description .videoPlay{
+    display: none;
 }
 .page-account__list ul>li.list .description .text{
     color: #fff;
@@ -732,4 +801,51 @@ body{
 }
 .modalGift .modalContent .itemForm.active.confirm .textAfter{
     display: block;
+}
+/*  */
+.modalLogout{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.modalLogout .contentWrapp{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    background: #fff;
+    border-radius: 14px;
+    padding-top: 17px;
+    text-align: center;
+}
+.modalLogout .contentWrapp p{
+    margin-bottom: 17px;
+}
+.modalLogout .contentWrapp .deleteFriend{
+    border-top: 1px solid #EBEBEB;
+    width: 99%;
+    margin: auto;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    display: block;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 18px;
+    color: #4892F3;
+    outline: none;
+}
+.modalLogout .modalClose{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 18px;
+    color: #4892F3;
+    background: #fff;
+    border-radius: 13px;
+    outline: none;
+    border: 0;
 }

@@ -5,6 +5,7 @@ const modals = (modalOpen, modalWrapp) => {
     let modal = document.querySelector(modalWrapp),
         btn = document.querySelectorAll(modalOpen);
 
+    console.log(modal, btn);
 
     const modalHide = (eStart, type = 'click', end = false) => {
         if (end) {
@@ -27,8 +28,7 @@ const modals = (modalOpen, modalWrapp) => {
                     document.body.classList.remove('modalActive');
                 } else if (eType === 'move') {
                     if ((event1.changedTouches[0].pageX) > (startX + 75) || (event1.changedTouches[0].pageX) < (startX - 75)) {
-                        console.log(event1.changedTouches[0].pageX, startX, event1.changedTouches[0].pageY, startY + 125);
-                        return
+                        return;
                     }
                     if ((event1.changedTouches[0].pageY) > (startY + 125)) {
                         modal.style.transition = ".5s";
@@ -39,7 +39,7 @@ const modals = (modalOpen, modalWrapp) => {
                 modal.removeEventListener('touchmove', (e) => hide('move', e));
             };
 
-            if (t.classList.contains('modal') && type === 'click') {
+            if (t.classList.contains('modal') || t.classList.contains('modalClose') && type === 'click') {
                 hide('click');
             } else {
                 modal.addEventListener('touchmove', (e) => hide('move', e));
@@ -49,6 +49,7 @@ const modals = (modalOpen, modalWrapp) => {
 
     const modalShow = (e) => {
         e.preventDefault();
+        console.log('testt');
         modal.style.transition = "0s";
         document.body.classList.add('modalActive');
         modal.classList.add('active');
