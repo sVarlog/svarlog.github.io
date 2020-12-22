@@ -542,6 +542,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .page-account__list ul > li.list .listWrapp{
     position: absolute;
