@@ -141,6 +141,9 @@ body{
     height: 16px;
     top: calc(50% - 8px);
 }
+.page-account__title a.back img{
+    height: 100%;
+}
 .page-account__title .beck {
     position: absolute;
     left: 15px;
