@@ -20,7 +20,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     observerTarget = document.querySelector('.modalGift .customSlider .sliderInner'),
     currNumber = 1,
     logoutBtn = document.querySelector('.page-account_logout'),
-    complainBtn = document.querySelector('.complainMenu');
+    complainBtn = document.querySelector('.complainMenu'),
+    shareBtn = document.querySelector('.share');
 
 btn.setAttribute('disabled', true);
 
@@ -34,6 +35,34 @@ const progressItems = {
     2: 27000,
     3: 97000,
     4: 247000
+};
+
+const initFormStep = () => {
+    let wrapp = document.querySelector('.reasonComplainModal '),
+        choseBtns = wrapp.querySelectorAll('.showForm'),
+        forms = wrapp.querySelectorAll('form'),
+        textContent = wrapp.querySelector('.content'),
+        backBtn = wrapp.querySelector('.backToForms');
+
+    const show = (n) => {
+        forms[n].classList.add('show');
+        textContent.classList.remove('show');
+        backBtn.classList.add('active');
+    };
+
+    const hide = () => {
+        forms.forEach(el => el.classList.remove('show'));
+        textContent.classList.add('show');
+        backBtn.classList.remove('active');
+    };
+
+    backBtn.addEventListener('click', hide);
+
+    choseBtns.forEach((el, i) => {
+        el.addEventListener('click', () => {
+            show(i);
+        });
+    });
 };
 
 const checkBtn = (bool, num) => {
@@ -120,6 +149,11 @@ window.addEventListener('load', () => {
     }
     if (complainBtn) {
         (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.complainMenu', '.complainModal');
+        initFormStep();
+        (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.complainBtn', '.reasonComplainModal');
+    }
+    if (shareBtn) {
+        (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.share', '.modalShare');
     }
 });
 

@@ -96,9 +96,9 @@
                                 </div>
                                 <div class="listWrapp"></div>
                             </li>
-                            <li class="list">
+                            <li class="list hidden">
                                 <div class="price">
-                                    500₽ <img src="../dist/img/icons/lockIcon.png" alt="lock">
+                                    <span class="priceText">500₽</span> <img src="../dist/img/icons/lockIcon.png" alt="lock">
                                 </div>
                                 <img class="listImage" src="../dist/img/accountImgs/accountImg1.jpg" alt="">
                                 <div class="description">
@@ -113,6 +113,9 @@
                                 <div class="listWrapp"></div>
                             </li>
                             <li class="list">
+                                <div class="price">
+                                    <img src="../dist/img/icons/lockIcon.png" alt="lock">
+                                </div>
                                 <img class="listImage" src="../dist/img/accountImgs/accountImg2.jpg" alt="">
                                 <div class="description">
                                     <div class="text">The Engineering of Ghost И что опя...</div>
@@ -140,7 +143,7 @@
                             </li>
                             <li class="list">
                                 <div class="price priceFriends">
-                                    Для друзей <img src="../dist/img/icons/handIcon.svg" alt="lock">
+                                    <img src="../dist/img/icons/handIcon.svg" alt="lock">
                                 </div>
                                 <img class="listImage" src="../dist/img/accountImgs/accountImg1.jpg" alt="">
                                 <div class="description">
@@ -156,7 +159,7 @@
                             </li>
                             <li class="list">
                                 <div class="price priceFriends">
-                                    Для друзей <img src="../dist/img/icons/handIcon.svg" alt="lock">
+                                    <img src="../dist/img/icons/handIcon.svg" alt="lock">
                                 </div>
                                 <img class="listImage" src="../dist/img/accountImgs/accountImg2.jpg" alt="">
                                 <div class="description">
@@ -320,8 +323,54 @@
         </div>
 
         <div class="modal complainModal">
-            <button class="complainBtn">Пожаловаться</button>
+            <button class="complainBtn modalClose">Пожаловаться</button>
             <button class="calncel modalClose">Отмена</button>
+        </div>
+
+        <div class="modal reasonComplainModal">
+            <div class="modalContent">
+                <div class="row">
+                    <div class="backToForms">
+                        <img src="../dist/img/icons/authBlueArrowToLeftIcon.svg" alt="left">
+                    </div>
+                    <h2>Сообщить</h2>
+                    <div class="modalClose">
+                        <img src="../dist/img/icons/authBlueArrowToLeftIcon.svg" alt="alt">
+                    </div>
+                </div>
+                <div class="underline"></div>
+                    <div class="content show">
+                        <span>Выберите причину</span>
+                        <p class="showForm">Пожаловаться на аккаунт</p>
+                        <p class="showForm">Пожаловаться на контент</p>
+                    </div>
+                    <form class="complainAccount">
+                        <p>Причина жалобы: Пожаловаться на аккаунт</p>
+                        <div class="underline"></div>
+                        <p>Описание жалобы (необязательно)</p>
+                        <textarea name="description" placeholder="Расскажите как можно подробнее"></textarea>
+                        <span class="numberCur">0/200</span>
+                        <label class="img">
+                            <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.8214 0.74707H3.17857C1.69924 0.74707 0.5 1.94631 0.5 3.42564V15.9256C0.5 17.4049 1.69924 18.6042 3.17857 18.6042H22.8214C24.3008 18.6042 25.5 17.4049 25.5 15.9256V3.42564C25.5 1.94631 24.3008 0.74707 22.8214 0.74707ZM23.7143 15.9256C23.7143 16.4187 23.3145 16.8185 22.8214 16.8185H3.17857C2.68544 16.8185 2.2857 16.4187 2.2857 15.9256V15.4024L5.85714 11.831L8.79734 14.7712C9.14597 15.1197 9.71119 15.1197 10.0598 14.7712L17.4643 7.36669L23.7143 13.6167V15.9256H23.7143ZM23.7143 11.0917L18.0955 5.47297C17.7469 5.12439 17.1817 5.12439 16.833 5.47297L9.42858 12.8774L6.48838 9.93718C6.13975 9.5886 5.57453 9.5886 5.2259 9.93718L2.2857 12.8774V3.42564C2.2857 2.93251 2.68544 2.53277 3.17857 2.53277H22.8214C23.3146 2.53277 23.7143 2.93251 23.7143 3.42564V11.0917H23.7143Z" fill="#828282"></path></svg>
+                            <input type="file">
+                            <div class="text">0/1</div>
+                        </label>
+                        <button class="sendComplain">Отправить</button>
+                    </form>
+                    <form class="complainContent">
+                        <p>Причина жалобы: Пожаловаться на контент</p>
+                        <div class="underline"></div>
+                        <p>Описание жалобы (необязательно)</p>
+                        <textarea name="description" placeholder="Расскажите как можно подробнее"></textarea>
+                        <span class="numberCur">0/200</span>
+                        <label class="img">
+                            <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.8214 0.74707H3.17857C1.69924 0.74707 0.5 1.94631 0.5 3.42564V15.9256C0.5 17.4049 1.69924 18.6042 3.17857 18.6042H22.8214C24.3008 18.6042 25.5 17.4049 25.5 15.9256V3.42564C25.5 1.94631 24.3008 0.74707 22.8214 0.74707ZM23.7143 15.9256C23.7143 16.4187 23.3145 16.8185 22.8214 16.8185H3.17857C2.68544 16.8185 2.2857 16.4187 2.2857 15.9256V15.4024L5.85714 11.831L8.79734 14.7712C9.14597 15.1197 9.71119 15.1197 10.0598 14.7712L17.4643 7.36669L23.7143 13.6167V15.9256H23.7143ZM23.7143 11.0917L18.0955 5.47297C17.7469 5.12439 17.1817 5.12439 16.833 5.47297L9.42858 12.8774L6.48838 9.93718C6.13975 9.5886 5.57453 9.5886 5.2259 9.93718L2.2857 12.8774V3.42564C2.2857 2.93251 2.68544 2.53277 3.17857 2.53277H22.8214C23.3146 2.53277 23.7143 2.93251 23.7143 3.42564V11.0917H23.7143Z" fill="#828282"></path></svg>
+                            <input type="file">
+                            <div class="text">0/1</div>
+                        </label>
+                        <button class="sendComplain">Отправить</button>
+                    </form>
+            </div>
         </div>
 
         <script src="../dist/js/account/account.js"></script>
