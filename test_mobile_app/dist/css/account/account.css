@@ -456,19 +456,14 @@ body{
     margin-bottom: 4px;
     border-radius: 10px;
     overflow: hidden;
-    height: 182px;
+    height: 205px;
     position: relative;
     width: calc(33.3% - 4px);
 }
 .page-account__list ul > li.list .listImage{
     width: 100%;
-    height: auto;
-    min-height: 182px;
-}
-@media screen and (max-width: 375px) {
-    .page-account__list ul>li.list {
-        height: 160px;
-    }
+    height: 100%;
+    object-fit: cover;
 }
 .page-account__list ul > li.list .listWrapp{
     position: absolute;
@@ -540,9 +535,38 @@ body{
     line-height: 22px;
     color: #1d1d1f;
 }
-.modalSetting .mainMenu .settingItem svg{
+.modalSetting .mainMenu .settingItem .imgWrapp{
+    width: 27px;
+    height: 27px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 13px;
 }
+.modalSetting .mainMenu .settingItem .imgWrapp img{
+    width: 100%;
+    height: 100%;
+}
+/*  */
+.modalSetting .mainMenu .settingItem .imgWrapp.friends,
+.modalSetting .mainMenu .settingItem .imgWrapp.settings{
+    background: #4892F3;
+    padding: 6px;
+}
+.modalSetting .mainMenu .settingItem .imgWrapp.money{
+    padding: 6px 5px;
+    background: #36CC76;
+}
+.modalSetting .mainMenu .settingItem .imgWrapp.subscribes{
+    background: #F19A37;
+    padding: 5.2px;
+}
+.modalSetting .mainMenu .settingItem .imgWrapp.help{
+    background: #C672FF;
+    padding: 6px 8px;
+}
+/*  */
 .modalSetting .anotherMenu{
     display: flex;
     flex-direction: column;
