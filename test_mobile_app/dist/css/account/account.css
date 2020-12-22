@@ -111,7 +111,8 @@ body{
 .page-account .page-account__title .btn svg {
     margin-left: 35px;
 }
-.page-account .page-account__title .acMenu {
+.page-account .page-account__title .acMenu,
+.page-account .page-account__title .complainMenu{
     position: absolute;
     width: 90px;
     height: 51px;
@@ -123,11 +124,17 @@ body{
     transform: translateY(-50%);
     z-index: 3;
 }
-.page-account .page-account__title .acMenu svg {
+.page-account .page-account__title .acMenu svg{
     width: 24px;
     height: auto;
     position: absolute;
     right: 12px;
+}
+.page-account .page-account__title .complainMenu img{
+    position: absolute;
+    right: 26px;
+    height: 16px;
+    top: calc(50% - 8px);
 }
 .page-account__title-box .complainMenu{
     position: absolute;
@@ -137,12 +144,18 @@ body{
 }
 .page-account__title a.back{
     position: absolute;
-    left: 14px;
     height: 16px;
-    top: calc(50% - 8px);
+    width: 90px;
+    height: 51px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
 }
 .page-account__title a.back img{
-    height: 100%;
+    height: 16px;
+    width: 9px;
+    margin-left: 14px;
 }
 .page-account__title .beck {
     position: absolute;
@@ -603,6 +616,7 @@ body{
     display: flex;
     align-items: center;
     font-size: 11px;
+    font-weight: 600;
     line-height: 13px;
     font-family: 'Gilroy';
     color: #fff;
@@ -713,6 +727,7 @@ body{
     align-items: center;
     transition: .5s;
     padding-left: 55px;
+    padding-right: 20px;
     margin-bottom: 10px;
 }
 .modalGift .modalContent .sliderInner .item{
@@ -890,30 +905,6 @@ body{
     border-radius: 13px;
     outline: none;
     border: 0;
-}
-.modal{
-    background: none!important;
-}
-.modal .modalWrapp{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0,0,0,.65);
-    opacity: 0;
-    z-index: 1;
-    transition: .5s;
-}
-.modal.active{
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-.modal.active .modalWrapp{
-    opacity: 1;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-.modal .contentModal{
-    z-index: 2;
 }
 .modal .modalClose {
     width: calc(100% - 20px);

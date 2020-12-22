@@ -8,7 +8,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     currNumber = 1,
     logoutBtn = document.querySelector('.page-account_logout'),
     complainBtn = document.querySelector('.complainMenu'),
-    shareBtn = document.querySelector('.share');
+    shareBtn1 = document.querySelector('.share'),
+    shareBtn2 = document.querySelector('.share2');
 
 btn.setAttribute('disabled', true);
 
@@ -139,7 +140,10 @@ window.addEventListener('load', () => {
         initFormStep();
         modal('.complainBtn', '.reasonComplainModal');
     }
-    if (shareBtn) {
+    if (shareBtn1) {
         modal('.share', '.modalShare');
+    }
+    if (shareBtn2) {
+        modal('.share2', '.modalShare');
     }
 });

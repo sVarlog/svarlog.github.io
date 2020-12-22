@@ -5,8 +5,6 @@ const modals = (modalOpen, modalWrapp) => {
     let modal = document.querySelector(modalWrapp),
         btn = document.querySelectorAll(modalOpen);
 
-    console.log(modal, btn);
-
     const modalHide = (eStart, type = 'click', end = false) => {
         if (end) {
             startX = 0, startY = 0;
@@ -39,7 +37,7 @@ const modals = (modalOpen, modalWrapp) => {
                 modal.removeEventListener('touchmove', (e) => hide('move', e));
             };
 
-            if (t.classList.contains('modal') || t.classList.contains('modalClose') && type === 'click') {
+            if (t.classList.contains('modal') || t.classList.contains('modalWrapp') || t.classList.contains('modalClose') && type === 'click') {
                 hide('click');
             } else {
                 modal.addEventListener('touchmove', (e) => hide('move', e));

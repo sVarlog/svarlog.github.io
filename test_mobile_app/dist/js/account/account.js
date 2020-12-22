@@ -21,7 +21,8 @@ let btn = document.querySelector('.modalGift .showForm'),
     currNumber = 1,
     logoutBtn = document.querySelector('.page-account_logout'),
     complainBtn = document.querySelector('.complainMenu'),
-    shareBtn = document.querySelector('.share');
+    shareBtn1 = document.querySelector('.share'),
+    shareBtn2 = document.querySelector('.share2');
 
 btn.setAttribute('disabled', true);
 
@@ -152,8 +153,11 @@ window.addEventListener('load', () => {
         initFormStep();
         (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.complainBtn', '.reasonComplainModal');
     }
-    if (shareBtn) {
+    if (shareBtn1) {
         (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.share', '.modalShare');
+    }
+    if (shareBtn2) {
+        (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.share2', '.modalShare');
     }
 });
 
@@ -339,8 +343,6 @@ const modals = (modalOpen, modalWrapp) => {
     let modal = document.querySelector(modalWrapp),
         btn = document.querySelectorAll(modalOpen);
 
-    console.log(modal, btn);
-
     const modalHide = (eStart, type = 'click', end = false) => {
         if (end) {
             startX = 0, startY = 0;
@@ -373,7 +375,7 @@ const modals = (modalOpen, modalWrapp) => {
                 modal.removeEventListener('touchmove', (e) => hide('move', e));
             };
 
-            if (t.classList.contains('modal') || t.classList.contains('modalClose') && type === 'click') {
+            if (t.classList.contains('modal') || t.classList.contains('modalWrapp') || t.classList.contains('modalClose') && type === 'click') {
                 hide('click');
             } else {
                 modal.addEventListener('touchmove', (e) => hide('move', e));
