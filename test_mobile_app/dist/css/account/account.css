@@ -722,6 +722,16 @@ body{
 .modalGift .modalContent p{
     width: 100%;
 }
+.modalGift .modalContent a.moreDetails{
+    margin-left: auto;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #469BFC;
+
+}
 .modalGift .modalContent .sliderWrapp{
     width: 275px;
     margin: auto;
