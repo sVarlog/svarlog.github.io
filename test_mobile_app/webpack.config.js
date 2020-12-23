@@ -185,4 +185,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// howItWork page
+{
+    mode: 'development',
+    entry: './src/howItWork.js',
+    output: {
+        filename: 'howItWork.js',
+        path: __dirname + '/dist/js/supportPage/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];
