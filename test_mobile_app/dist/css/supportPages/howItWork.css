@@ -32,6 +32,9 @@ body{
     line-height: 20px;
     color: #1D1D1F;
 }
+.menuBottom{
+    z-index: 4;
+}
 /*  */
 .workSlider{
     margin-top: 16px;
