@@ -20,15 +20,65 @@ const rangeInit = () => {
         input2 = wrapp.querySelector('.second .input input'),
         inputLabel2 = wrapp.querySelector('.second .inputTextNumber'),
         inputLabel2Num = wrapp.querySelector('.second .inputTextNumber .num'),
-        current = '$';
+        changeCurrBtns = wrapp.querySelectorAll('.buttons .btn');
+    
+    // here need add current exchange rate
+    let currValues ={
+        usd: {
+            rate: 1,
+            icon: '$'
+        },
+        rub: {
+            rate: 74.98,
+            icon: '₽'
+        },
+        euro: {
+            rate: 0.82,
+            icon: '€'
+        }
+    };
+
+    let currItem = currValues.usd;
+    
+    let current = {
+        rate: currItem.rate,
+        icon: currItem.icon
+    };
+
+    let moneyValue = {
+        0: 4.99,
+        1: 27.49,
+        2: 49.99,
+        3: 72.49,
+        4: 94.99
+    };
+
+    const setStepPrice = () => {
+        let stepWrapp = wrapp.querySelector('.second .stepsValue'),
+            val1 = stepWrapp.querySelector('.first'),
+            val2 = stepWrapp.querySelector('.second'),
+            val3 = stepWrapp.querySelector('.third'),
+            val4 = stepWrapp.querySelector('.four'),
+            val5 = stepWrapp.querySelector('.five');
+        const values = [val1, val2, val3, val4, val5];
+
+        console.log(current);
+
+        values.forEach((el, i) => {
+            el.innerHTML = `${(moneyValue[i] * current.rate).toFixed(2)}${current.icon}`;
+        });
+    };
+    setStepPrice();
 
     const setLabel = (input, label, labelText, step, type) => {
-        let newStr = (+input.value * step).toString(),
+        let newStr = ((+input.value * step) * current.rate).toString(),
             onePercent = input.parentNode.offsetWidth / 100;
         if (type === 'number') {
+            console.log(current);
+            console.log(current.icon);
             labelText.innerHTML = newStr.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
         } else if (type === 'curr') {
-            labelText.innerHTML = (+newStr + +input.dataset.startValue).toFixed(2);
+            labelText.innerHTML = `${(+newStr + +input.dataset.startValue).toFixed(2)} ${current.icon}`;
         }
         label.style.left = `${(input.value * 5 + 0.5) - ((label.offsetWidth / 2) / onePercent)}%`;
     };
@@ -45,18 +95,42 @@ const rangeInit = () => {
             endOld = wrapp.querySelector('.endOld'),
             startNew = wrapp.querySelector('.startNew'),
             endNew = wrapp.querySelector('.endNew'),
-            currValue = (+input2.dataset.move * val2) + +input2.dataset.startValue,
+            currValue = ((+input2.dataset.move * val2) + +input2.dataset.startValue) * current.rate,
             subValue = (+input1.dataset.move * val1),
-            oldValFrom = ((subValue / 100) * 1) * currValue,
-            oldValTo = ((subValue / 100) * 5) * currValue,
-            newValFrom = ((subValue / 100) * 4) * currValue,
-            newValTo = ((subValue / 100) * 9) * currValue;
-        startOld.innerHTML = oldValFrom + current;
-        endOld.innerHTML = oldValTo + current;
-        startNew.innerHTML = newValFrom + current;
-        endNew.innerHTML = newValTo + current;
+            oldValFrom = (((subValue / 100) * 1) * currValue).toFixed(0),
+            oldValTo = (((subValue / 100) * 5) * currValue).toFixed(0),
+            newValFrom = (((subValue / 100) * 4) * currValue).toFixed(0),
+            newValTo = (((subValue / 100) * 9) * currValue).toFixed(0);
+        startOld.innerHTML = oldValFrom + current.icon;
+        endOld.innerHTML = oldValTo + current.icon;
+        startNew.innerHTML = newValFrom + current.icon;
+        endNew.innerHTML = newValTo + current.icon;
     };
     changeNumbers(input1.value, input2.value);
+
+    const btnClick = (n) => {
+        changeCurrBtns.forEach((el, i) => {
+            el.classList.remove('active');
+            if (n === i) {
+                el.classList.add('active');
+            }
+        });
+        current = {
+            rate: currValues[Object.keys(currValues)[n]].rate,
+            icon: currValues[Object.keys(currValues)[n]].icon
+        };
+        currItem = currValues[Object.keys(currValues)[n]];
+        setValue(input2, inputLabel2, inputLabel2Num, 10, input2.dataset.move, 'curr');
+        changeNumbers(input1.value, input2.value);
+        changeNumbers(input1.value, input2.value);
+        setStepPrice();
+    };
+
+    changeCurrBtns.forEach((el, i) => {
+        el.addEventListener('click', () => {
+            btnClick(i);
+        });
+    });
 
     input1.addEventListener('input', () => {
         setLabel(input1, inputLabel1, inputLabel1Num, input1.dataset.move, 'number');
@@ -97,7 +171,7 @@ const observe = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_0__.default)('.workSlider', '.sliderWrapp', '.sliderInner', '.item', true, -15, 100);
+    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_0__.default)('.workSlider', '.sliderWrapp', '.sliderInner', '.item', false, -15, 100);
     observe();
     rangeInit();
 });

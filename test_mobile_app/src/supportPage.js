@@ -1,5 +1,3 @@
-import modals from './modules/modal.js';
-
 const tabs = (sectionSelector, mainBtnSelector, secondBtnSelector, mainContentSelector, seconContentSelector) => {
     let section = document.querySelector(sectionSelector),
         mainBtns = section.querySelectorAll(mainBtnSelector),
@@ -21,7 +19,6 @@ const tabs = (sectionSelector, mainBtnSelector, secondBtnSelector, mainContentSe
         });
     };
     firstRender();
-    console.log(mainContentsHeight,secondContentsHeight);
 
     const tabShow = (type, i) => {
         console.log(i);
@@ -65,5 +62,4 @@ const tabs = (sectionSelector, mainBtnSelector, secondBtnSelector, mainContentSe
 
 window.addEventListener('DOMContentLoaded', () => {
     tabs('.tabs', '.tabBtn.first', '.tabBtn.second', '.tabContent.first', '.tabContent.second');
-    modals('.modalShowContent', '.modalLink');
 });

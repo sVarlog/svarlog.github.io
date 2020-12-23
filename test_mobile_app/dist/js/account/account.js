@@ -144,7 +144,7 @@ window.addEventListener('load', () => {
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.acMenu', '.modalSetting');
     (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.page-account__buttonSetting .gift', '.modalGift');
     showForm();
-    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 5, 95);
+    (0,_modules_customSlider_js__WEBPACK_IMPORTED_MODULE_1__.default)('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 0, 100);
     if (logoutBtn) {
         (0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_0__.default)('.page-account_logout', '.modalLogout');
     }

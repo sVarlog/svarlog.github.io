@@ -112,7 +112,7 @@ body{
 /*  */
 .workSlider .sliderText{
     margin-left: 27px;
-    margin-right: 2px;
+    margin-right: 27px;
     margin-top: 15px;
 }
 .workSlider .sliderText p{
@@ -305,9 +305,6 @@ body{
 .income .calculator .second .stepsValue .stepItem .num.third,
 .income .calculator .second .stepsValue .stepItem .num.four{
     margin-left: -10px;
-}
-.income .calculator .second .stepsValue .stepItem .num.five{
-    /* margin-left: -30px; */
 }
 /*  */
 .income h2{

@@ -722,12 +722,14 @@ body{
 .modalGift .modalContent p{
     width: 100%;
 }
+.modalGift .modalContent .sliderWrapp{
+    width: 275px;
+    margin: auto;
+}
 .modalGift .modalContent .sliderInner{
     display: flex;
     align-items: center;
     transition: .5s;
-    padding-left: 55px;
-    padding-right: 20px;
     margin-bottom: 10px;
 }
 .modalGift .modalContent .sliderInner .item{

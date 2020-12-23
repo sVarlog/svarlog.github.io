@@ -131,7 +131,7 @@ window.addEventListener('load', () => {
     modal('.acMenu', '.modalSetting');
     modal('.page-account__buttonSetting .gift', '.modalGift');
     showForm();
-    customSlider('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 5, 95);
+    customSlider('.modalGift .customSlider', '.sliderWrapp', '.sliderInner', '.item', false, 0, 100);
     if (logoutBtn) {
         modal('.page-account_logout', '.modalLogout');
     }
