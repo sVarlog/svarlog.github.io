@@ -173,4 +173,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// message page
+{
+    mode: 'development',
+    entry: './src/messages.js',
+    output: {
+        filename: 'messages.js',
+        path: __dirname + '/dist/js/messages/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];
