@@ -1,0 +1,369 @@
+body{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 60px;
+}
+.header{
+    background: #FAFAFA;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    justify-content: center;
+}
+.header a.change {
+    position: absolute;
+    width: 90px;
+    height: 51px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #4892F3;
+    text-decoration: none;
+}
+.header .heading h2{
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    color: #1D1D1F;
+}
+/*  */
+.search{
+    width: 100%;
+    height: 32px;
+    margin-top: 14px;
+    border-radius: 10px;
+    background: #EEEEEF;
+    position: relative;
+}
+.search img{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 9px;
+    top: calc(50% - 8px);
+}
+.search input{
+    width: 100%;
+    height: 32px;
+    border-radius: 10px;
+    border: 0;
+    background: #EEEEEF;
+    outline: 0;
+    padding-left: 10px;
+}
+.search input::placeholder{
+    padding-left: 25px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #BDBDBD;
+}
+/*  */
+.notificationBlock{
+    background: #FAFAFA;
+    border-radius: 10px;
+    padding: 11px 15px 11px 23px;
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+}
+.notificationBlock .right{
+    margin-left: 25px;
+}
+.notificationBlock .right h2{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #1D1D1F;
+}
+.notificationBlock .right p{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-top: 3px;
+    margin-bottom: 9px;
+}
+.notificationBlock .right button.showNotification{
+    width: 100%;
+    background: linear-gradient(90deg, #01C99B 0%, #4892F3 100%);
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    height: 26px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+/*  */
+.chatContent{
+    margin-top: 5px;
+}
+.chatContent .item{
+    margin-top: 12px;
+    display: flex;
+    text-decoration: none;
+}
+.chatContent .item .left .avatar{
+    background: #cecece;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    position: relative;
+}
+.chatContent .item .left .online.active{
+    background: #11D900;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    bottom: 0;
+    right: 0;
+}
+/*  */
+.chatContent .item:nth-child(1) .left .avatar{
+    background: linear-gradient(270deg, #7BC862 0.01%, #ABEA96 100%);
+}
+.chatContent .item:nth-child(2) .left .avatar {
+    background: linear-gradient(270deg, #A695E7 0%, #BDABFE 100%);
+}
+.chatContent .item:nth-child(3) .left .avatar {
+    background: linear-gradient(270deg, #6EC9CB 0%, #82E9EB 100%);
+}
+.chatContent .item:nth-child(4) .left .avatar {
+    background: linear-gradient(270deg, #FAA774 0%, #F6BC98 100%);
+}
+.chatContent .item:nth-child(5) .left .avatar {
+    background: linear-gradient(270deg, #E17076 0%, #FF969B 100%);
+}
+.chatContent .item:nth-child(6) .left .avatar {
+    background: linear-gradient(270deg, #6EC9CB 0%, #82E9EB 100%);
+}
+.chatContent .item:nth-child(7) .left .avatar {
+    background: linear-gradient(270deg, #FAA774 0%, #F6BC98 100%);
+}
+.chatContent .item:nth-child(8) .left .avatar {
+    background: linear-gradient(270deg, #E17076 0%, #FF969B 100%);
+}
+/*  */
+.chatContent .item .right{
+    margin-left: 9px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #ececec;
+}
+.chatContent .item .right .content{
+    margin-top: 3px;
+    width: 75%;
+    max-width: 75%;
+    margin-bottom: 10px;
+}
+.chatContent .item .right .content h2{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #1D1D1F;
+}
+.chatContent .item .right .content p{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #828282;
+}
+.chatContent .item .right .messageData{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 25%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.chatContent .item .right .messageData{
+    color: #BDBDBD;
+    font-family: 'Gilroy';
+}
+.chatContent .item .right .messageData.active{
+    color: #4892F3;
+}
+.chatContent .item .right .messageData .time{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #BDBDBD;
+    margin-bottom: 2px;
+}
+.chatContent .item .right .messageData.active .time{
+    color: #4892F3;
+}
+.chatContent .item .right .messageData .mess{
+    background: #4892F3;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    color: #F7F7F7;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*  */
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.modal .modalContent{
+    display: flex;
+    position: relative;
+    border-radius: 14px;
+    padding: 15px 23px;
+}
+.modal.notificationModal .modalContent {
+    padding-bottom: 5px;
+}
+.modal .modalContent .row{
+    display: flex;
+    align-items: center;
+}
+.modal .modalContent .row svg{
+    margin-right: 10px;
+}
+.modal.notificationModal .modalContent p{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #1D1D1F;
+    margin-top: 13px;
+    margin-bottom: 14px;
+}
+.modal .modalContent .lastStep p{
+    font-size: 15px;
+    line-height: 19px;
+}
+.modal.notificationModal .modalContent .blueBtn{
+    background: #2E88FD;
+    border-radius: 24px;
+    margin-bottom: 7px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    outline: 0;
+    border: 0;
+    height: 48px;
+}
+.modal .modalContent .firstStep{
+    display: flex;
+    flex-direction: column;
+}
+.modal .modalContent .step{
+    display: none;
+}
+.modal .modalContent .step.active{
+    display: flex;
+    flex-direction: column;
+}
+.modal .modalContent input{
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    outline: 0;
+}
+.modal .modalContent input::placeholder{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #878A92;
+}
+.modal .modalContent .secondStep .row,
+.modal .modalContent .lastStep .row{
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    margin-bottom: 43px;
+}
+.modal .modalContent .secondStep .row .prevStep,
+.modal .modalContent .lastStep .row .prevStep{
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    border: 1px solid #ECECEC;
+    outline: 0;
+    border-radius: 10px;
+    margin-right: 11px;
+}
+.modal .modalContent .secondStep .row .nextStep,
+.modal .modalContent .lastStep .row .nextStep,
+.modal .modalContent .sendBtn {
+    width: 100%;
+    margin-bottom: 0;
+}
+.modal .modalContent button:disabled{
+    opacity: .3;
+}

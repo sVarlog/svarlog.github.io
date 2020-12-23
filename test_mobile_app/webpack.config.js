@@ -161,4 +161,16 @@ module.exports = [{
     watch: true,
 
     devtool: "source-map",
+},
+// chats page
+{
+    mode: 'development',
+    entry: './src/chatsPage.js',
+    output: {
+        filename: 'chatsPage.js',
+        path: __dirname + '/dist/js/chatsPage/'
+    },
+    watch: true,
+
+    devtool: "source-map",
 }];
