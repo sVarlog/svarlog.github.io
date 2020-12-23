@@ -1,0 +1,255 @@
+body{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.header{
+    background: #FAFAFA;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    justify-content: center;
+}
+.header a.back {
+    position: absolute;
+    width: 90px;
+    height: 51px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+.header a.back img {
+    height: 16px;
+    width: 9px;
+    margin-left: 14px;
+}
+/*  */
+.tabsHeading h2{
+    margin-top: 21px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 30px;
+}
+.tabsHeading .underline{
+    background: #4892F3;
+    border-radius: 2.5px;
+    width: 115px;
+    height: 2px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+}
+.tabsHeading p{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+}
+/* tabs */
+.tabs *{
+    font-family: 'Gilroy';
+    transition: .5s;
+}
+.tabs{
+    padding-left: 34px;
+    margin-top: 33px;
+}
+.tabWrapp{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.tabWrapp .tabContent{
+    display: flex;
+    flex-direction: column;
+    opacity: -1;
+    z-index: -1;
+    transition: .25s;
+}
+.tabWrapp .tabContent.active{
+    opacity: 1;
+    z-index: 1;
+}
+.tabWrapp.first{
+    padding-bottom: 10px;
+}
+.tabWrapp.first > .tabBtn{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.tabWrapp > .tabBtn.first{
+    margin-bottom: 10px;
+}
+.tabWrapp.first > .tabBtn > .btnIcon{
+    position: absolute;
+    left: -34px;
+}
+.tabWrapp.first > .tabBtn > .tabHeading{
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.tabWrapp.first > .tabBtn > .btnState{
+    margin-left: auto;
+    background: #EBECEF;
+    border-radius: 9px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabWrapp.first > .tabBtn > .btnState > img{
+    width: 10px;
+    height: 17px;
+    transform: rotate(-90deg);
+}
+.tabWrapp.first > .tabBtn.active > .btnState > img{
+    transform: rotate(90deg);
+}
+.tabWrapp.second > .tabBtn{
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 13px;
+}
+.tabWrapp > .tabContent > a{
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4892F3;
+    text-decoration: none;
+    margin-bottom: 13px;
+}
+/*  */
+.tgBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gilroy';
+    text-align: center;
+    margin-top: 30px;
+}
+.tgBlock p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.tgBlock a{
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.tgBlock a > span{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    border-bottom: 1px solid #30A7DB;
+    color: #30A7DB;
+    padding-bottom: 1px;
+    display: block;
+}
+.tgBlock a > svg{
+    margin-right: 4px;
+}
+/*  */
+.modalLink .modalContent{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: auto;
+    transform: translateX(125%);
+}
+.modalLink .modalContent.active{
+    transform: translateX(0);
+}
+.modalLink .modalContent .modalHeader{
+    position: fixed;
+    z-index: 2;
+    height: 51px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #FAFAFA;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalLink .modalContent .modalHeader a.back{
+    position: absolute;
+    width: 90px;
+    height: 51px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: #4892F3;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15.6px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+.modalLink .modalContent .modalText{
+    margin-top: 51px;
+    padding: 15px 20px;
+}
+.modalLink .modalContent .modalText .backModalBtn{
+    height: 40px;
+    width: 220px;
+    background: inherit;
+    border: 1px solid #469BFC;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #469BFC;
+    margin-bottom: 25px;
+}
+.modalLink .modalContent .modalText .backModalBtn img{
+    margin-right: 10px;
+}
+.modalLink .modalContent .modalText .textHeading{
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1D1D1F;
+}
+.modalLink .modalContent .modalText .underline{
+    width: 115px;
+    height: 2px;
+    background: #4892F3;
+    border-radius: 2.5px;
+    margin-top: 12px;
+    margin-bottom: 9px;
+}
+.modalLink .modalContent .modalText p{
+    margin-bottom: 15px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
