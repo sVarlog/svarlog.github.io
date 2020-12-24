@@ -53,6 +53,9 @@ const rangeInit = () => {
         4: 94.99
     };
 
+    console.log(moneyValue[0] * currItem.rate);
+    input2.setAttribute('data-start-value', moneyValue[0] * currItem.rate);
+
     const setStepPrice = () => {
         let stepWrapp = wrapp.querySelector('.second .stepsValue'),
             val1 = stepWrapp.querySelector('.first'),
@@ -120,6 +123,7 @@ const rangeInit = () => {
             icon: currValues[Object.keys(currValues)[n]].icon
         };
         currItem = currValues[Object.keys(currValues)[n]];
+        input2.setAttribute('data-start-value', moneyValue[0] * currItem.rate);
         setValue(input2, inputLabel2, inputLabel2Num, 10, input2.dataset.move, 'curr');
         changeNumbers(input1.value, input2.value);
         changeNumbers(input1.value, input2.value);
