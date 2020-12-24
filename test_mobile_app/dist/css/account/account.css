@@ -730,7 +730,7 @@ body{
     font-size: 13px;
     line-height: 15px;
     color: #469BFC;
-
+    display: flex;
 }
 .modalGift .modalContent .sliderWrapp{
     width: 275px;
