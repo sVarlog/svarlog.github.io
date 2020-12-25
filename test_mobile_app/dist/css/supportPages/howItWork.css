@@ -244,6 +244,8 @@ body{
     cursor: pointer;
     position: relative;
     z-index: 2;
+    border: 0!important;
+    outline: 0!important;
 }
 .income .calculator input::-moz-range-thumb {
     width: 25px;
@@ -254,6 +256,8 @@ body{
     cursor: pointer;
     position: relative;
     z-index: 2;
+    border: 0!important;
+    outline: 0!important;
 }
 .income .calculator .stepsValue{
     display: flex;
@@ -330,4 +334,5 @@ body{
 }
 .income h2 .number{
     border-bottom: 1px solid #1D1D1F;
+    white-space: nowrap;
 }

@@ -104,10 +104,10 @@ const rangeInit = () => {
             console.log(((+input2.dataset.move * val2) * current.rate) + +input2.dataset.startValue);
             console.log(current.rate);
             console.log(input2.dataset.startValue);
-        startOld.innerHTML = oldValFrom + current.icon;
-        endOld.innerHTML = oldValTo + current.icon;
-        startNew.innerHTML = newValFrom + current.icon;
-        endNew.innerHTML = newValTo + current.icon;
+        startOld.innerHTML = oldValFrom.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1") + current.icon;
+        endOld.innerHTML = oldValTo.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1") + current.icon;
+        startNew.innerHTML = newValFrom.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1") + current.icon;
+        endNew.innerHTML = newValTo.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1") + current.icon;
     };
     changeNumbers(input1.value, input2.value);
 
