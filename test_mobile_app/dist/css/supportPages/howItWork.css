@@ -109,6 +109,22 @@ body{
 .workSlider .item:nth-child(5){
     background: linear-gradient(217.34deg, #7D69E8 2.6%, #6A5AC7 100%);
 }
+.workSlider .item.test{
+    position: relative;
+}
+.workSlider .item.test video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.workSlider .item.test .text {
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+}
 /*  */
 .workSlider .sliderText{
     margin-left: 27px;
