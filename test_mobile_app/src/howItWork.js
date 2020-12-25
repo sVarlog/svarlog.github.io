@@ -53,8 +53,6 @@ const rangeInit = () => {
             val5 = stepWrapp.querySelector('.five');
         const values = [val1, val2, val3, val4, val5];
 
-        console.log(current);
-
         values.forEach((el, i) => {
             el.innerHTML = `${(moneyValue[i] * current.rate).toFixed(2)}${current.icon}`;
         });
@@ -85,12 +83,15 @@ const rangeInit = () => {
             endOld = wrapp.querySelector('.endOld'),
             startNew = wrapp.querySelector('.startNew'),
             endNew = wrapp.querySelector('.endNew'),
-            currValue = ((+input2.dataset.move * val2) + +input2.dataset.startValue) * current.rate,
+            currValue = ((+input2.dataset.move * val2) * current.rate) + +input2.dataset.startValue,
             subValue = (+input1.dataset.move * val1),
             oldValFrom = (((subValue / 100) * 1) * currValue).toFixed(0),
             oldValTo = (((subValue / 100) * 5) * currValue).toFixed(0),
             newValFrom = (((subValue / 100) * 4) * currValue).toFixed(0),
             newValTo = (((subValue / 100) * 9) * currValue).toFixed(0);
+            console.log(((+input2.dataset.move * val2) * current.rate) + +input2.dataset.startValue);
+            console.log(current.rate);
+            console.log(input2.dataset.startValue);
         startOld.innerHTML = oldValFrom + current.icon;
         endOld.innerHTML = oldValTo + current.icon;
         startNew.innerHTML = newValFrom + current.icon;
