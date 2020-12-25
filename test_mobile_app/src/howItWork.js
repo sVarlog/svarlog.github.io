@@ -62,13 +62,12 @@ const rangeInit = () => {
     setStepPrice();
 
     const setLabel = (input, label, labelText, step, type) => {
-        let newStr = ((+input.value * step) * current.rate).toString(),
+        let newStr = (+input.value * step).toString(),
             onePercent = input.parentNode.offsetWidth / 100;
         if (type === 'number') {
-            console.log(current);
-            console.log(current.icon);
             labelText.innerHTML = newStr.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
         } else if (type === 'curr') {
+            newStr = ((+input.value * step) * current.rate).toString()
             labelText.innerHTML = `${(+newStr + +input.dataset.startValue).toFixed(2)} ${current.icon}`;
         }
         label.style.left = `${(input.value * 5 + 0.5) - ((label.offsetWidth / 2) / onePercent)}%`;
@@ -114,7 +113,7 @@ const rangeInit = () => {
         input2.setAttribute('data-start-value', moneyValue[0] * currItem.rate);
         setValue(input2, inputLabel2, inputLabel2Num, 10, input2.dataset.move, 'curr');
         changeNumbers(input1.value, input2.value);
-        changeNumbers(input1.value, input2.value);
+        // changeNumbers(input1.value, input2.value);
         setStepPrice();
     };
 
