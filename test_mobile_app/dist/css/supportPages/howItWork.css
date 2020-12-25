@@ -43,17 +43,17 @@ body{
     overflow: hidden;
 }
 .workSlider .sliderWrapp{
-    margin-right: 45px;
-    margin-left: 45px;
+    margin-right: 15vw;
+    margin-left: 15vw;
 }
 .workSlider .sliderInner{
     transition: .5s;
     display: flex;
 }
 .workSlider .item{
-    width: 285px;
-    min-width: 285px;
-    height: 250px;
+    width: 70vw;
+    min-width: 70vw;
+    height: 70vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,6 +61,8 @@ body{
     border-radius: 20px;
     color: #fff;
     text-align: center;
+    background: rgba(0, 0, 0, .5);
+    margin-right: 15px;
 }
 .workSlider .item h2{
     font-size: 25px;
@@ -73,10 +75,6 @@ body{
     z-index: 2;
 }
 /*  */
-.workSlider .item {
-    background: rgba(0,0,0,.5);
-    margin-right: 15px;
-}
 .workSlider .item:nth-child(1){
     background: linear-gradient(175.72deg, #80FAFD -10.52%, rgba(255, 255, 255, 0) 96.52%),
     linear-gradient(212.28deg, #7EF6FB 3.45%, #5964F2 65.3%, #A123AF 100%);
@@ -89,7 +87,7 @@ body{
 }
 .workSlider .item:nth-child(4){
     background: url(../../img/howItWork/SliderWrapp4.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
     position: relative;
 }
 .workSlider .item:nth-child(4):after{
@@ -241,7 +239,8 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #4892F3;
+    background: rgba(0, 100, 239,1);
+    /* background: #4892F3; */
     cursor: pointer;
     position: relative;
     z-index: 2;
@@ -250,7 +249,8 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #4892F3;
+    background: rgba(0, 100, 239,1);
+    /* background: rgb(127, 178, 246); */
     cursor: pointer;
     position: relative;
     z-index: 2;
