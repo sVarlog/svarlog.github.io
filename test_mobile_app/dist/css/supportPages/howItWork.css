@@ -79,10 +79,6 @@ body{
     background: linear-gradient(175.72deg, #80FAFD -10.52%, rgba(255, 255, 255, 0) 96.52%),
     linear-gradient(212.28deg, #7EF6FB 3.45%, #5964F2 65.3%, #A123AF 100%);
 }
-.workSlider .item:nth-child(1) img{
-    width: 80px;
-    height: 80px;
-}
 .workSlider .item:nth-child(2){
     background: linear-gradient(240.61deg, #E54454 7.18%, #E56148 15.73%, #EBB344 40.87%, #DA3A22 78.8%);
 }
