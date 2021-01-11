@@ -115,6 +115,10 @@
     font-size: 14px;
     color: #8f8f8f;
 }
+.content .thirdRow img{
+    width: 35px;
+    height: 35px;
+}
 .content button{
     background: linear-gradient(90deg, #01C79B 0%, #4593EF 100%);
     border-radius: 10px;
