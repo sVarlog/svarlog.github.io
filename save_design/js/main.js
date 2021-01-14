@@ -425,7 +425,7 @@ $(document).ready((function () {
 
     function u(t) {
         var e = $(window).outerWidth(), s = $(window).outerHeight(), i = 80;
-        e < 768 && (i = 50), t > 0 ? $("header").addClass("scroll") : $("header").removeClass("scroll"), t > s ? $("#up").fadeIn(300) : $("#up").fadeOut(300), $.each($(".sector"), (function (e, a) {
+        e < 768 && (i = 50), t > s ? $("#up").fadeIn(300) : $("#up").fadeOut(300), $.each($(".sector"), (function (e, a) {
             var l = $(this).outerHeight(), n = $(this).offset().top;
             if (t >= n && t <= n + l - s && ($(".sector.scroll").removeClass("scroll"), $(this).addClass("scroll")), $(this).hasClass("scroll") && (t >= n && t <= n + l - s ? $(this).hasClass("normalscroll") ? $("body").addClass("scroll") : $("body").removeClass("scroll") : $(this).hasClass("normalscroll") && $("body").removeClass("scroll")), t > n - s / 1.5 && t < n + l ? ($(".dotts").length > 0 && function (t, e) {
                 1 == e && $.each($(".sector"), (function (t, e) {

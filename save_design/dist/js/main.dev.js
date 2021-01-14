@@ -486,7 +486,7 @@ $(document).ready(function () {
     var e = $(window).outerWidth(),
         s = $(window).outerHeight(),
         i = 80;
-    e < 768 && (i = 50), t > 0 ? $("header").addClass("scroll") : $("header").removeClass("scroll"), t > s ? $("#up").fadeIn(300) : $("#up").fadeOut(300), $.each($(".sector"), function (e, a) {
+    e < 768 && (i = 50), t > s ? $("#up").fadeIn(300) : $("#up").fadeOut(300), $.each($(".sector"), function (e, a) {
       var l = $(this).outerHeight(),
           n = $(this).offset().top;
 
