@@ -990,7 +990,9 @@
   }
 
   .loan {
-    background: url(/img/main/mob_bg.jpg);
+    background: url(../img/main/mob_bg.jpg) no-repeat center;
+    background-position: top left;
+    background-size: cover;
     padding-top: 115px;
     padding-bottom: 50px;
   }
