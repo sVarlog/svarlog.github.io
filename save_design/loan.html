@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label>E-mail <span>*</span></label>
-                                    <input type="email" required name="email" placeholder="E-mail">
+                                    <input type="email" required name="email" id="emailX" placeholder="E-mail">
                                 </div>
                             </div>
                             <div class="form__checkInfo">
@@ -166,19 +166,19 @@
                                     <input type="text" name="date" placeholder="ДД/ММ/ГГГГ" id="date">
                                 </div>
                                 <div class="form__group gender">
-                                    <label>Пол <span>*</span></label>
+                                    <label class="genderLabel">Пол <span>*</span></label>
                                     <div class="form__radio">
                                         <input type="radio" class="radio" id="radio1" name="gender" checked/>
-                                        <label for="radio1">М</label>
+                                        <label for="radio1" class="male"><div>М</div></label>
                                     </div>
                                     <div class="form__radio">
                                         <input type="radio" class="radio" id="radio2" name="gender" />
-                                        <label for="radio2">Ж</label>
+                                        <label for="radio2" class="female"><div>Ж</div></label>
                                     </div>
                                 </div>
                             </div>
                             <hr>
-                            <div class="form__groupsTWO">
+                            <div class="form__groupsTWO select">
                                 <div class="form__group">
                                     <label>Сумма займа <span>*</span></label>
                                     <input type="text" name="summDolg" placeholder="500000" id="summDolg">
@@ -235,7 +235,7 @@
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.125 5.62497H2.64394L5.50856 2.89647C5.65856 2.75359 5.66437 2.51622 5.5215 2.36622C5.37881 2.21641 5.14144 2.21041 4.99125 2.35328L1.71975 5.46953C1.57819 5.61128 1.5 5.79953 1.5 5.99997C1.5 6.20022 1.57819 6.38866 1.72631 6.53659L4.99144 9.64647C5.064 9.71566 5.157 9.74997 5.25 9.74997C5.349 9.74997 5.448 9.71097 5.52169 9.63353C5.66456 9.48353 5.65875 9.24634 5.50875 9.10347L2.63213 6.37497H10.125C10.332 6.37497 10.5 6.20697 10.5 5.99997C10.5 5.79297 10.332 5.62497 10.125 5.62497Z" fill="#828282"/>
                                     </svg>
-                                    Назад
+                                    <span>Назад</span>
                                 </a>
                                 <div class="button" data-href="#step-4" id="btnStep3">ОТПРАВИТЬ</div>
                             </div>
@@ -248,35 +248,35 @@
                             <div class="form__groupsTWO">
                                 <div class="form__group">
                                     <label>Регион <span>*</span></label>
-                                    <input type="text" id="region1">
+                                    <input type="text" id="region1" placeholder="Ваш регион">
                                 </div>
                                 <div class="form__group">
                                     <label>Город <span>*</span></label>
-                                    <input type="text" id="city1">
+                                    <input type="text" id="city1" placeholder="Ваш город">
                                 </div>
                             </div>
                             <div class="form__groupsTREE">
                                 <div class="form__group">
                                     <label>Улица <span>*</span></label>
-                                    <input type="text" id="street1">
+                                    <input type="text" id="street1" placeholder="Ваша улица">
                                 </div>
                                 <div class="form__group">
                                     <label>Дом  <span>*</span></label>
-                                    <input type="text" id="house1">
+                                    <input type="text" id="house1" placeholder="Дом">
                                 </div>
                                 <div class="form__group">
                                     <label>Квартира</label>
-                                    <input type="text">
+                                    <input type="text" placeholder="Квартира">
                                 </div>
-                                <div class="form__group gender">
+                                <div class="form__group factic gender">
                                     <label>Совпадает с фактическим? <span>*</span></label>
                                     <div class="form__radio">
                                         <input type="radio" class="radio radioDual" value="0" id="radio3" name="dual" checked/>
-                                        <label for="radio3">Да</label>
+                                        <label for="radio3" class="yes"><div>Да</div></label>
                                     </div>
                                     <div class="form__radio">
                                         <input type="radio" class="radio radioDual" value="1" id="radio4" name="dual" />
-                                        <label for="radio4">Нет</label>
+                                        <label for="radio4" class="no"><div>Нет</div></label>
                                     </div>
                                 </div>
                             </div>
@@ -285,25 +285,25 @@
                                 <div class="form__groupsTWO">
                                     <div class="form__group">
                                         <label>Регион <span>*</span></label>
-                                        <input type="text" id="region2" >
+                                        <input type="text" id="region2" placeholder="Ваш регион">
                                     </div>
                                     <div class="form__group">
                                         <label>Город <span>*</span></label>
-                                        <input type="text"  id="city2">
+                                        <input type="text"  id="city2" placeholder="Ваш город">
                                     </div>
                                 </div>
                                 <div class="form__groupsTREE">
                                     <div class="form__group">
                                         <label>Улица <span>*</span></label>
-                                        <input type="text" id="street2">
+                                        <input type="text" id="street2" placeholder="Ваша улица">
                                     </div>
                                     <div class="form__group">
                                         <label>Дом  <span>*</span></label>
-                                        <input type="text" id="house2">
+                                        <input type="text" id="house2" placeholder="Дом">
                                     </div>
                                     <div class="form__group">
                                         <label>Квартира</label>
-                                        <input type="text">
+                                        <input type="text" placeholder="Квартира">
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.125 5.62497H2.64394L5.50856 2.89647C5.65856 2.75359 5.66437 2.51622 5.5215 2.36622C5.37881 2.21641 5.14144 2.21041 4.99125 2.35328L1.71975 5.46953C1.57819 5.61128 1.5 5.79953 1.5 5.99997C1.5 6.20022 1.57819 6.38866 1.72631 6.53659L4.99144 9.64647C5.064 9.71566 5.157 9.74997 5.25 9.74997C5.349 9.74997 5.448 9.71097 5.52169 9.63353C5.66456 9.48353 5.65875 9.24634 5.50875 9.10347L2.63213 6.37497H10.125C10.332 6.37497 10.5 6.20697 10.5 5.99997C10.5 5.79297 10.332 5.62497 10.125 5.62497Z" fill="#828282"/>
                                     </svg>
-                                    Назад
+                                    <span>Назад</span>
                                 </a>
                                 <div class="button" data-href="#step-5" id="btnStep4">ОТПРАВИТЬ</div>
                             </div>
@@ -388,6 +388,7 @@
                             <!--                                    </div>-->
                             <!--                                </div>-->
                             <!--                            </div>-->
+                            <div class="mob_desc">Услуга платная - 398 руб. каждые пять дней.</div>
                             <div class="form__footer">
                                 <a href="javascript:void(0)" data-href="#step-4" class="black btn-stepsBlack">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +477,7 @@
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.125 5.62497H2.64394L5.50856 2.89647C5.65856 2.75359 5.66437 2.51622 5.5215 2.36622C5.37881 2.21641 5.14144 2.21041 4.99125 2.35328L1.71975 5.46953C1.57819 5.61128 1.5 5.79953 1.5 5.99997C1.5 6.20022 1.57819 6.38866 1.72631 6.53659L4.99144 9.64647C5.064 9.71566 5.157 9.74997 5.25 9.74997C5.349 9.74997 5.448 9.71097 5.52169 9.63353C5.66456 9.48353 5.65875 9.24634 5.50875 9.10347L2.63213 6.37497H10.125C10.332 6.37497 10.5 6.20697 10.5 5.99997C10.5 5.79297 10.332 5.62497 10.125 5.62497Z" fill="#828282"/>
                                     </svg>
-                                    Назад
+                                    <span>Назад</span>
                                 </a>
                                 <btn class="button" data-href="#step-6" id="progressBarBtn" onclick="document.location = 'offers.html'" disable="disable">Продолжить</btn>
                             </div>

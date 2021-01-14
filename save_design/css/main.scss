@@ -304,6 +304,9 @@
     padding: 40px 50px 25px 50px;
     margin: 0 auto;
     position: relative;
+    #step-5 .mob_desc{
+      display: none;
+    }
     .step{
       display: none;
       &__name{
@@ -613,6 +616,9 @@
           color: #1D1D1F;
           span{
             color: red;
+          }
+          div{
+            display: inline;
           }
         }
         &.has-error{
@@ -1141,12 +1147,117 @@
       margin-top: 25px;
       padding: 25px 24px;
 
-      & .form__groupsTWO{
+      & label{
+        color: #2B2C49;
+      }
+
+      & hr{
+        display: none;
+      }
+
+      & .form__groupsTWO.select{
+        & label {
+          z-index: 11;
+        }
+
+        & .jq-selectbox__select {
+          border-radius: 7px;
+
+          & .jq-selectbox__trigger-arrow{
+            width: 5px;
+            height: 5px;
+            border: solid black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+      }
+
+      & .form__groupsTWO,
+      & .form__groupsTREE{
         display: flex;
         flex-direction: column;
         margin: 0;
+      
 
-        & .form__group{
+        & .form__group.gender{
+          display: flex;
+          padding-left: 0;
+          width: 100%;
+          margin-bottom: 15px;
+
+          & label.genderLabel{
+            width: auto;
+            order: 3;
+            color: #2B2C49;
+            margin-left: 10px;
+            margin-top: 7px;
+            color: #808192;
+          }
+
+          & .form__radio {
+            margin-right: 15px;
+
+            & .radio + label:before{
+              border-radius: 5px;
+            }
+
+            & .radio:checked + label:before{
+              background: #4892F3;
+              color: #fff;
+            }
+
+            & label {
+              &.male {
+                &:before{
+                  content: 'М';
+                }
+              }
+
+              &.female {
+                &:before {
+                  content: 'Ж';
+                }
+              }
+
+              div {
+                display: none;
+              }
+
+              &:before {
+                color: #808192;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                width: 37px;
+                height: 37px;
+              }
+            }
+          }
+        }
+
+        & .form__group.factic{
+          & .form__radio{
+            width: 50px;
+            height: 37px;
+          }
+
+          & label.yes:before{
+            content: 'Да';
+            width: 50px;
+          }
+
+          & label.no:before {
+            content: 'Нет';
+            width: 50px;
+          }
+        }
+
+        & .form__group:not(.gender){
           width: 100%;
           position: relative;
           padding-left: 0;
@@ -1154,6 +1265,7 @@
           margin-bottom: 20px;
 
           & label{
+            color: #808192;
             position: absolute;
             background: #fff;
             left: 17px;
@@ -1264,6 +1376,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      & #step-5{
+        & h2 {
+          font-size: 20px;
+          color: #2B2C49;
+        }
+
+        & .form {
+          .text-new span {
+            font-size: 16px;
+          }
+
+          & .box-next-offers{
+            padding-top: 40px;
+            padding-bottom: 17px;
+            width: 100%;
+            max-width: 100%;
+
+            & #btnStep5{
+              width: 100%;
+              max-width: 100%;
+              border-radius: 7px;
+              padding-left: 50px;
+              padding-right: 50px;
+            }
+          }
+
+          & .mob_desc {
+            display: flex;
+            justify-content: center;
+            color: #808192;
+            margin-bottom: 40px;
+          }
+
+          & .form__footer a{
+            width: 135px;
+            color: #2B2C49;
+
+            & svg{
+              margin-right: 15px;
+            }
+          }
+        }
       }
     }
 

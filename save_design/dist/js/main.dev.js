@@ -76,7 +76,17 @@ $(document).ready(function () {
   });
 
   function checkStep(step) {
-    console.log(step);
+    var lines = document.querySelectorAll(".loan .line");
+
+    if (lines) {
+      lines.forEach(function (el) {
+        el.classList.remove('active');
+
+        if (+el.dataset.step <= step) {
+          el.classList.add('active');
+        }
+      });
+    }
   }
 
   $("#bank-card-number").on('input', function () {
@@ -101,6 +111,13 @@ $(document).ready(function () {
       $("#phoneX").addClass('error');
     } else {
       $("#phoneX").removeClass('error');
+    }
+
+    if ($("#emailX").val() == '') {
+      error = true;
+      $("#emailX").addClass('error');
+    } else {
+      $("#emailX").removeClass('error');
     }
 
     if ($("#checkbox").is(':checked')) {
@@ -385,8 +402,13 @@ $(document).ready(function () {
 
   var E = Date.now();
   superT = new Date(E + 9e5).toLocaleTimeString().slice(0, -3), superT, setInterval(function () {
-    document.getElementById("doc_time1").innerHTML = superT;
-    document.getElementById("doc_time2").innerHTML = superT;
+    if (document.getElementById("doc_time1")) {
+      document.getElementById("doc_time1").innerHTML = superT;
+    }
+
+    if (document.getElementById("doc_time2")) {
+      document.getElementById("doc_time2").innerHTML = superT;
+    }
   }, 500);
   $(window).outerWidth(), $(window).outerHeight();
   var t,
