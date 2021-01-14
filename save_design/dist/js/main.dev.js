@@ -9,7 +9,8 @@ $(document).ready(function () {
     $('#progressBar').removeClass('active');
 
     if ($($(this).data('href')).hasClass('step5')) {
-      initAnimNumber();
+      // initAnimNumber()
+      console.log('completed');
     }
   });
   $('.btn-stepsBlack').on('click', function () {
@@ -136,7 +137,7 @@ $(document).ready(function () {
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
-        initAnimNumber();
+        console.log('complete');
       }
     }
   });
@@ -180,7 +181,7 @@ $(document).ready(function () {
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
-        initAnimNumber();
+        console.log('complete');
       }
     }
   });
@@ -224,7 +225,7 @@ $(document).ready(function () {
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
-        initAnimNumber();
+        console.log('complete');
       }
     }
   });
@@ -302,11 +303,12 @@ $(document).ready(function () {
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
-        initAnimNumber();
+        console.log('complete');
       }
     }
   });
   $('#btnStep5').on('click', function () {
+    console.log('complete2');
     $('.loan__steps-list .active').addClass('check');
     $($(this).data('href') + 'ul').addClass('active');
     $('.loan__form .step').removeClass('active');
@@ -314,7 +316,7 @@ $(document).ready(function () {
     $('#progressBar').removeClass('active');
 
     if ($($(this).data('href')).hasClass('step5')) {
-      initAnimNumber();
+      console.log('complete');
     }
   });
   $('#progressBarBtn').on('click', function () {
@@ -328,7 +330,7 @@ $(document).ready(function () {
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
-        initAnimNumber();
+        console.log('complete');
       }
     }
   });
@@ -376,6 +378,11 @@ $(document).ready(function () {
     }, 9000);
   } // initAnimNumber()
 
+
+  if (document.querySelector('#step-6')) {
+    console.log('test');
+    initAnimNumber();
+  }
 
   var count = 60 * 20;
   var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
