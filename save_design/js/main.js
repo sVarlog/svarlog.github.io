@@ -331,7 +331,7 @@ $(document).ready((function () {
 
         setTimeout(function (){
             $('#progressBarBtn').attr('disable',false);
-            document.location.href = "/offers.html";
+            document.location.href = "offers.html";
         },9000)
 
     }

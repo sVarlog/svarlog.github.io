@@ -372,7 +372,7 @@ $(document).ready(function () {
     $('#progressBar').addClass('active');
     setTimeout(function () {
       $('#progressBarBtn').attr('disable', false);
-      document.location.href = "/offers.html";
+      document.location.href = "offers.html";
     }, 9000);
   } // initAnimNumber()
 
