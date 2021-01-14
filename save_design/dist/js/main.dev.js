@@ -372,6 +372,7 @@ $(document).ready(function () {
     $('#progressBar').addClass('active');
     setTimeout(function () {
       $('#progressBarBtn').attr('disable', false);
+      document.location.href = "/offers.html";
     }, 9000);
   } // initAnimNumber()
 
@@ -380,24 +381,29 @@ $(document).ready(function () {
   var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
   function timer() {
-    count = count - 1;
+    if (document.getElementById("doc_timeMin")) {
+      count = count - 1;
 
-    if (count == -1) {
+      if (count == -1) {
+        clearInterval(counter);
+        return;
+      }
+
+      var seconds = count % 60;
+      var minutes = Math.floor(count / 60);
+      minutes %= 60;
+
+      if (seconds < 10) {
+        document.getElementById("doc_time").innerHTML = minutes + ":" + "0" + seconds;
+      } else {
+        document.getElementById("doc_time").innerHTML = minutes + ":" + seconds;
+      }
+
+      document.getElementById("doc_timeMin").innerHTML = minutes;
+    } else {
       clearInterval(counter);
       return;
     }
-
-    var seconds = count % 60;
-    var minutes = Math.floor(count / 60);
-    minutes %= 60;
-
-    if (seconds < 10) {
-      document.getElementById("doc_time").innerHTML = minutes + ":" + "0" + seconds;
-    } else {
-      document.getElementById("doc_time").innerHTML = minutes + ":" + seconds;
-    }
-
-    document.getElementById("doc_timeMin").innerHTML = minutes;
   }
 
   var E = Date.now();
