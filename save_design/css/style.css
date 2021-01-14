@@ -1762,6 +1762,9 @@ body.lock {
 	.header.scroll{
 		background: #257DF0;
 	}
+	.header__menu.menu {
+		display: none;
+	}
 	.main__text{
 		padding: 0;
 		text-align: left;

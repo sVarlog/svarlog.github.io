@@ -74,6 +74,11 @@ $(document).ready(function () {
       });
     }
   });
+
+  function checkStep(step) {
+    console.log(step);
+  }
+
   $("#bank-card-number").on('input', function () {
     console.log($(this).val());
 
@@ -106,15 +111,11 @@ $(document).ready(function () {
     }
 
     if (!error) {
-      if ($(".loan__steps .line").data("step") === 2) {
-        console.log("tets");
-      }
-
+      checkStep(1);
       $('.loan__steps-list .active').addClass('check');
       $($(this).data('href') + 'ul').addClass('active');
       $('.loan__form .step').removeClass('active');
       $($(this).data('href')).addClass('active');
-      console.log($(".loan__steps .line"));
       $('#progressBar').removeClass('active');
 
       if ($($(this).data('href')).hasClass('step5')) {
@@ -154,6 +155,7 @@ $(document).ready(function () {
     }
 
     if (!error) {
+      checkStep(2);
       $('.loan__steps-list .active').addClass('check');
       $($(this).data('href') + 'ul').addClass('active');
       $('.loan__form .step').removeClass('active');
@@ -197,6 +199,7 @@ $(document).ready(function () {
     }
 
     if (!error) {
+      checkStep(3);
       $('.loan__steps-list .active').addClass('check');
       $($(this).data('href') + 'ul').addClass('active');
       $('.loan__form .step').removeClass('active');
