@@ -510,7 +510,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($('.review .customSlider .slider') && $(document).width() < 576) {
+  if ($('.review .customSlider .slider') && $(document).width() < 577) {
     $(".customSlider .slider").slick({
       dots: true,
       prevArrow: $(".review .customSlider .prev"),
