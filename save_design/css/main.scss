@@ -1,5 +1,9 @@
 .nomain{
   background: #E6EAEE;
+
+  .white {
+    color: #4892F3;
+  }
   .header.scroll{
     background: #E6EAEE;
     box-shadow: 0px 0px 50px rgba(72, 146, 243, 0.02);
@@ -1021,6 +1025,9 @@
     &.scroll{
       background: #257DF0;
     }
+  }
+  .nomain .white{
+    color: #fff;
   }
   .header__menu.menu{
     display: none;
