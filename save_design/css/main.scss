@@ -238,13 +238,11 @@
           margin: auto;
           position: relative;
 
-          &.active:after{
-            content: '';
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            right: 0;
-            top: 0;
+          & svg{
+            display: none;
+          }
+
+          &.active{
             background: #4892F3;
           }
         }
@@ -277,16 +275,6 @@
               border: 3px solid #fff;
               border-radius: 50%;
             }
-            // &:after{
-            //   content: '';
-            //   position: absolute;
-            //   top: 0;
-            //   right: 0;
-            //   width: 50px;
-            //   height: 120px;
-            //   display: block;
-            //   background: #4892F3;
-            // }
             &.check{
               span:after{
                 opacity: 0;
@@ -1101,9 +1089,25 @@
           width: 100%;
           height: 2px;
 
-          &.active:after{
-            width: 50%;
-            left: 0;
+          &.active{
+            width: 100%;
+            background: #4892F3;
+            position: relative;
+
+            & .svgWrapp{
+              position: absolute;
+              top: -5px;
+              left: calc(50% - 10px);
+              width: 20px;
+              height: 20px;
+              background: #fff;
+              display: flex;
+              justify-content: center;
+
+              & svg {
+                display: block;
+              }
+            }
           }
         }
 
@@ -1238,6 +1242,15 @@
         border-radius: 7px;
         margin-right: 20px;
 
+        & svg{
+          height: 17px;
+          width: 20px;
+
+          & path{
+            fill: rgba(72, 146, 243, 0.5);
+          }
+        }
+
         & span {
           display: none;
         }
@@ -1255,6 +1268,18 @@
     }
 
     & .step__name{
+      display: none;
+    }
+  }
+  .footer.nomain {
+    background: #fff;
+    padding-top: 30px;
+
+    & .footer__body{
+      margin: 0;
+    }
+
+    & .bottom__img{
       display: none;
     }
   }
