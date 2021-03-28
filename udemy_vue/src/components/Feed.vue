@@ -44,10 +44,10 @@
                 </router-link>
             </div>
             <pagination 
-                :total="total" 
-                :limit="limit" 
+                :total="feed.articlesCount" 
+                :limit="limit"
                 :current-page="currentPage"
-                :url="url"
+                :url="baseUrl"
             ></pagination>
         </div>
     </div>
@@ -57,6 +57,8 @@
 import { mapState } from 'vuex';
 import { actionTypes } from '@/store/modules/feed';
 import Pagination from '@/components/Pagination';
+import {limit} from '@/helpers/variables';
+import {stringify, parseUrl} from 'query-string';
 
 const Feed = {
     props: {
@@ -64,9 +66,7 @@ const Feed = {
         required: true
     },
     data: () => ({
-        total: 500,
-        limit: 10,
-        currentPage: 5,
+        limit,
         url: '/tags/dragons'
     }),
     components: {
@@ -77,11 +77,38 @@ const Feed = {
             isLoading: state => state.feed.isLoading,
             feed: state => state.feed.data,
             error: state => state.feed.error
-        })
+        }),
+        baseUrl() {
+            return this.$route.path
+        },
+        currentPage() {
+            return Number(this.$route.query.page || '1')
+        },
+        offset() {
+            return this.currentPage * limit - limit;
+        }
+    },
+    watch: {
+        currentPage() {
+            console.log('change url', this.offset);
+            this.fetchFeed();
+        }
     },
     mounted() {
         console.log('init feed');
-        this.$store.dispatch(actionTypes.getFeed, { apiUrl: this.apiUrl });
+        this.fetchFeed();
+    },
+    methods: {
+        fetchFeed() {
+            let parsedUrl = parseUrl(this.apiUrl);
+            const stringifyedParams = stringify({
+                limit,
+                offset: this.offset,
+                ...parsedUrl.query
+            })
+            const apiUrlWithParans = `${parsedUrl.url}?${stringifyedParams}`;
+            this.$store.dispatch(actionTypes.getFeed, { apiUrl: apiUrlWithParans });
+        }
     }
 };
 export default Feed;
