@@ -19,11 +19,11 @@
 import Banner from '@/components/Banner';
 import PopularTags from '@/components/PopularTags'
 import Feed from '@/components/Feed';
-import FeedToggler from '@/components/FeedToggler'
+import FeedToggler from '@/components/FeedToggler';
 
-const GlobalFeed = {
+const YourFeed = {
     data: () => ({
-        apiUrl: '/articles'
+        apiUrl: '/articles/feed'
     }),
     components: {
         Feed,
@@ -32,5 +32,5 @@ const GlobalFeed = {
         FeedToggler
     }
 };
-export default GlobalFeed;
+export default YourFeed;
 </script>

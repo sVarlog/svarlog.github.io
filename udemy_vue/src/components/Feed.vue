@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-if="isLoading">Loading...</div>
-        <div v-if="error">Something error</div>
+        <loading v-if="isLoading"></loading>
+        <error-message v-if="error"></error-message>
         <div v-if="feed">
             <div
                 class="article-preview"
@@ -40,14 +40,14 @@
                     <h1>{{ article.title }}</h1>
                     <p>{{ article.description }}</p>
                     <span>Read more...</span>
-                    TAG LIST
+                    <tag-list :tags="article.tagList"></tag-list>
                 </router-link>
             </div>
             <pagination 
                 :total="total" 
                 :limit="limit" 
                 :current-page="currentPage"
-                :url="url"
+                :url="baseUrl"
             ></pagination>
         </div>
     </div>
@@ -56,7 +56,11 @@
 <script>
 import { mapState } from 'vuex';
 import { actionTypes } from '@/store/modules/feed';
-import Pagination from '@/components/Pagination';
+import {stringify, parseUrl} from 'query-string';
+const Pagination = () => import('@/components/Pagination');
+const Loading = () => import('@/components/Loading');
+const ErrorMessage = () => import('@/components/ErrorMessage');
+const TagList = () => import('@/components/TagList');
 
 const Feed = {
     props: {
@@ -66,22 +70,52 @@ const Feed = {
     data: () => ({
         total: 500,
         limit: 10,
-        currentPage: 5,
-        url: '/tags/dragons'
     }),
     components: {
-        Pagination
+        Pagination,
+        Loading,
+        ErrorMessage,
+        TagList
     },
     computed: {
         ...mapState({
             isLoading: state => state.feed.isLoading,
             feed: state => state.feed.data,
             error: state => state.feed.error
-        })
+        }),
+        currentPage() {
+            return Number(this.$route.query.page || 1)
+        },
+        baseUrl() {
+            return this.$route.path
+        },
+        offset() {
+            return this.currentPage * this.limit - this.limit;
+        }
+    },
+    watch: {
+        currentPage() {
+            console.log('current page changed');
+            this.fetchFeed();
+        }
     },
     mounted() {
         console.log('init feed');
-        this.$store.dispatch(actionTypes.getFeed, { apiUrl: this.apiUrl });
+        console.log(this.apiUrl);
+        this.fetchFeed();
+    },
+    methods: {
+        fetchFeed() {
+            const parsedUrl = parseUrl(this.apiUrl);
+            const stringifiedParams = stringify({
+                ...parsedUrl.query,
+                limit: this.limit,
+                offset: this.offset, 
+            })
+            const apiUrlWithParams = `${parsedUrl.url}?${stringifiedParams}`;
+            console.log(apiUrlWithParams);
+            this.$store.dispatch(actionTypes.getFeed, {apiUrl: apiUrlWithParams});
+        }
     }
 };
 export default Feed;

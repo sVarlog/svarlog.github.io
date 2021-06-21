@@ -4,7 +4,7 @@
         <div class="container page">
             <div class="row">
                 <div class="col-md-9">
-                    <feed-toggler></feed-toggler>
+                    <feed-toggler :tag-name="tagName"></feed-toggler>
                     <feed :api-url="apiUrl"></feed>
                 </div>
                 <div class="col-md-3">
@@ -19,12 +19,17 @@
 import Banner from '@/components/Banner';
 import PopularTags from '@/components/PopularTags'
 import Feed from '@/components/Feed';
-import FeedToggler from '@/components/FeedToggler'
+import FeedToggler from '@/components/FeedToggler';
 
-const GlobalFeed = {
-    data: () => ({
-        apiUrl: '/articles'
-    }),
+const TagFeed = {
+    computed: {
+        tagName() {
+            return this.$route.params.slug;
+        },
+        apiUrl() {
+            return `/articles?tag=${this.tagName}`;
+        }
+    },
     components: {
         Feed,
         PopularTags,
@@ -32,5 +37,5 @@ const GlobalFeed = {
         FeedToggler
     }
 };
-export default GlobalFeed;
+export default TagFeed;
 </script>
