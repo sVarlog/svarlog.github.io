@@ -99,6 +99,9 @@ const Feed = {
     watch: {
         currentPage() {
             this.fetchFeed();
+        },
+        apiUrl() {
+            this.fetchFeed();
         }
     },
     mounted() {

@@ -9,6 +9,7 @@ const Article = () => import('@/views/Article.vue');
 const CreateArticle = () => import('@/views/CreateArticle.vue');
 const EditArticle = () => import('@/views/EditArticle');
 const Settings = () => import('@/views/Settings');
+const UserProfile = () => import('@/views/UserProfile');
 
 Vue.use(VueRouter);
 
@@ -61,12 +62,12 @@ const routes = [
     {
         path: '/profiles/:slug',
         name: 'userProfile',
-        component: GlobalFeed
+        component: UserProfile
     },
     {
         path: '/profiles/:slug/favorites',
         name: 'userProfileFavorites',
-        component: GlobalFeed
+        component: UserProfile
     }
 ];
 
