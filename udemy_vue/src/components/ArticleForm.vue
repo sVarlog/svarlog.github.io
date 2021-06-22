@@ -57,6 +57,27 @@ const ArticleForm = {
         body: '',
         tagList: ''
     }),
+    computed: {
+        // title() {
+        //     return this.$props.initialValues.title || ''}
+        // ,
+        // description() {
+        //     return this.$props.initialValues.description || ''}
+        // ,
+        // body() {
+        //     return this.$props.initialValues.body || ''}
+        // ,
+        // tagList() {
+        //     return this.$props.initialValues.tagList.join('') || ''
+        // }
+    },
+    mounted() {
+        console.log(this);
+        this.title = this.$props.initialValues.title;
+        this.description = this.$props.initialValues.description;
+        this.body = this.$props.initialValues.body;
+        this.tagList = this.$props.initialValues.tagList;    
+    },
     components: {
         ValidationErrors
     },

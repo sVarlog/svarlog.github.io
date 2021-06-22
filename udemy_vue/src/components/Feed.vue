@@ -56,17 +56,12 @@
 <script>
 import { mapState } from 'vuex';
 import { actionTypes } from '@/store/modules/feed';
-<<<<<<< HEAD
 import {stringify, parseUrl} from 'query-string';
 const Pagination = () => import('@/components/Pagination');
 const Loading = () => import('@/components/Loading');
 const ErrorMessage = () => import('@/components/ErrorMessage');
 const TagList = () => import('@/components/TagList');
-=======
-import Pagination from '@/components/Pagination';
 import {limit} from '@/helpers/variables';
-import {stringify, parseUrl} from 'query-string';
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
 
 const Feed = {
     props: {
@@ -74,13 +69,8 @@ const Feed = {
         required: true
     },
     data: () => ({
-<<<<<<< HEAD
-        total: 500,
-        limit: 10,
-=======
         limit,
         url: '/tags/dragons'
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
     }),
     components: {
         Pagination,
@@ -94,7 +84,6 @@ const Feed = {
             feed: state => state.feed.data,
             error: state => state.feed.error
         }),
-<<<<<<< HEAD
         currentPage() {
             return Number(this.$route.query.page || 1)
         },
@@ -103,49 +92,18 @@ const Feed = {
         },
         offset() {
             return this.currentPage * this.limit - this.limit;
-=======
-        baseUrl() {
-            return this.$route.path
-        },
-        currentPage() {
-            return Number(this.$route.query.page || '1')
-        },
-        offset() {
-            return this.currentPage * limit - limit;
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
         }
     },
     watch: {
         currentPage() {
-<<<<<<< HEAD
-            console.log('current page changed');
-=======
-            console.log('change url', this.offset);
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
             this.fetchFeed();
         }
     },
     mounted() {
-        console.log('init feed');
-<<<<<<< HEAD
-        console.log(this.apiUrl);
-=======
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
         this.fetchFeed();
     },
     methods: {
         fetchFeed() {
-<<<<<<< HEAD
-            const parsedUrl = parseUrl(this.apiUrl);
-            const stringifiedParams = stringify({
-                ...parsedUrl.query,
-                limit: this.limit,
-                offset: this.offset, 
-            })
-            const apiUrlWithParams = `${parsedUrl.url}?${stringifiedParams}`;
-            console.log(apiUrlWithParams);
-            this.$store.dispatch(actionTypes.getFeed, {apiUrl: apiUrlWithParams});
-=======
             let parsedUrl = parseUrl(this.apiUrl);
             const stringifyedParams = stringify({
                 limit,
@@ -154,7 +112,6 @@ const Feed = {
             })
             const apiUrlWithParans = `${parsedUrl.url}?${stringifyedParams}`;
             this.$store.dispatch(actionTypes.getFeed, { apiUrl: apiUrlWithParans });
->>>>>>> b8378e9ec52361eaf4fc4754ed023538a4005973
         }
     }
 };

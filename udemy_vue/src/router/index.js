@@ -7,6 +7,7 @@ const AppRegister = () => import('@/views/AppRegister.vue');
 const Login = () => import('@/views/Login.vue');
 const Article = () => import('@/views/Article.vue');
 const CreateArticle = () => import('@/views/CreateArticle.vue');
+const EditArticle = () => import('@/views/EditArticle');
 
 Vue.use(VueRouter);
 
@@ -49,7 +50,7 @@ const routes = [
     {
         path: '/articles/:slug/edit',
         name: 'editArticle',
-        component: GlobalFeed
+        component: EditArticle
     },
     {
         path: '/settings',
