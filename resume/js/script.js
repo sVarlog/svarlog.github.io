@@ -18,10 +18,13 @@ $('.education #layoutWayup').on('click', function () {
 	$('#layoutWModal iframe').attr('src', $('#layoutWModal iframe').data('src'));
 	$('#layoutWModal').show(500);
 });
+$('.education #udemyVueJs').on('click', function () {
+	$('#udemyVueModal iframe').attr('src', $('#udemyVueModal iframe').data('src'));
+	$('#udemyVueModal').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
-////////////////////////////////////////////////////
 (() => {
 	let headings = document.querySelectorAll('.works .worksWrap .headingItems'),
 		items = document.querySelectorAll('.works .worksWrap .projects');
