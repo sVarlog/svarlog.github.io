@@ -59,11 +59,9 @@ const Settings = {
     },
     methods: {
         onSubmit() {
-            console.log('submitted settings', this.form);
             this.$store.dispatch(authActionTypes.updateCurrentUser, {currentUserInput: this.form})
         },
         logout() {
-            console.log('logout');
             this.$store.dispatch(authActionTypes.logout).then(() => {
                 this.$router.push({name: 'globalFeed'})
             })

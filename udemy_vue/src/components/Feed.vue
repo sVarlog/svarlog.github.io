@@ -30,7 +30,7 @@
                         <span class="date">{{ article.createdAt }}</span>
                     </div>
                     <div class="pull-xs-right">
-                        ADD TO FAVORITS
+                        <add-to-favorites :is-favorited="article.favorited" :article-slug="article.slug" :favorites-count="article.favoritesCount"></add-to-favorites>
                     </div>
                 </div>
                 <router-link
@@ -57,11 +57,12 @@
 import { mapState } from 'vuex';
 import { actionTypes } from '@/store/modules/feed';
 import {stringify, parseUrl} from 'query-string';
+import {limit} from '@/helpers/variables';
 const Pagination = () => import('@/components/Pagination');
 const Loading = () => import('@/components/Loading');
 const ErrorMessage = () => import('@/components/ErrorMessage');
 const TagList = () => import('@/components/TagList');
-import {limit} from '@/helpers/variables';
+const AddToFavorites = () => import('@/components/AddToFavorites');
 
 const Feed = {
     props: {
@@ -76,7 +77,8 @@ const Feed = {
         Pagination,
         Loading,
         ErrorMessage,
-        TagList
+        TagList,
+        AddToFavorites
     },
     computed: {
         ...mapState({
