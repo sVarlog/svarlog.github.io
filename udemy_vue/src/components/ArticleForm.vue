@@ -57,20 +57,6 @@ const ArticleForm = {
         body: '',
         tagList: ''
     }),
-    computed: {
-        // title() {
-        //     return this.$props.initialValues.title || ''}
-        // ,
-        // description() {
-        //     return this.$props.initialValues.description || ''}
-        // ,
-        // body() {
-        //     return this.$props.initialValues.body || ''}
-        // ,
-        // tagList() {
-        //     return this.$props.initialValues.tagList.join('') || ''
-        // }
-    },
     mounted() {
         console.log(this);
         this.title = this.$props.initialValues.title;

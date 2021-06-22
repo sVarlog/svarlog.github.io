@@ -20,13 +20,21 @@ export const mutationTypes = {
 
     getCurrentUserStart: '[auth] getCurrentUserStart',
     getCurrentUserSuccess: '[auth] getCurrentUserSuccess',
-    getCurrentUserFailed: '[auth] getCurrentUserFailed'
+    getCurrentUserFailed: '[auth] getCurrentUserFailed',
+
+    updateCurrentUserStart: '[auth] updateCurrentUserStart',
+    updateCurrentUserSuccess: '[auth] updateCurrentUserSuccess',
+    updateCurrentUserFailed: '[auth] updateCurrentUserFailed',
+
+    logout: '[auth] logout'
 };
 
 export const actionTypes = {
     register: '[auth] register',
     login: '[auth] login',
-    getCurrentUser: '[auth] getCurrentUser'
+    getCurrentUser: '[auth] getCurrentUser',
+    updateCurrentUser: '[auth] updateCurrentUser',
+    logout: '[auth] logout'
 };
 
 export const getterTypes = {
@@ -88,6 +96,15 @@ const mutations = {
         state.isLoading = false;
         state.isLoggedIn = false;
         state.currentUser = null;
+    },
+    [mutationTypes.yodateCurrentUserStart]() {},
+    [mutationTypes.updateCurrentUserSuccess](state, payload) {
+        state.currentUser = payload;
+    },
+    [mutationTypes.updateCurrentUserFailed]() {},
+    [mutationTypes.logout](state) {
+        state.currentUser = null;
+        state.isLoggedIn = false;
     }
 };
 
@@ -150,6 +167,27 @@ const actions = {
                     context.commit(mutationTypes.getCurrentUserFailed);
                 });
         });
+    },
+    [actionTypes.updateCurrentUser](context, {currentUserInput}) {
+        return new Promise(resolve => {
+            context.commit(mutationTypes.updateCurrentUserStart);
+            authApi
+                .updateCurrentUser(currentUserInput)
+                .then(user => {
+                    context.commit(mutationTypes.updateCurrentUserSuccess, user);
+                    resolve(user);
+                })
+                .catch((result) => {
+                    context.commit(mutationTypes.updateCurrentUserFailed, result.response.data.errors);
+                });
+        });
+    },
+    [actionTypes.logout](context) {
+        return new Promise(resolve => {
+            setItem('accessToken', '');
+            context.commit(mutationTypes.logout);
+            resolve();
+        })
     }
 };
 
