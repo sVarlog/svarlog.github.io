@@ -6,6 +6,17 @@ const browsersync = require("browser-sync");
 
 const dist = "./dist/";
 // const dist = "/Applications/MAMP/htdocs/test"; // Ссылка на вашу папку на сервере
+let sass = require('gulp-sass')(require('sass'));
+ 
+gulp.task('sass', () => {
+  return gulp.src('./src/assets/sass/**/*.sass')
+          .pipe(sass().on('error', sass.logError))
+          .pipe(gulp.dest('./src/assets/css'));
+});
+ 
+gulp.task('sass:watch', () => {
+  gulp.watch('./sass/**/*.sass', ['sass']);
+});
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/*.html")
@@ -62,7 +73,8 @@ gulp.task("watch", () => {
 		port: 4000,
 		notify: true
     });
-    
+
+    gulp.watch('./src/assets/sass/**/*.sass' ,gulp.parallel('sass'));
     gulp.watch("./src/*.html", gulp.parallel("copy-html"));
     gulp.watch("./src/assets/**/*.*", gulp.parallel("copy-assets"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
