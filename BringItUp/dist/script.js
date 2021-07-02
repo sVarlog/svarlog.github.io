@@ -95,12 +95,17 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_slider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider.js */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_slider_sliderMain__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider/sliderMain */ "./src/js/modules/slider/sliderMain.js");
 /* harmony import */ var _modules_playVideo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/playVideo.js */ "./src/js/modules/playVideo.js");
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  const slider = new _modules_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"]('.page', '.slide', '.next', '.sidecontrol .reset');
+  const slider = new _modules_slider_sliderMain__WEBPACK_IMPORTED_MODULE_0__["default"]({
+    page: '.page',
+    slides: '.slide',
+    btns: '.next',
+    resetSlidesSelector: '.sidecontrol .reset'
+  });
   slider.render();
   const player = new _modules_playVideo_js__WEBPACK_IMPORTED_MODULE_1__["default"]('.showup .play', '.overlay');
   player.init();
@@ -168,10 +173,10 @@ class VideoPlayer {
 
 /***/ }),
 
-/***/ "./src/js/modules/slider.js":
-/*!**********************************!*\
-  !*** ./src/js/modules/slider.js ***!
-  \**********************************/
+/***/ "./src/js/modules/slider/slider.js":
+/*!*****************************************!*\
+  !*** ./src/js/modules/slider/slider.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -179,12 +184,40 @@ class VideoPlayer {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Slider; });
 class Slider {
-  constructor(page, slides, btns, resetSlidesSelector) {
+  constructor({
+    page = '',
+    slides = '',
+    next = '',
+    btns = '',
+    prev = '',
+    resetSlidesSelector = ''
+  } = {}) {
     this.page = document.querySelector(page);
     this.slides = this.page.querySelectorAll(slides);
     this.resetSlides = document.querySelectorAll(resetSlidesSelector);
     this.btns = document.querySelectorAll(btns);
     this.slideIndex = 1;
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/slider/sliderMain.js":
+/*!*********************************************!*\
+  !*** ./src/js/modules/slider/sliderMain.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MainSlider; });
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/modules/slider/slider.js");
+
+class MainSlider extends _slider__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(page, btns) {
+    super(page, btns);
   }
 
   showSlides(n) {
