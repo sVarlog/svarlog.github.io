@@ -50,14 +50,18 @@ export default class MiniSlider extends Slider {
     }
 
     bindTriggers() {
-        this.next.addEventListener('click', () => this.nextSlide());
+        this.next.forEach(el => el.addEventListener('click', () => this.nextSlide()));
 
-        this.prev.addEventListener('click', () => this.prevSlide());
+        this.prev.forEach(el => el.addEventListener('click', () => this.prevSlide()));
     }
 
     setSliderPauseEvents(elements) {
+        console.log(this.container);
+        console.log(elements, 'elements');
         elements.forEach(el => {
+            console.log(el);
             el.addEventListener('mouseenter', () => {
+                console.log('pause');
                 clearInterval(this.timer);
                 this.timer = null;
             });
@@ -70,19 +74,21 @@ export default class MiniSlider extends Slider {
     }
 
     init() {
-        this.container.style.cssText = `
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            align-items: flex-start;
-        `;
+        try {
+            this.container.style.cssText = `
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                align-items: flex-start;
+            `;
 
-        this.bindTriggers();
-        this.decorizeSlides();
+            this.bindTriggers();
+            this.decorizeSlides();
 
-        if (this.autoplay) {
-            this.timer = setInterval(() => this.nextSlide(), this.timePlay || 5000);
-            this.setSliderPauseEvents([this.next, this.prev, this.container]);
-        }
+            if (this.autoplay) {
+                this.timer = setInterval(() => this.nextSlide(), this.timePlay || 5000);
+                this.setSliderPauseEvents([this.next[0], this.prev[0], this.container]);
+            }
+        } catch (e) {}
     }
 }
