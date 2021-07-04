@@ -1,8 +1,8 @@
 import Slider from './slider';
 
 export default class MainSlider extends Slider{
-    constructor(page, btns) {
-        super(page, btns);
+    constructor(btns) {
+        super(btns);
     }
 
     showSlides(n) {
@@ -27,7 +27,7 @@ export default class MainSlider extends Slider{
             }
         }
 
-        this.slides.forEach((el, i) => {
+        [...this.slides].forEach((el, i) => {
             el.style.display = 'none';
             if (i === this.slideIndex - 1) {
                 el.style.display = 'block';
