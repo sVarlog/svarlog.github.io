@@ -1847,6 +1847,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider_sliderMain__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider/sliderMain */ "./src/js/modules/slider/sliderMain.js");
 /* harmony import */ var _modules_playVideo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/playVideo.js */ "./src/js/modules/playVideo.js");
 /* harmony import */ var _modules_slider_sliderMini_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider/sliderMini.js */ "./src/js/modules/slider/sliderMini.js");
+/* harmony import */ var _modules_difference_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/difference.js */ "./src/js/modules/difference.js");
+
 
 
 
@@ -1884,7 +1886,67 @@ window.addEventListener('DOMContentLoaded', () => {
   feedSlider.init();
   const player = new _modules_playVideo_js__WEBPACK_IMPORTED_MODULE_1__["default"]('.showup .play', '.overlay');
   player.init();
+  new _modules_difference_js__WEBPACK_IMPORTED_MODULE_3__["default"]('.officerold', '.officernew', '.officer__card-item').init();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/difference.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/difference.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Difference; });
+class Difference {
+  constructor(oldOfficer, newOfficer, items) {
+    this.oldOfficer = document.querySelector(oldOfficer);
+    this.newOfficer = document.querySelector(newOfficer);
+    this.oldItems = this.oldOfficer.querySelectorAll(items);
+    this.newItems = this.newOfficer.querySelectorAll(items);
+    this.oldCounter = 0;
+    this.newCounter = 0;
+  }
+
+  bindTriggers() {
+    const showEvents = (elem, counter, itemsList) => {
+      elem.addEventListener('click', () => {
+        if (counter !== itemsList.length - 2) {
+          itemsList[counter].style.display = 'flex';
+          counter++;
+        } else {
+          itemsList[counter].style.display = 'flex';
+          itemsList[itemsList.length - 1].remove();
+        }
+      });
+    };
+
+    showEvents(this.oldOfficer.querySelector('.plus'), this.oldCounter, this.oldItems);
+    showEvents(this.newOfficer.querySelector('.plus'), this.newCounter, this.newItems);
+  }
+
+  hideItems() {
+    const hideItems = items => {
+      items.forEach((el, i, arr) => {
+        if (i !== arr.length - 1) {
+          el.style.display = 'none';
+        }
+      });
+    };
+
+    hideItems(this.oldItems);
+    hideItems(this.newItems);
+  }
+
+  init() {
+    this.hideItems();
+    this.bindTriggers();
+  }
+
+}
 
 /***/ }),
 
