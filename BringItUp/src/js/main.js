@@ -3,6 +3,8 @@ import VideoPlayer from './modules/playVideo.js';
 import MiniSlider from './modules/slider/sliderMini.js';
 import Difference from './modules/difference.js';
 import Forms from './modules/forms.js';
+import ShowInfo from './modules/showInfo.js';
+import Download from './modules/download.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -58,4 +60,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const forms = new Forms('.form');
     forms.init();
+
+    const showInfo = new ShowInfo('.plus__content');
+    showInfo.init();
+
+    const download = new Download('.download');
+    download.init();
 });
