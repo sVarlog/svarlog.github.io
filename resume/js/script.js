@@ -22,6 +22,10 @@ $('.education #udemyVueJs').on('click', function () {
 	$('#udemyVueModal iframe').attr('src', $('#udemyVueModal iframe').data('src'));
 	$('#udemyVueModal').show(500);
 });
+$('.education #UdemyUpperJS').on('click', function () {
+	$('#upperUdemyJS iframe').attr('src', $('#upperUdemyJS iframe').data('src'));
+	$('#upperUdemyJS').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
