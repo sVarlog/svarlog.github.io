@@ -6,7 +6,7 @@
 	<title>Резюме</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="stylesheet" href="css/main-min.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 	<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -32,9 +32,9 @@
 			</div>
 			<div class="profile-info">
 				<h2 class="heading heading-light wow fadeInLeft" data-wow-delay=".5s">Профиль</h2>
-				<p class="profile-text wow fadeInLeft" data-wow-delay=".5s">Привет! Я Михаил Носов, мне 21 год, я
-					frontent разработчик, занимаюсь разработкой frontend интерфейсов любой сложности более 2х лет.
-					Программные языки: JavaScript (ES6+/ReactJS/VueJS), PHP(Laravel/WordPress). В данный момент изучаю backend (php/node.js).
+				<p class="profile-text wow fadeInLeft" data-wow-delay=".5s">Привет! Я Михаил Носов, мне 22 года, я
+					fullstack разработчик, занимаюсь разработкой fullstack приложений любой сложности. Более 2х лет занимался разработкой фронтенд интерфейсов
+					Программные языки: <span class="bold">JavaScript</span> (ES6+ / ReactJS / VueJS / NodeJS), PHP (Laravel / WordPress).
 					Так же
 					увлекаюсь английским языком(Intermediate, B1) и скоростным набором текста на английском 320-350
 					зн/мин.</p>
@@ -119,7 +119,7 @@
 				</div>
 				<div class="about">
 					<h1 class="name wow fadeInRight">Михаил Носов</h1>
-					<span class="position wow fadeInRight">Design / Frontend / ReactJS / VueJS / WordPress</span>
+					<span class="position wow fadeInRight">Fullstack / Frontend / Backend / ReactJS / VueJS / NodeJS / PHP</span>
 					<div class="about-contacts wow fadeInRight">
 						<a href="mailto:giroild@gamil.com"><b>Email:</b> giroild@gmail.com</a>
 					</div>
@@ -148,17 +148,23 @@
 						<div class="educationItem wow zoomIn" id="udemyVueJs">
 							<img src="img/Education/udemyVue.jpg" alt="udemy Vue.js">
 						</div>
+						<div class="educationItem wow zoomIn" id="nodeJS">
+							<img src="img/Education/nodeJS_udemy.jpg" alt="nodeJS">
+						</div>
 					</div>
 				</div>
 				<div class="skills">
 					<h2 class="heading heading-dark heading-skills wow fadInDown">Навыки</h2>
 					<p class="text-center wow fadeInRight">Навыки работы с:</p>
-					<p class="text-center mb wow fadeInRight">
-						<span><span class="bold">Design</span> - Photoshop, Figma, Adobe XD;
-							<br> <span class="bold">DevTools</span> - Webpack, Babel, GitHub, Git, Less/Scss, npm;
-							<br> <span class="bold">Development</span> - ReactJS/Redux/Router, Vue.js/Vuex/Router,
-							jQuery, Bootstrap4, БЭМ, PHP - (Wordpress, Laravel)</span>
-					</p>
+					<div class="text-center mb wow fadeInRight">
+						<span class="bold">Design</span>
+						<p class="text-center">Photoshop, Figma, Adobe XD</p>
+						<span class="bold">DevTools</span>
+						<p>Webpack, Babel, GitHub, Git, Less/Scss, npm, OpenServer, TimeDoctor, Notion.so</p>
+						<span class="bold">Development</span>
+						<p>HTML/CSS(Bootstrap4, БЭМ, less/scss/stylus), ReactJS/Redux/Router, Vue.js/Vuex/Router,
+							JS(ES6+, jQuery), NodeJS(express, MySQL, MongoDB), WebSocket, PHP(Wordpress, Laravel, MySQL)</p>
+					</div>
 					<ul class="skills-list">
 						<li class="skills-list__item">
 							<span class="wow fadeInLeft">HTML5/CSS3</span>
@@ -166,11 +172,7 @@
 						</li>
 						<li class="skills-list__item">
 							<span class="wow fadeInLeft">JavaScript</span>
-							<progress class="wow fadeInRight" max="100" value="65"></progress>
-						</li>
-						<li class="skills-list__item">
-							<span class="wow fadeInLeft">WordPress</span>
-							<progress class="wow fadeInRight" max="100" value="65"></progress>
+							<progress class="wow fadeInRight" max="100" value="85"></progress>
 						</li>
 						<li class="skills-list__item">
 							<span class="wow fadeInLeft">PHP</span>
@@ -185,7 +187,11 @@
 		<div class="works">
 			<div class="worksWrap">
 				<h2 class="heading heading-dark main-heading wow fadeInDown">Мои работы:</h2>
-				<h2 class="heading heading-dark wow fadeInLeft">JavaScript <span class="headingItems"></span> :</h2>
+				<div class="borderB">
+					<p class="text-center">Здесь размещенны мои некоторые работы.</p>
+					<p class="text-center">Большенство работ я не могу размещать так как подписывал NDA</p>
+				</div>
+				<h2 class="heading heading-dark wow fadeInLeft">Frontend <span class="headingItems"></span> :</h2>
 				<div class="projects projectJS">
 					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
@@ -243,6 +249,18 @@
 						<img src="img/sitesImg/postapp-min.jpg" alt="postapp">
 					</div>
 				</div>
+				<h2 class="heading heading-dark wow fadeInLeft">Fullstack <span class="headingItems"></span> :</h2>
+				<div class="projects projectJS">
+					<div class="workItem wow zoomIn">
+						<span class="itemWrap">
+							<h2>Courses Shop</h2>
+							<p>Разработка Fullstack приложения на NodeJS + handlebars.js (.hbs) с использованием MongoDB. Размещено на Heroku.com</p>
+							<a href="https://github.com/sVarlog/CoursesShop" target="_blank">gitHub</a>
+							<a href="https://salty-tor-02441.herokuapp.com/courses" target="_blank">Демо</a>
+						</span>
+						<img src="img/sitesImg/CoursesShop.png" alt="Courses shop img">
+					</div>
+				</div>
 				<h2 class="heading heading-dark wow fadeInLeft">Верстка <span class="headingItems"></span> :</h2>
 				<div class="projects projectMarkup">
 					<div class="workItem wow zoomIn">
@@ -271,14 +289,14 @@
 						</span>
 						<img src="img/sitesImg/press-landing-min.jpg" alt="Press">
 					</div>
-					<div class="workItem wow zoomIn">
+					<!-- <div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>SmartSonic landing</h2>
 							<p>Верстка сайта по макету, анимация, разделение файлов, оптимизация загрузки.</p>
 							<a href="https://smartsonic.mirkosmetologa.com" target="_blank">Верстка</a>
 						</span>
 						<img src="img/sitesImg/SmartSonic-min.jpg" alt="Smart Sonic">
-					</div>
+					</div> -->
 					<div class="workItem wow zoomIn">
 						<span class="itemWrap">
 							<h2>Filter</h2>
