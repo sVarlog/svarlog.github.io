@@ -22,6 +22,18 @@ $('.education #udemyVueJs').on('click', function () {
 	$('#udemyVueModal iframe').attr('src', $('#udemyVueModal iframe').data('src'));
 	$('#udemyVueModal').show(500);
 });
+$('.education #udemyVueJs').on('click', function () {
+	$('#udemyVueModal iframe').attr('src', $('#udemyVueModal iframe').data('src'));
+	$('#udemyVueModal').show(500);
+});
+$('.education #nodeJS').on('click', function () {
+	$('#nodeJSModal iframe').attr('src', $('#nodeJSModal iframe').data('src'));
+	$('#nodeJSModal').show(500);
+});
+$('.education #gitUdemy').on('click', function () {
+	$('#gitUdemyModal iframe').attr('src', $('#gitUdemyModal iframe').data('src'));
+	$('#gitUdemyModal').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
