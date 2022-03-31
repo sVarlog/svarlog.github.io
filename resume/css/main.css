@@ -15,7 +15,7 @@ body{margin: 0;background:linear-gradient(45deg,#304352,#BFC7CD,#204352);backgro
 }
 .container{
 	display: flex;
-	max-width: 960px;
+	max-width: 1140px;
 	background-color: rgba(0,0,0,0);
 	margin: 0px auto;
 	padding: 20px 0;
@@ -274,6 +274,7 @@ address{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 15px;
+	margin-top: 10px;
 }
 .education .educationItem{
 	display: block;

@@ -34,6 +34,10 @@ $('.education #gitUdemy').on('click', function () {
 	$('#gitUdemyModal iframe').attr('src', $('#gitUdemyModal iframe').data('src'));
 	$('#gitUdemyModal').show(500);
 });
+$('.education #reactNativeUdemy').on('click', function () {
+	$('#reactNativeUdemyModal iframe').attr('src', $('#reactNativeUdemyModal iframe').data('src'));
+	$('#reactNativeUdemyModal').show(500);
+});
 $('.modal .close').on('click', function(){
 	$('.modal').hide(500);
 });
