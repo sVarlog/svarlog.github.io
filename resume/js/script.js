@@ -9,6 +9,8 @@ const certificates = [
     { name: "gitUdemy", modal: "gitUdemyModal" },
     { name: "reactNativeUdemy", modal: "reactNativeUdemyModal" },
     { name: "TSUdemy", modal: "TSUdemyModal" },
+    { name: "GRQL_udemy", modal: "GRQL_udemy_modal" },
+    { name: "EFSET", modal: "EFSET_modal" },
 ];
 
 for (let value of certificates) {
