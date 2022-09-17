@@ -28,11 +28,18 @@ $(".modal .close").on("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    let headings = document.querySelectorAll(".works .worksWrap .headingItems"),
-        items = document.querySelectorAll(".works .worksWrap .projects");
+    const workHeadings = document.querySelectorAll(
+        ".works .worksWrap .headingItems"
+    );
+    const workItems = document.querySelectorAll(".works .worksWrap .projects");
 
-    items.forEach((el, i) => {
-        let n = el.querySelectorAll(".workItem");
-        headings[i].append(`( ${n.length} )`);
+    workItems.forEach((el, i) => {
+        let nodeCollection = el.querySelectorAll(".workItem");
+        workHeadings[i].append(`( ${nodeCollection.length} )`);
     });
+
+    const certHeading = document.querySelector(".education .certCount");
+    const certificates = document.querySelectorAll(".education .educationItem");
+
+    certHeading.innerHTML = `(${certificates.length}) :`;
 });
