@@ -11,6 +11,7 @@ const certificates = [
     { name: "TSUdemy", modal: "TSUdemyModal" },
     { name: "GRQL_udemy", modal: "GRQL_udemy_modal" },
     { name: "EFSET", modal: "EFSET_modal" },
+    { name: "electron_react_udemy", modal: "electron_react_udemy_modal" },
 ];
 
 for (let value of certificates) {

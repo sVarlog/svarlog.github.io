@@ -189,8 +189,10 @@ body {
 .mb {
     margin-bottom: 3rem;
 }
+.mt {
+    margin-top: 3rem;
+}
 .heading-dark {
-    font-size: 16px;
     border-bottom: 1px solid rgba(168, 168, 168, 0.44);
     margin-top: 30px;
 }
@@ -259,9 +261,6 @@ body {
 .heading-light {
     color: #fff;
     padding: 0;
-}
-.contacts {
-    margin-bottom: 50px;
 }
 .contacts-item {
     padding: 10px 0;
