@@ -1,185 +1,9 @@
-/* normalize */
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-}
-body {
-    margin: 0;
-}
-main {
-    display: block;
-}
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
-a {
-    background-color: transparent;
-}
-abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted;
-}
-b,
-strong {
-    font-weight: bolder;
-}
-code,
-kbd,
-samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
-small {
-    font-size: 80%;
-}
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-sub {
-    bottom: -0.25em;
-}
-sup {
-    top: -0.5em;
-}
-img {
-    border-style: none;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-}
-button,
-input {
-    overflow: visible;
-}
-button,
-select {
-    text-transform: none;
-}
-[type="button"],
-[type="reset"],
-[type="submit"],
-button {
-    -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
-legend {
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
-}
-progress {
-    vertical-align: baseline;
-}
-textarea {
-    overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-[type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-}
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-}
-details {
-    display: block;
-}
-summary {
-    display: list-item;
-}
-template {
-    display: none;
-}
-[hidden] {
-    display: none;
-}
-
-html {
-    box-sizing: border-box;
-}
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-}
-p,
-a,
-li {
-    font-family: "Cormorant SC", serif;
-}
-a {
-    text-decoration: none;
-}
 body {
     margin: 0;
     background: linear-gradient(45deg, #304352, #bfc7cd, #204352);
     background-size: 200%200%;
     animation: gradient 5s ease infinite;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
     overflow-x: hidden;
 }
@@ -242,15 +66,11 @@ body {
     right: 35px;
 }
 .profile-info {
-    padding: 20px 20px 70px 20px;
+    padding: 20px 20px 40px 20px;
 }
 .profile-text {
     line-height: 20px;
     font-size: 16px;
-    font-family: cursive;
-}
-.languages {
-    font-family: "Cormorant SC", serif;
 }
 .heading {
     padding-top: 16px;
@@ -309,7 +129,7 @@ address {
     overflow: hidden;
 }
 .language:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     background-color: #5c5c5c;
@@ -379,7 +199,7 @@ address {
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    font-family: "UBUNTU", sans-serif;
+    font-family: 'UBUNTU', sans-serif;
 }
 .logo-lines {
     display: flex;
@@ -414,12 +234,11 @@ address {
 }
 .position {
     display: inline-block;
-    font-size: 11px;
+    font-size: 14px;
     text-transform: uppercase;
     color: rgb(28, 28, 28);
     margin-bottom: 10px;
-    font-family: monospace;
-    font-weight: 700;
+    font-weight: 400;
 }
 .about-contacts {
     font-size: 13px;
@@ -433,7 +252,7 @@ address {
     color: rgb(63, 63, 63);
 }
 .about-contacts a::before {
-    content: "";
+    content: '';
     bottom: 0;
     right: 0;
     position: absolute;
@@ -490,7 +309,7 @@ address {
     border-bottom: 1px dashed #ececec;
 }
 .list-item:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 23px;
@@ -530,7 +349,7 @@ address {
     background: #fff;
 }
 .skills span {
-    font-family: "Prosto One", cursive;
+    font-family: 'Prosto One', cursive;
     line-height: 30px;
     font-size: 17px;
 }
@@ -631,7 +450,7 @@ progress::-moz-progress-bar {
     text-align: center;
 }
 .works .projects .workItem .itemWrap:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 5%;
     right: 2.5%;
@@ -643,7 +462,7 @@ progress::-moz-progress-bar {
     transform: scaleX(0);
 }
 .works .projects .workItem .itemWrap:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 5%;
     right: 2.5%;
@@ -700,7 +519,7 @@ progress::-moz-progress-bar {
     cursor: pointer;
 }
 .modalWrap .close:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 2px;
@@ -712,7 +531,7 @@ progress::-moz-progress-bar {
     transition: 0.5s;
 }
 .modalWrap .close:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 2px;

@@ -1,9 +1,7 @@
 const certificates = [
-    { name: 'wp', modal: 'wpModal' },
     { name: 'stepikJS', modal: 'stepikJSModal' },
     { name: 'stepikLayout', modal: 'stepikModal' },
     { name: 'udemyJS', modal: 'udemyModal' },
-    { name: 'layoutWayup', modal: 'layoutWModal' },
     { name: 'udemyVueJs', modal: 'udemyVueModal' },
     { name: 'nodeJS', modal: 'nodeJSModal' },
     { name: 'gitUdemy', modal: 'gitUdemyModal' },
@@ -15,15 +13,20 @@ const certificates = [
     { name: 'tests_udemy', modal: 'tests_udemy_modal' },
 ];
 
-for (let value of certificates) {
-    $(`.education #${value.name}`).on('click', function () {
-        $(`#${value.modal} iframe`).attr('src', $(`#${value.modal} iframe`).data('src'));
-        $(`#${value.modal}`).show(500);
+certificates.forEach((value) => {
+    document.querySelector(`.education #${value.name}`).addEventListener('click', function () {
+        const iframe = document.querySelector(`#${value.modal} iframe`);
+        iframe.src = iframe.getAttribute('data-src');
+        document.getElementById(value.modal).style.display = 'block';
     });
-}
+});
 
-$('.modal .close').on('click', function () {
-    $('.modal').hide(500);
+document.querySelectorAll('.modal .close').forEach((closeButton) => {
+    closeButton.addEventListener('click', function () {
+        document.querySelectorAll('.modal').forEach((modal) => {
+            modal.style.display = 'none';
+        });
+    });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const workItems = document.querySelectorAll('.works .worksWrap .projects');
 
     workItems.forEach((el, i) => {
-        let nodeCollection = el.querySelectorAll('.workItem');
+        const nodeCollection = el.querySelectorAll('.workItem');
         workHeadings[i].append(`( ${nodeCollection.length} )`);
     });
 
     const certHeading = document.querySelector('.education .certCount');
-    const certificates = document.querySelectorAll('.education .educationItem');
+    const certificateItems = document.querySelectorAll('.education .educationItem');
 
-    certHeading.innerHTML = `(${certificates.length}) :`;
+    certHeading.innerHTML = `(${certificateItems.length}) :`;
 });
